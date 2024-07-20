@@ -224,7 +224,18 @@ function App() {
 											alt=""
 											className="shrink-0 w-6 aspect-square"
 										/>
-										<div className="my-auto">Home</div>
+										<div className="my-auto">Dashboard</div>
+									</div>
+								</nav>
+								<nav className="flex gap-5 justify-between p-3 mt-6 w-full text-sm font-medium tracking-normal text-white whitespace-nowrap bg-green-800 rounded-lg">
+									<div className="flex gap-3.5">
+										<img
+											loading="lazy"
+											src="https://cdn.builder.io/api/v1/image/assets/TEMP/7a3ccde314faf3075248c175cc423bf1ed4941a06ebc81574783391ced639f90?apiKey=d03d160494014eaf8a1af94dd934f586&"
+											alt=""
+											className="shrink-0 w-6 aspect-square"
+										/>
+										<div className="my-auto">Analytic</div>
 									</div>
 								</nav>
 								<div className="flex gap-5 justify-between">
@@ -255,191 +266,6 @@ function App() {
 							<h1 className="text-2xl font-medium text-black max-md:max-w-full">
 								Home
 							</h1>
-{/* 							<section className="grid grid-cols-3 gap-4 mt-12">
-								<div className="flex flex-col p-9 gap-4 bg-white rounded-[30px] shadow-[0px_10px_60px_rgba(226,236,249,0.5)]">
-									<div className="text-3xl font-semibold tracking-tight text-black text-center">
-										Sensor NPK
-									</div>
-									<div className="flex flex-row justify-between gap-4">
-										<div className="flex flex-col gap-4 mt-3 items-center justify-center w-full">
-											<span className="text-teal-500 text-center">
-												Sensor NPK 1
-											</span>
-											<div className="font-bold text-center text-5xl">
-												{data?.sensornpk1?.value}
-											</div>
-											{data?.sensornpk1?.value === 0 ? (
-												<div className="justify-center px-3 py-1 w-24 text-center rounded border text-red-600 bg-red-200 border-red-600 bg-opacity-40 max-md:px-5">
-													{"Error"}
-												</div>
-											) : (
-												<div className="justify-center px-3 py-1 w-24 text-center rounded border border-emerald-500 border-solid bg-teal-500 bg-opacity-40 max-md:px-5">
-													{"Baik"}
-												</div>
-											)}
-
-											<div className="font-light text-center text-base">
-												Last Update: <br />
-												{new Date(
-													data?.sensornpk1?.createdAt
-												).toLocaleDateString()}{" "}
-												{new Date(
-													data?.sensornpk1?.createdAt
-												).toLocaleTimeString()}
-											</div>
-										</div>
-										<div className="flex flex-col gap-4 mt-3 items-center justify-center w-full">
-											<span className="text-teal-500 text-center">
-												Sensor NPK 1
-											</span>
-											<div className="font-bold text-center text-5xl">
-												{data?.sensornpk2?.value}
-											</div>
-											{data?.sensornpk2?.value === 0 ? (
-												<div className="justify-center px-3 py-1 w-24 text-center rounded border text-red-600 bg-red-200 border-red-600 bg-opacity-40 max-md:px-5">
-													{"Error"}
-												</div>
-											) : (
-												<div className="justify-center px-3 py-1 w-24 text-center rounded border border-emerald-500 border-solid bg-teal-500 bg-opacity-40 max-md:px-5">
-													{"Baik"}
-												</div>
-											)}
-
-											<div className="font-light text-center text-base">
-												Last Update: <br />
-												{new Date(
-													data?.sensornpk2?.createdAt
-												).toLocaleDateString()}{" "}
-												{new Date(
-													data?.sensornpk2?.createdAt
-												).toLocaleTimeString()}
-											</div>
-										</div>
-									</div>
-								</div>
-								<div className="flex flex-col p-9 gap-4 bg-white rounded-[30px] shadow-[0px_10px_60px_rgba(226,236,249,0.5)]">
-									<div className="text-3xl font-semibold tracking-tight text-black text-center">
-										Sensor PH
-									</div>
-									<div className="flex flex-row justify-between gap-4">
-										<div className="flex flex-col gap-4 mt-3 items-center justify-center w-full">
-											<span className="text-teal-500 text-center">
-												Sensor PH 1
-											</span>
-											<div className="font-bold text-center text-5xl">
-												{data?.sensorph1?.value}
-											</div>
-											{data?.sensorph1?.value === 0 ? (
-												<div className="justify-center px-3 py-1 w-24 text-center rounded border text-red-600 bg-red-200 border-red-600 bg-opacity-40 max-md:px-5">
-													{"Error"}
-												</div>
-											) : (
-												<div className="justify-center px-3 py-1 w-24 text-center rounded border border-emerald-500 border-solid bg-teal-500 bg-opacity-40 max-md:px-5">
-													{"Baik"}
-												</div>
-											)}
-
-											<div className="font-light text-center text-base">
-												Last Update: <br />
-												{new Date(
-													data?.sensorph1?.createdAt
-												).toLocaleDateString()}{" "}
-												{new Date(
-													data?.sensorph1?.createdAt
-												).toLocaleTimeString()}
-											</div>
-										</div>
-										<div className="flex flex-col gap-4 mt-3 items-center justify-center w-full">
-											<span className="text-teal-500 text-center">
-												Sensor PH 2
-											</span>
-											<div className="font-bold text-center text-5xl">
-												{data?.sensorph2?.value}
-											</div>
-											{data?.sensorph2?.value === 0 ? (
-												<div className="justify-center px-3 py-1 w-24 text-center rounded border text-red-600 bg-red-200 border-red-600 bg-opacity-40 max-md:px-5">
-													{"Error"}
-												</div>
-											) : (
-												<div className="justify-center px-3 py-1 w-24 text-center rounded border border-emerald-500 border-solid bg-teal-500 bg-opacity-40 max-md:px-5">
-													{"Baik"}
-												</div>
-											)}
-
-											<div className="font-light text-center text-base">
-												Last Update: <br />
-												{new Date(
-													data?.sensorph2?.createdAt
-												).toLocaleDateString()}{" "}
-												{new Date(
-													data?.sensorph2?.createdAt
-												).toLocaleTimeString()}
-											</div>
-										</div>
-									</div>
-								</div>
-								<div className="flex flex-col p-9 gap-4 bg-white rounded-[30px] shadow-[0px_10px_60px_rgba(226,236,249,0.5)]">
-									<div className="text-3xl font-semibold tracking-tight text-black text-center">
-										Sensor ST
-									</div>
-									<div className="flex flex-row justify-between gap-4">
-										<div className="flex flex-col gap-4 mt-3 items-center justify-center w-full">
-											<span className="text-teal-500 text-center">
-												Sensor ST 1
-											</span>
-											<div className="font-bold text-center text-5xl">
-												{data?.sensorst1?.value}
-											</div>
-											{data?.sensorst1?.value === 0 ? (
-												<div className="justify-center px-3 py-1 w-24 text-center rounded border text-red-600 bg-red-200 border-red-600 bg-opacity-40 max-md:px-5">
-													{"Error"}
-												</div>
-											) : (
-												<div className="justify-center px-3 py-1 w-24 text-center rounded border border-emerald-500 border-solid bg-teal-500 bg-opacity-40 max-md:px-5">
-													{"Baik"}
-												</div>
-											)}
-
-											<div className="font-light text-center text-base">
-												Last Update: <br />
-												{new Date(
-													data?.sensorst1?.createdAt
-												).toLocaleDateString()}{" "}
-												{new Date(
-													data?.sensorst1?.createdAt
-												).toLocaleTimeString()}
-											</div>
-										</div>
-										<div className="flex flex-col gap-4 mt-3 items-center justify-center w-full">
-											<span className="text-teal-500 text-center">
-												Sensor ST 2
-											</span>
-											<div className="font-bold text-center text-5xl">
-												{data?.sensorst2?.value}
-											</div>
-											{data?.sensorst2?.value === 0 ? (
-												<div className="justify-center px-3 py-1 w-24 text-center rounded border text-red-600 bg-red-200 border-red-600 bg-opacity-40 max-md:px-5">
-													{"Error"}
-												</div>
-											) : (
-												<div className="justify-center px-3 py-1 w-24 text-center rounded border border-emerald-500 border-solid bg-teal-500 bg-opacity-40 max-md:px-5">
-													{"Baik"}
-												</div>
-											)}
-
-											<div className="font-light text-center text-base">
-												Last Update:{" "}
-												{new Date(
-													data?.sensorst2?.createdAt
-												).toLocaleDateString()}{" "}
-												{new Date(
-													data?.sensorst2?.createdAt
-												).toLocaleTimeString()}
-											</div>
-										</div>
-									</div>
-								</div>
-							</section> */}
 							<section className="flex flex-col mt-10 bg-white overflow-y-hidden rounded-[30px] shadow-[0px_10px_60px_rgba(226,236,249,0.5)] w-full">
 								<div className="flex flex-col w-full p-5">
 									<div className="flex gap-5 text-sm tracking-normal w-full">
