@@ -226,8 +226,6 @@ function App() {
 										/>
 										<div className="my-auto">Dashboard</div>
 									</div>
-								</nav>
-								<nav className="flex gap-5 justify-between p-3 mt-6 w-full text-sm font-medium tracking-normal text-white whitespace-nowrap bg-green-800 rounded-lg">
 									<div className="flex gap-3.5">
 										<img
 											loading="lazy"
@@ -238,6 +236,7 @@ function App() {
 										<div className="my-auto">Analytic</div>
 									</div>
 								</nav>
+								
 								<div className="flex gap-5 justify-between">
 									<div className="flex flex-col">
 										<div className="flex gap-3">
@@ -682,6 +681,101 @@ function App() {
 									</div>
 								</div>
 							</section>
+
+							<section className="flex flex-col mt-10 bg-white overflow-y-hidden rounded-[30px] shadow-[0px_10px_60px_rgba(226,236,249,0.5)] w-full">
+								<div className="flex flex-col w-full p-5">
+									<div className="flex gap-5 text-sm tracking-normal w-full">
+										<div className="flex flex-col gap-3 w-full">
+											<h2 className="text-2xl font-semibold tracking-tight text-black">
+												Sensor NPK
+											</h2>
+											<div className="text-teal-500">
+												Nilai NPK pada tanah
+											</div>
+											<div className="flex flex-row gap-3 px-2 py-5 justify-between items-center w-full font-medium text-gray-400 border-b border-solid border-zinc-100">
+												<div className="font-medium text-gray-400 w-full text-center justify-center items-center">
+													Bedeng
+												</div>
+												<div className="font-medium text-gray-400 w-full text-center justify-center items-center">
+													N
+												</div>
+												<div className="font-medium text-gray-400 w-full text-center justify-center items-center">
+													P
+												</div>
+												<div className="font-medium text-gray-400 w-full text-center justify-center items-center">
+													K
+												</div>
+												<div className="font-medium text-gray-400 w-full text-center justify-center items-center">
+													Status
+												</div>
+											</div>
+											<div className="flex flex-row gap-3 px-2 py-2 justify-between w-full font-medium border-b border-solid border-zinc-100">
+												<div className="font-medium w-full text-center justify-center items-center content-center">
+													Kemarau
+												</div>
+												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
+													{data?.sensorph2?.value}
+													<br />
+												</div>
+												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
+													{data?.sensorph2?.value}
+													<br />
+												</div>
+												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
+													{data?.sensorph2?.value}
+													<br />
+												</div>
+												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
+													
+{/* 													<br /> */}
+													{data?.sensorph2?.value === 0 ? (
+														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-red-600 bg-red-200 border-red-600 bg-opacity-40 max-md:px-5">
+															{"Anomali"}
+														</div>
+													) : (
+														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-emerald-500 border-emerald-500 border-solid bg-teal-500 bg-opacity-40 max-md:px-5">
+															{"Normal"}
+														</div>
+													)}
+												</div>
+											</div>
+											<div className="flex flex-row gap-3 px-2 py-2 justify-between w-full font-medium border-b border-solid border-zinc-100">
+												<div className="font-medium w-full text-center justify-center items-center content-center">
+													Kemarau
+												</div>
+												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
+													{data?.sensorph2?.value}
+													<br />
+												</div>
+												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
+													{data?.sensorph2?.value}
+													<br />
+												</div>
+												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
+													{data?.sensorph2?.value}
+													<br />
+												</div>
+												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
+													
+{/* 													<br /> */}
+													{data?.sensorph2?.value === 0 ? (
+														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-red-600 bg-red-200 border-red-600 bg-opacity-40 max-md:px-5">
+															{"Anomali"}
+														</div>
+													) : (
+														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-emerald-500 border-emerald-500 border-solid bg-teal-500 bg-opacity-40 max-md:px-5">
+															{"Normal"}
+														</div>
+													)}
+												</div>
+											</div>
+											
+											
+										</div>
+									</div>
+								</div>
+							</section>
+							
 						</div>
 					</main>
 				</div>
