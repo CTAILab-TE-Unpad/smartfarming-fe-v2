@@ -987,7 +987,7 @@ function App() {
 						                    </div>
 						                  ))}
 						                </div>
-						              </section>
+							</section>
 							
 						</div>
 					</main>
