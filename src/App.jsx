@@ -733,6 +733,301 @@ function App() {
 									</div>
 								</div>
 							</section>
+
+
+							<section className="flex flex-col mt-10 bg-white overflow-y-hidden rounded-[30px] shadow-[0px_10px_60px_rgba(226,236,249,0.5)] w-full">
+								<div className="flex flex-col w-full p-5">
+									<div className="flex gap-5 text-sm tracking-normal w-full">
+										<div className="flex flex-col gap-3 w-full">
+											<h2 className="text-2xl font-semibold tracking-tight text-black">
+												Soil Moisture
+											</h2>
+											<div className="text-teal-500">
+												sensor kelembaban tanah
+											</div>
+											<div className="flex flex-row gap-3 px-2 py-5 justify-between items-center w-full font-medium text-gray-400 border-b border-solid border-zinc-100">
+												<div className="font-medium text-gray-400 w-full text-center justify-center items-center">
+													Baris
+												</div>
+												<div className="font-medium text-gray-400 w-full text-center justify-center items-center">
+													Kemarau
+												</div>
+												<div className="font-medium text-gray-400 w-full text-center justify-center items-center">
+													Hujan
+												</div>
+												<div className="font-medium text-gray-400 w-full text-center justify-center items-center">
+													Manual
+												</div>
+											</div>
+											<div className="flex flex-row gap-3 px-2 py-2 justify-between w-full font-medium border-b border-solid border-zinc-100">
+												<div className="font-medium w-full text-center justify-center items-center content-center">
+													R1
+												</div>
+												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
+													{soil?.kemaraur1?.value}
+													<br />
+													{soil?.kemaraur1?.value === 0 ? (
+														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-red-600 bg-red-200 border-red-600 bg-opacity-40 max-md:px-5">
+															{"Error"}
+														</div>
+													) : (
+														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-emerald-500 border-emerald-500 border-solid bg-teal-500 bg-opacity-40 max-md:px-5">
+															{"Baik"}
+														</div>
+													)}
+												</div>
+												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
+													{soil?.hujanr1?.value}
+													<br />
+													{soil?.hujanr1?.value === 0 ? (
+														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-red-600 bg-red-200 border-red-600 bg-opacity-40 max-md:px-5">
+															{"Error"}
+														</div>
+													) : (
+														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-emerald-500 border-emerald-500 border-solid bg-teal-500 bg-opacity-40 max-md:px-5">
+															{"Baik"}
+														</div>
+													)}
+												</div>
+												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
+													{soil?.manualr1?.value}
+													<br />
+													{soil?.manualr1?.value === 0 ? (
+														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-red-600 bg-red-200 border-red-600 bg-opacity-40 max-md:px-5">
+															{"Error"}
+														</div>
+													) : (
+														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-emerald-500 border-emerald-500 border-solid bg-teal-500 bg-opacity-40 max-md:px-5">
+															{"Baik"}
+														</div>
+													)}
+												</div>
+											</div>
+											<div className="flex flex-row gap-3 px-2 py-2 justify-between w-full font-medium border-b border-solid border-zinc-100">
+												<div className="font-medium w-full text-center justify-center items-center content-center">
+													R2
+												</div>
+												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
+													{soil?.kemaraur2?.value}
+													<br />
+													{soil?.kemaraur2?.value === 0 ? (
+														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-red-600 bg-red-200 border-red-600 bg-opacity-40 max-md:px-5">
+															{"Error"}
+														</div>
+													) : (
+														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-emerald-500 border-emerald-500 border-solid bg-teal-500 bg-opacity-40 max-md:px-5">
+															{"Baik"}
+														</div>
+													)}
+												</div>
+												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
+													{soil?.hujanr2?.value}
+													<br />
+													{soil?.hujanr2?.value === 0 ? (
+														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-red-600 bg-red-200 border-red-600 bg-opacity-40 max-md:px-5">
+															{"Error"}
+														</div>
+													) : (
+														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-emerald-500 border-emerald-500 border-solid bg-teal-500 bg-opacity-40 max-md:px-5">
+															{"Baik"}
+														</div>
+													)}
+												</div>
+												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
+													{soil?.manualr2?.value}
+													<br />
+													{soil?.manualr2?.value === 0 ? (
+														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-red-600 bg-red-200 border-red-600 bg-opacity-40 max-md:px-5">
+															{"Error"}
+														</div>
+													) : (
+														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-emerald-500 border-emerald-500 border-solid bg-teal-500 bg-opacity-40 max-md:px-5">
+															{"Baik"}
+														</div>
+													)}
+												</div>
+											</div>
+											<div className="flex flex-row gap-3 px-2 py-2 justify-between w-full font-medium border-b border-solid border-zinc-100">
+												<div className="font-medium w-full text-center justify-center items-center content-center">
+													R3
+												</div>
+												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
+													{soil?.kemaraur3?.value}
+													<br />
+													{soil?.kemaraur3?.value === 0 ? (
+														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-red-600 bg-red-200 border-red-600 bg-opacity-40 max-md:px-5">
+															{"Error"}
+														</div>
+													) : (
+														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-emerald-500 border-emerald-500 border-solid bg-teal-500 bg-opacity-40 max-md:px-5">
+															{"Baik"}
+														</div>
+													)}
+												</div>
+												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
+													{soil?.hujanr3?.value}
+													<br />
+													{soil?.hujanr3?.value === 0 ? (
+														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-red-600 bg-red-200 border-red-600 bg-opacity-40 max-md:px-5">
+															{"Error"}
+														</div>
+													) : (
+														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-emerald-500 border-emerald-500 border-solid bg-teal-500 bg-opacity-40 max-md:px-5">
+															{"Baik"}
+														</div>
+													)}
+												</div>
+												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
+													{soil?.manualr3?.value}
+													<br />
+													{soil?.manualr3?.value === 0 ? (
+														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-red-600 bg-red-200 border-red-600 bg-opacity-40 max-md:px-5">
+															{"Error"}
+														</div>
+													) : (
+														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-emerald-500 border-emerald-500 border-solid bg-teal-500 bg-opacity-40 max-md:px-5">
+															{"Baik"}
+														</div>
+													)}
+												</div>
+											</div>
+											<div className="flex flex-row gap-3 px-2 py-2 justify-between w-full font-medium border-b border-solid border-zinc-100">
+												<div className="font-medium w-full text-center justify-center items-center content-center">
+													R4
+												</div>
+												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
+													{soil?.kemaraur4?.value}
+													<br />
+													{soil?.kemaraur4?.value === 0 ? (
+														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-red-600 bg-red-200 border-red-600 bg-opacity-40 max-md:px-5">
+															{"Error"}
+														</div>
+													) : (
+														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-emerald-500 border-emerald-500 border-solid bg-teal-500 bg-opacity-40 max-md:px-5">
+															{"Baik"}
+														</div>
+													)}
+												</div>
+												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
+													{soil?.hujanr4?.value}
+													<br />
+													{soil?.hujanr4?.value === 0 ? (
+														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-red-600 bg-red-200 border-red-600 bg-opacity-40 max-md:px-5">
+															{"Error"}
+														</div>
+													) : (
+														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-emerald-500 border-emerald-500 border-solid bg-teal-500 bg-opacity-40 max-md:px-5">
+															{"Baik"}
+														</div>
+													)}
+												</div>
+												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
+													{soil?.manualr4?.value}
+													<br />
+													{soil?.manualr4?.value === 0 ? (
+														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-red-600 bg-red-200 border-red-600 bg-opacity-40 max-md:px-5">
+															{"Error"}
+														</div>
+													) : (
+														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-emerald-500 border-emerald-500 border-solid bg-teal-500 bg-opacity-40 max-md:px-5">
+															{"Baik"}
+														</div>
+													)}
+												</div>
+											</div>
+											<div className="flex flex-row gap-3 px-2 py-2 justify-between w-full font-medium border-b border-solid border-zinc-100">
+												<div className="font-medium w-full text-center justify-center items-center content-center">
+													R5
+												</div>
+												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
+													{soil?.kemaraur5?.value}
+													<br />
+													{soil?.kemaraur5?.value === 0 ? (
+														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-red-600 bg-red-200 border-red-600 bg-opacity-40 max-md:px-5">
+															{"Error"}
+														</div>
+													) : (
+														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-emerald-500 border-emerald-500 border-solid bg-teal-500 bg-opacity-40 max-md:px-5">
+															{"Baik"}
+														</div>
+													)}
+												</div>
+												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
+													{soil?.hujanr5?.value}
+													<br />
+													{soil?.hujanr5?.value === 0 ? (
+														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-red-600 bg-red-200 border-red-600 bg-opacity-40 max-md:px-5">
+															{"Error"}
+														</div>
+													) : (
+														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-emerald-500 border-emerald-500 border-solid bg-teal-500 bg-opacity-40 max-md:px-5">
+															{"Baik"}
+														</div>
+													)}
+												</div>
+												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
+													{soil?.manualr5?.value}
+													<br />
+													{soil?.manualr5?.value === 0 ? (
+														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-red-600 bg-red-200 border-red-600 bg-opacity-40 max-md:px-5">
+															{"Error"}
+														</div>
+													) : (
+														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-emerald-500 border-emerald-500 border-solid bg-teal-500 bg-opacity-40 max-md:px-5">
+															{"Baik"}
+														</div>
+													)}
+												</div>
+											</div>
+											<div className="flex flex-row gap-3 px-2 py-2 justify-between w-full font-medium border-b border-solid border-zinc-100">
+												<div className="font-medium w-full text-center justify-center items-center content-center">
+													R6
+												</div>
+												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
+													{soil?.kemaraur6?.value}
+													<br />
+													{soil?.kemaraur6?.value === 0 ? (
+														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-red-600 bg-red-200 border-red-600 bg-opacity-40 max-md:px-5">
+															{"Error"}
+														</div>
+													) : (
+														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-emerald-500 border-emerald-500 border-solid bg-teal-500 bg-opacity-40 max-md:px-5">
+															{"Baik"}
+														</div>
+													)}
+												</div>
+												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
+													{soil?.hujanr6?.value}
+													<br />
+													{soil?.hujanr6?.value === 0 ? (
+														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-red-600 bg-red-200 border-red-600 bg-opacity-40 max-md:px-5">
+															{"Error"}
+														</div>
+													) : (
+														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-emerald-500 border-emerald-500 border-solid bg-teal-500 bg-opacity-40 max-md:px-5">
+															{"Baik"}
+														</div>
+													)}
+												</div>
+												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
+													{soil?.manualr6?.value}
+													<br />
+													{soil?.manualr6?.value === 0 ? (
+														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-red-600 bg-red-200 border-red-600 bg-opacity-40 max-md:px-5">
+															{"Error"}
+														</div>
+													) : (
+														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-emerald-500 border-emerald-500 border-solid bg-teal-500 bg-opacity-40 max-md:px-5">
+															{"Baik"}
+														</div>
+													)}
+												</div>
+											</div>
+											
+										</div>
+									</div>
+								</div>
+							</section>
 						</div>
 					</main>
 				</div>
