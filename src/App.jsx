@@ -259,7 +259,7 @@ function App() {
 							</div>
 							<div className="flex flex-col justify-between h-full">
 								<nav className="flex flex-col gap-5 p-3 mt-6 w-full text-sm font-medium tracking-normal text-white whitespace-nowrap bg-green-800 rounded-lg">
-								    <div className="flex gap-3.5">
+								    <div className="flex gap-3.5 mb-4">
 								        <img
 								            loading="lazy"
 								            src="https://cdn.builder.io/api/v1/image/assets/TEMP/7a3ccde314faf3075248c175cc423bf1ed4941a06ebc81574783391ced639f90?apiKey=d03d160494014eaf8a1af94dd934f586&"
@@ -278,6 +278,7 @@ function App() {
 								        <div className="my-auto">Analytic</div>
 								    </div>
 								</nav>
+
 
 								
 								<div className="flex gap-5 justify-between">
