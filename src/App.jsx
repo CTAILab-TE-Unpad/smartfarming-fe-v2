@@ -162,6 +162,34 @@ const datasoil = [
 		elementId: "manualr6",
 	},
 ];
+
+const databareng = [
+	{
+		device_id: "gxaZkwZafNVweTq8HycMKpZMz9MvbTyh",
+		index_id: "65792115cc701ed1363c640f",
+		elementId: "khaliwaktu",
+	},
+	{
+		device_id: "XniD6mBlnKqagRJ8qD9WhR6JGK4yle1d",
+		index_id: "65792115cc701ed1363c640f",
+		elementId: "khalipersen",
+	},
+	{
+		device_id: "ODw83libBAixNsPMGTmqQer2gn2mZrOC",
+		index_id: "6280a8465a0c89673d266101",
+		elementId: "musan1",
+	},
+	{
+		device_id: "ODw83libBAixNsPMGTmqQer2gn2mZrOC",
+		index_id: "6280a8275a0c89673d266100",
+		elementId: "musap1",
+	},
+	{
+		device_id: "ODw83libBAixNsPMGTmqQer2gn2mZrOC",
+		index_id: "6280a8505a0c89673d266102",
+		elementId: "musak1",
+	},
+];
 function App() {
 	const [data, setData] = React.useState({
 		sensorn1: null,
@@ -198,6 +226,14 @@ function App() {
 		kemaraur6: null,
 		hujanr6: null,
 		manualr6: null,
+	});
+
+	const [dataB, setDataBareng] = React.useState({
+		khaliwaktu: null,
+		khalipersen: null,
+		musan1: null,
+		musap1: null,
+		musak1: null,
 	});
 
 	React.useEffect(() => {
@@ -240,6 +276,28 @@ function App() {
 					console.log("error => ", err);
 				});
 		});
+
+		databareng.forEach((dtbareng) => {
+			console.log("dtbareng", dtbareng);
+			axios
+				.get("https://smartfarming2-be.vercel.app/datalist", {
+					params: {
+						device_id: dtbareng.device_id,
+						index_id: dtbareng.index_id,
+					},
+				})
+				.then((res) => {
+					setData((prevState) => ({
+						...prevState,
+						[dtbareng.elementId]: res?.data[0] || "No data",
+					}));
+				})
+				.catch((err) => {
+					console.log("error => ", err);
+				});
+		});
+
+		
 	}, []);
 
 	return (
@@ -815,6 +873,41 @@ function App() {
 											</div>
 											
 											
+										</div>
+									</div>
+								</div>
+							</section>
+
+
+							<section className="flex flex-col mt-10 bg-white overflow-y-hidden rounded-[30px] shadow-[0px_10px_60px_rgba(226,236,249,0.5)] w-full">
+								<div className="flex flex-col w-full p-5">
+									<div className="flex gap-5 text-sm tracking-normal w-full">
+										<div className="flex flex-col gap-3 w-full">
+											<h2 className="text-2xl font-semibold tracking-tight text-black">
+												Log Control Valve 1
+											</h2>
+											<div className="text-teal-500">
+												Status pemberian irigasi bedeng hujan
+											</div>
+											<div className="flex flex-row gap-3 px-2 py-5 justify-between items-center w-full font-medium text-gray-400 border-b border-solid border-zinc-100">
+												<div className="font-medium text-gray-400 w-full text-center justify-center items-center">
+													Waktu (s)
+												</div>
+												<div className="font-medium text-gray-400 w-full text-center justify-center items-center">
+													Bukaan (0-225)
+												</div>
+											</div>
+											<div className="flex flex-row gap-3 px-2 py-2 justify-between w-full font-medium border-b border-solid border-zinc-100">
+												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
+													{dataB?.khaliwaktu?.value}
+													<br />
+												</div>
+												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
+													{dataB?.khalipersen?.value}
+													<br />
+												</div>
+												
+											</div>
 										</div>
 									</div>
 								</div>
