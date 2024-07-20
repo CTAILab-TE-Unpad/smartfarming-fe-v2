@@ -163,7 +163,7 @@ const datasoil = [
 	},
 ];
 
-const specialDatasets = [
+const databareng = [
 	{
 		device_id: "gxaZkwZafNVweTq8HycMKpZMz9MvbTyh",
 		index_id: "65792115cc701ed1363c640f",
@@ -280,60 +280,60 @@ function App() {
 				});
 		});
 
-		// databareng.forEach((dtbareng) => {
-		// 	console.log("dtbareng", dtbareng);
-		// 	axios
-		// 		.get("https://smartfarming2-be.vercel.app/datalist", {
-		// 			params: {
-		// 				device_id: dtbareng.device_id,
-		// 				index_id: dtbareng.index_id,
-		// 			},
-		// 		})
-		// 		.then((res) => {
-		// 			setData((prevState) => ({
-		// 				...prevState,
-		// 				[dtbareng.elementId]: res?.data[0] || "No data",
-		// 			}));
-		// 		})
-		// 		.catch((err) => {
-		// 			console.log("error => ", err);
-		// 		});
-		// });
+		databareng.forEach((dtbareng) => {
+			console.log("dtbareng", dtbareng);
+			axios
+				.get("https://smartfarming2-be.vercel.app/datalist", {
+					params: {
+						device_id: dtbareng.device_id,
+						index_id: dtbareng.index_id,
+					},
+				})
+				.then((res) => {
+					setData((prevState) => ({
+						...prevState,
+						[dtbareng.elementId]: res?.data[0] || "No data",
+					}));
+				})
+				.catch((err) => {
+					console.log("error => ", err);
+				});
+		});
 
-		// Fetch data for khaliwaktu
-		    axios
-		      .get('https://smartfarming2-be.vercel.app/datalist', {
-		        params: {
-		          device_id: 'gxaZkwZafNVweTq8HycMKpZMz9MvbTyh',
-		          index_id: '65792115cc701ed1363c640f',
-		        },
-		      })
-		      .then((res) => {
-		        setDataB((prevState) => ({
-		          ...prevState,
-		          khaliwaktu: res.data,
-		        }));
-		      })
-		      .catch((err) => {
-		        console.log('error => ', err);
-		      });
-		// Fetch data for khalipersen
-		   axios
-		      .get('https://smartfarming2-be.vercel.app/datalist', {
-		        params: {
-		          device_id: 'XniD6mBlnKqagRJ8qD9WhR6JGK4yle1d',
-		          index_id: '65792115cc701ed1363c640f',
-		        },
-		      })
-		      .then((res) => {
-		        setDataB((prevState) => ({
-		          ...prevState,
-		          khalipersen: res.data,
-		        }));
-		      })
-		      .catch((err) => {
-		        console.log('error => ', err);
-		      });
+		// // Fetch data for khaliwaktu
+		//     axios
+		//       .get('https://smartfarming2-be.vercel.app/datalist', {
+		//         params: {
+		//           device_id: 'gxaZkwZafNVweTq8HycMKpZMz9MvbTyh',
+		//           index_id: '65792115cc701ed1363c640f',
+		//         },
+		//       })
+		//       .then((res) => {
+		//         setDataB((prevState) => ({
+		//           ...prevState,
+		//           khaliwaktu: res.data,
+		//         }));
+		//       })
+		//       .catch((err) => {
+		//         console.log('error => ', err);
+		//       });
+		// // Fetch data for khalipersen
+		//    axios
+		//       .get('https://smartfarming2-be.vercel.app/datalist', {
+		//         params: {
+		//           device_id: 'XniD6mBlnKqagRJ8qD9WhR6JGK4yle1d',
+		//           index_id: '65792115cc701ed1363c640f',
+		//         },
+		//       })
+		//       .then((res) => {
+		//         setDataB((prevState) => ({
+		//           ...prevState,
+		//           khalipersen: res.data,
+		//         }));
+		//       })
+		//       .catch((err) => {
+		//         console.log('error => ', err);
+		//       });
 		
 	}, []);
 
@@ -937,7 +937,7 @@ function App() {
 													Bukaan (0-225)
 												</div>
 											</div>
-{/* 											<div className="flex flex-row gap-3 px-2 py-2 justify-between w-full font-medium border-b border-solid border-zinc-100">
+											<div className="flex flex-row gap-3 px-2 py-2 justify-between w-full font-medium border-b border-solid border-zinc-100">
 												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
 													{new Date(
 														dataB?.khaliwaktu?.createdAt
@@ -953,7 +953,7 @@ function App() {
 													<br />
 												</div>
 												
-											</div> */}
+											</div>
 {/* 									                {dataB.khaliwaktu.map((item, index) => (
 									                <div className="flex flex-row gap-3 px-2 py-2 justify-between w-full font-medium border-b border-solid border-zinc-100" key={index} >
 												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
