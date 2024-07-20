@@ -1,0 +1,34 @@
+name: Install react-router-dom
+
+on:
+  push:
+    paths:
+      - '.github/workflows/install-react-router-dom.yml'
+  workflow_dispatch:
+
+jobs:
+  install-react-router-dom:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '14'
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Install react-router-dom
+      run: npm install react-router-dom
+
+    - name: Commit changes
+      run: |
+        git config --global user.name 'github-actions[bot]'
+        git config --global user.email '41898282+github-actions[bot]@users.noreply.github.com'
+        git add package.json package-lock.json
+        git commit -m 'Install react-router-dom'
+        git push
