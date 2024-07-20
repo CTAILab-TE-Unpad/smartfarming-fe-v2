@@ -379,7 +379,7 @@ function App() {
 									</div>
 								</div>
 								<div className="flex flex-col p-9 gap-4 bg-white rounded-[30px] shadow-[0px_10px_60px_rgba(226,236,249,0.5)]">
-									<div className="text-3xl font-semibold tracking-tight text-black text-center">
+{/* 									<div className="text-3xl font-semibold tracking-tight text-black text-center">
 										Sensor ST
 									</div>
 									<div className="flex flex-row justify-between gap-4">
@@ -437,7 +437,7 @@ function App() {
 												).toLocaleTimeString()}
 											</div>
 										</div>
-									</div>
+									</div> */}
 								</div>
 							</section>
 							<section className="flex flex-col mt-10 bg-white overflow-y-hidden rounded-[30px] shadow-[0px_10px_60px_rgba(226,236,249,0.5)] w-full">
@@ -473,11 +473,11 @@ function App() {
 													<br />
 													{soil?.kemaraur1?.value === 0 ? (
 														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-red-600 bg-red-200 border-red-600 bg-opacity-40 max-md:px-5">
-															{"Error"}
+															{"Anomali"}
 														</div>
 													) : (
 														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-emerald-500 border-emerald-500 border-solid bg-teal-500 bg-opacity-40 max-md:px-5">
-															{"Baik"}
+															{"Normal"}
 														</div>
 													)}
 												</div>
@@ -486,11 +486,11 @@ function App() {
 													<br />
 													{soil?.hujanr1?.value === 0 ? (
 														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-red-600 bg-red-200 border-red-600 bg-opacity-40 max-md:px-5">
-															{"Error"}
+															{"Anomali"}
 														</div>
 													) : (
 														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-emerald-500 border-emerald-500 border-solid bg-teal-500 bg-opacity-40 max-md:px-5">
-															{"Baik"}
+															{"Normal"}
 														</div>
 													)}
 												</div>
@@ -499,11 +499,11 @@ function App() {
 													<br />
 													{soil?.manualr1?.value === 0 ? (
 														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-red-600 bg-red-200 border-red-600 bg-opacity-40 max-md:px-5">
-															{"Error"}
+															{"Anomali"}
 														</div>
 													) : (
 														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-emerald-500 border-emerald-500 border-solid bg-teal-500 bg-opacity-40 max-md:px-5">
-															{"Baik"}
+															{"Normal"}
 														</div>
 													)}
 												</div>
@@ -517,11 +517,11 @@ function App() {
 													<br />
 													{soil?.kemaraur2?.value === 0 ? (
 														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-red-600 bg-red-200 border-red-600 bg-opacity-40 max-md:px-5">
-															{"Error"}
+															{"Anomali"}
 														</div>
 													) : (
 														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-emerald-500 border-emerald-500 border-solid bg-teal-500 bg-opacity-40 max-md:px-5">
-															{"Baik"}
+															{"Normal"}
 														</div>
 													)}
 												</div>
@@ -530,11 +530,11 @@ function App() {
 													<br />
 													{soil?.hujanr2?.value === 0 ? (
 														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-red-600 bg-red-200 border-red-600 bg-opacity-40 max-md:px-5">
-															{"Error"}
+															{"Anomali"}
 														</div>
 													) : (
 														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-emerald-500 border-emerald-500 border-solid bg-teal-500 bg-opacity-40 max-md:px-5">
-															{"Baik"}
+															{"Normal"}
 														</div>
 													)}
 												</div>
@@ -543,11 +543,11 @@ function App() {
 													<br />
 													{soil?.manualr2?.value === 0 ? (
 														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-red-600 bg-red-200 border-red-600 bg-opacity-40 max-md:px-5">
-															{"Error"}
+															{"Anomali"}
 														</div>
 													) : (
 														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-emerald-500 border-emerald-500 border-solid bg-teal-500 bg-opacity-40 max-md:px-5">
-															{"Baik"}
+															{"Normal"}
 														</div>
 													)}
 												</div>
@@ -561,11 +561,11 @@ function App() {
 													<br />
 													{soil?.kemaraur3?.value === 0 ? (
 														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-red-600 bg-red-200 border-red-600 bg-opacity-40 max-md:px-5">
-															{"Error"}
+															{"Anomali"}
 														</div>
 													) : (
 														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-emerald-500 border-emerald-500 border-solid bg-teal-500 bg-opacity-40 max-md:px-5">
-															{"Baik"}
+															{"Normal"}
 														</div>
 													)}
 												</div>
@@ -574,11 +574,11 @@ function App() {
 													<br />
 													{soil?.hujanr3?.value === 0 ? (
 														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-red-600 bg-red-200 border-red-600 bg-opacity-40 max-md:px-5">
-															{"Error"}
+															{"Anomali"}
 														</div>
 													) : (
 														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-emerald-500 border-emerald-500 border-solid bg-teal-500 bg-opacity-40 max-md:px-5">
-															{"Baik"}
+															{"Normal"}
 														</div>
 													)}
 												</div>
@@ -587,11 +587,11 @@ function App() {
 													<br />
 													{soil?.manualr3?.value === 0 ? (
 														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-red-600 bg-red-200 border-red-600 bg-opacity-40 max-md:px-5">
-															{"Error"}
+															{"Anomali"}
 														</div>
 													) : (
 														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-emerald-500 border-emerald-500 border-solid bg-teal-500 bg-opacity-40 max-md:px-5">
-															{"Baik"}
+															{"Normal"}
 														</div>
 													)}
 												</div>
@@ -605,11 +605,11 @@ function App() {
 													<br />
 													{soil?.kemaraur4?.value === 0 ? (
 														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-red-600 bg-red-200 border-red-600 bg-opacity-40 max-md:px-5">
-															{"Error"}
+															{"Anomali"}
 														</div>
 													) : (
 														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-emerald-500 border-emerald-500 border-solid bg-teal-500 bg-opacity-40 max-md:px-5">
-															{"Baik"}
+															{"Normal"}
 														</div>
 													)}
 												</div>
@@ -618,11 +618,11 @@ function App() {
 													<br />
 													{soil?.hujanr4?.value === 0 ? (
 														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-red-600 bg-red-200 border-red-600 bg-opacity-40 max-md:px-5">
-															{"Error"}
+															{"Anomali"}
 														</div>
 													) : (
 														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-emerald-500 border-emerald-500 border-solid bg-teal-500 bg-opacity-40 max-md:px-5">
-															{"Baik"}
+															{"Normal"}
 														</div>
 													)}
 												</div>
@@ -631,11 +631,11 @@ function App() {
 													<br />
 													{soil?.manualr4?.value === 0 ? (
 														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-red-600 bg-red-200 border-red-600 bg-opacity-40 max-md:px-5">
-															{"Error"}
+															{"Anomali"}
 														</div>
 													) : (
 														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-emerald-500 border-emerald-500 border-solid bg-teal-500 bg-opacity-40 max-md:px-5">
-															{"Baik"}
+															{"Normal"}
 														</div>
 													)}
 												</div>
@@ -649,11 +649,11 @@ function App() {
 													<br />
 													{soil?.kemaraur5?.value === 0 ? (
 														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-red-600 bg-red-200 border-red-600 bg-opacity-40 max-md:px-5">
-															{"Error"}
+															{"Anomali"}
 														</div>
 													) : (
 														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-emerald-500 border-emerald-500 border-solid bg-teal-500 bg-opacity-40 max-md:px-5">
-															{"Baik"}
+															{"Normal"}
 														</div>
 													)}
 												</div>
@@ -662,11 +662,11 @@ function App() {
 													<br />
 													{soil?.hujanr5?.value === 0 ? (
 														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-red-600 bg-red-200 border-red-600 bg-opacity-40 max-md:px-5">
-															{"Error"}
+															{"Anomali"}
 														</div>
 													) : (
 														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-emerald-500 border-emerald-500 border-solid bg-teal-500 bg-opacity-40 max-md:px-5">
-															{"Baik"}
+															{"Normal"}
 														</div>
 													)}
 												</div>
@@ -675,11 +675,11 @@ function App() {
 													<br />
 													{soil?.manualr5?.value === 0 ? (
 														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-red-600 bg-red-200 border-red-600 bg-opacity-40 max-md:px-5">
-															{"Error"}
+															{"Anomali"}
 														</div>
 													) : (
 														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-emerald-500 border-emerald-500 border-solid bg-teal-500 bg-opacity-40 max-md:px-5">
-															{"Baik"}
+															{"Normal"}
 														</div>
 													)}
 												</div>
@@ -693,11 +693,11 @@ function App() {
 													<br />
 													{soil?.kemaraur6?.value === 0 ? (
 														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-red-600 bg-red-200 border-red-600 bg-opacity-40 max-md:px-5">
-															{"Error"}
+															{"Anomali"}
 														</div>
 													) : (
 														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-emerald-500 border-emerald-500 border-solid bg-teal-500 bg-opacity-40 max-md:px-5">
-															{"Baik"}
+															{"Normal"}
 														</div>
 													)}
 												</div>
@@ -706,11 +706,11 @@ function App() {
 													<br />
 													{soil?.hujanr6?.value === 0 ? (
 														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-red-600 bg-red-200 border-red-600 bg-opacity-40 max-md:px-5">
-															{"Error"}
+															{"Anomali"}
 														</div>
 													) : (
 														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-emerald-500 border-emerald-500 border-solid bg-teal-500 bg-opacity-40 max-md:px-5">
-															{"Baik"}
+															{"Normal"}
 														</div>
 													)}
 												</div>
@@ -719,11 +719,11 @@ function App() {
 													<br />
 													{soil?.manualr6?.value === 0 ? (
 														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-red-600 bg-red-200 border-red-600 bg-opacity-40 max-md:px-5">
-															{"Error"}
+															{"Anomali"}
 														</div>
 													) : (
 														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-emerald-500 border-emerald-500 border-solid bg-teal-500 bg-opacity-40 max-md:px-5">
-															{"Baik"}
+															{"Normal"}
 														</div>
 													)}
 												</div>
@@ -805,7 +805,52 @@ function App() {
 													)}
 												</div>
 											</div>
-											
+											<div className="flex flex-row gap-3 px-2 py-2 justify-between w-full font-medium border-b border-solid border-zinc-100">
+												<div className="font-medium w-full text-center justify-center items-center content-center">
+													ST
+												</div>
+												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
+													Kemarau
+												</div>
+												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
+													{data?.sensorst2?.value}
+												</div>
+												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
+													{data?.sensorst2?.value === 0 ? (
+														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-red-600 bg-red-200 border-red-600 bg-opacity-40 max-md:px-5">
+															{"Anomali"}
+														</div>
+													) : (
+														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-emerald-500 border-emerald-500 border-solid bg-teal-500 bg-opacity-40 max-md:px-5">
+															{"Normal"}
+														</div>
+													)}
+												</div>
+												
+											</div>
+											<div className="flex flex-row gap-3 px-2 py-2 justify-between w-full font-medium border-b border-solid border-zinc-100">
+												<div className="font-medium w-full text-center justify-center items-center content-center">
+													ST
+												</div>
+												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
+													Hujan
+												</div>
+												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
+													{data?.sensorst1?.value}
+												</div>
+												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
+													{data?.sensorst1?.value === 0 ? (
+														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-red-600 bg-red-200 border-red-600 bg-opacity-40 max-md:px-5">
+															{"Anomali"}
+														</div>
+													) : (
+														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-emerald-500 border-emerald-500 border-solid bg-teal-500 bg-opacity-40 max-md:px-5">
+															{"Normal"}
+														</div>
+													)}
+												</div>
+												
+											</div>
 											
 										</div>
 									</div>
