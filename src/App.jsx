@@ -243,63 +243,6 @@ function App() {
 		});
 	}, []);
 
-	useEffect(() => {
-    const canvas = document.getElementById('soilChart');
-    const ctx = canvas.getContext('2d');
-
-    // Clear the canvas
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-    // Set chart properties
-    ctx.lineWidth = 2;
-    ctx.strokeStyle = '#007bff';
-    ctx.fillStyle = '#007bff';
-
-    const labels = ['R1', 'R2', 'R3', 'R4', 'R5', 'R6'];
-    const kemarauData = [
-      soil.kemaraur1?.value,
-      soil.kemaraur2?.value,
-      soil.kemaraur3?.value,
-      soil.kemaraur4?.value,
-      soil.kemaraur5?.value,
-      soil.kemaraur6?.value,
-    ];
-    const hujanData = [
-      soil.hujanr1?.value,
-      soil.hujanr2?.value,
-      soil.hujanr3?.value,
-      soil.hujanr4?.value,
-      soil.hujanr5?.value,
-      soil.hujanr6?.value,
-    ];
-    const manualData = [
-      soil.manualr1?.value,
-      soil.manualr2?.value,
-      soil.manualr3?.value,
-      soil.manualr4?.value,
-      soil.manualr5?.value,
-      soil.manualr6?.value,
-    ];
-
-    const drawLineChart = (data, color) => {
-      ctx.strokeStyle = color;
-      ctx.beginPath();
-      data.forEach((value, index) => {
-        const x = (canvas.width / (labels.length - 1)) * index;
-        const y = canvas.height - value * 10; // Scale the y value
-        if (index === 0) {
-          ctx.moveTo(x, y);
-        } else {
-          ctx.lineTo(x, y);
-        }
-      });
-      ctx.stroke();
-    };
-
-    drawLineChart(kemarauData, 'rgba(75, 192, 192, 1)');
-    drawLineChart(hujanData, 'rgba(54, 162, 235, 1)');
-    drawLineChart(manualData, 'rgba(255, 206, 86, 1)');
-  }, [soil]);
 
 	return (
 		<>
@@ -879,16 +822,6 @@ function App() {
 								</div>
 							</section>
 
-
-							<section className="flex flex-col mt-10 bg-white overflow-y-hidden rounded-[30px] shadow-[0px_10px_60px_rgba(226,236,249,0.5)] w-full">
-						                <div className="flex flex-col w-full p-5">
-						                  <h2 className="text-2xl font-semibold tracking-tight text-black">Soil Data Chart</h2>
-						                  <canvas id="soilChart" width="600" height="400"></canvas>
-						                </div>
-						              </section>
-
-
-							
 						</div>
 					</main>
 				</div>
