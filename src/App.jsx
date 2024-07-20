@@ -766,13 +766,13 @@ function App() {
 													Kemarau
 												</div>
 												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
-													{datasets?.sensorph2?.value}
+													{data?.sensorph2?.value}
 													<br />
 												</div>
 												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
-{/* 													{datasets?.sensorph2?.value} */}
+													
 {/* 													<br /> */}
-													{datasets?.sensorph2?.value === 0 ? (
+													{data?.sensorph2?.value === 0 ? (
 														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-red-600 bg-red-200 border-red-600 bg-opacity-40 max-md:px-5">
 															{"Anomali"}
 														</div>
@@ -791,10 +791,10 @@ function App() {
 													Hujan
 												</div>
 												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
-													{datasets?.sensorph1?.value}
+													{data?.sensorph1?.value}
 												</div>
 												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
-													{datasets?.sensorph1?.value === 0 ? (
+													{data?.sensorph1?.value === 0 ? (
 														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-red-600 bg-red-200 border-red-600 bg-opacity-40 max-md:px-5">
 															{"Anomali"}
 														</div>
