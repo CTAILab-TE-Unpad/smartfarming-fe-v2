@@ -959,7 +959,7 @@ function App() {
 								</div>
 							</section> */}
 
-{/* 							<section className="flex flex-col mt-10 bg-white overflow-y-hidden rounded-[30px] shadow-[0px_10px_60px_rgba(226,236,249,0.5)] w-full">
+							<section className="flex flex-col mt-10 bg-white overflow-y-hidden rounded-[30px] shadow-[0px_10px_60px_rgba(226,236,249,0.5)] w-full">
 						                <div className="flex flex-col w-full p-5">
 						                  <h2 className="text-2xl font-semibold tracking-tight text-black">Data Khaliwaktu dan Khalipersen</h2>
 						                  <div className="flex flex-row gap-3 px-2 py-5 justify-between items-center w-full font-medium text-gray-400 border-b border-solid border-zinc-100">
@@ -987,7 +987,7 @@ function App() {
 						                    </div>
 						                  ))}
 						                </div>
-							</section> */}
+							</section>
 							
 						</div>
 					</main>
