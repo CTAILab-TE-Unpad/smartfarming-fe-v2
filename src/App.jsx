@@ -954,7 +954,7 @@ function App() {
 												</div>
 												
 											</div> */}
-									                {dataB.khaliwaktu.map((item, index) => (
+{/* 									                {dataB.khaliwaktu.map((item, index) => (
 									                <div className="flex flex-row gap-3 px-2 py-2 justify-between w-full font-medium border-b border-solid border-zinc-100" key={index} >
 												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
 													{new Date(item.createdAt).toLocaleDateString()}
@@ -966,7 +966,7 @@ function App() {
 													{dataB.khalipersen[index]?.value}
 												</div>
 											</div>
-											))}
+											))} */}
 									                
 										</div>
 									</div>
