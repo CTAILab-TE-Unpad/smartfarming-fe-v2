@@ -326,7 +326,7 @@ function App() {
 								        />
 								        <div className="my-auto">Dashboard</div>
 								    </div>
-								    <div className="bg-white h-2"></div>
+{/* 								    <div className="bg-white h-2"></div>
 								    <div className="flex gap-3.5">
 								        <img
 								            loading="lazy"
@@ -335,7 +335,7 @@ function App() {
 								            className="shrink-0 w-6 aspect-square"
 								        />
 								        <div className="my-auto">Analytic</div>
-								    </div>
+								    </div> */}
 								</nav>
 
 								
@@ -891,13 +891,22 @@ function App() {
 											</div>
 											<div className="flex flex-row gap-3 px-2 py-5 justify-between items-center w-full font-medium text-gray-400 border-b border-solid border-zinc-100">
 												<div className="font-medium text-gray-400 w-full text-center justify-center items-center">
-													Waktu (s)
+													Waktu
+												</div>
+												<div className="font-medium text-gray-400 w-full text-center justify-center items-center">
+													Durasi (detik)
 												</div>
 												<div className="font-medium text-gray-400 w-full text-center justify-center items-center">
 													Bukaan (0-225)
 												</div>
 											</div>
 											<div className="flex flex-row gap-3 px-2 py-2 justify-between w-full font-medium border-b border-solid border-zinc-100">
+												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
+													{new Date(
+														dataB?.khaliwaktu?.createdAt
+													).toLocaleDateString()}{" "}
+													<br />
+												</div>
 												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
 													{dataB?.khaliwaktu?.value}
 													<br />
