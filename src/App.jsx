@@ -255,7 +255,7 @@ function App() {
 							<h1 className="text-2xl font-medium text-black max-md:max-w-full">
 								Home
 							</h1>
-							<section className="grid grid-cols-3 gap-4 mt-12">
+{/* 							<section className="grid grid-cols-3 gap-4 mt-12">
 								<div className="flex flex-col p-9 gap-4 bg-white rounded-[30px] shadow-[0px_10px_60px_rgba(226,236,249,0.5)]">
 									<div className="text-3xl font-semibold tracking-tight text-black text-center">
 										Sensor NPK
@@ -379,7 +379,7 @@ function App() {
 									</div>
 								</div>
 								<div className="flex flex-col p-9 gap-4 bg-white rounded-[30px] shadow-[0px_10px_60px_rgba(226,236,249,0.5)]">
-{/* 									<div className="text-3xl font-semibold tracking-tight text-black text-center">
+									<div className="text-3xl font-semibold tracking-tight text-black text-center">
 										Sensor ST
 									</div>
 									<div className="flex flex-row justify-between gap-4">
@@ -437,9 +437,9 @@ function App() {
 												).toLocaleTimeString()}
 											</div>
 										</div>
-									</div> */}
+									</div>
 								</div>
-							</section>
+							</section> */}
 							<section className="flex flex-col mt-10 bg-white overflow-y-hidden rounded-[30px] shadow-[0px_10px_60px_rgba(226,236,249,0.5)] w-full">
 								<div className="flex flex-col w-full p-5">
 									<div className="flex gap-5 text-sm tracking-normal w-full">
