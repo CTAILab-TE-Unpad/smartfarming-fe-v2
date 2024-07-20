@@ -5,12 +5,32 @@ const datasets = [
 	{
 		device_id: "GDdR9vUe3yXQWcfhP6grCLK74ZV4QZFL",
 		index_id: "6280a8275a0c89673d266100",
-		elementId: "sensornpk1",
+		elementId: "sensorn1",
 	},
 	{
 		device_id: "gxaZkwZafNVweTq8HycMKpZMz9MvbTyh",
 		index_id: "6280a8275a0c89673d266100",
-		elementId: "sensornpk2",
+		elementId: "sensorn2",
+	},
+	{
+		device_id: "GDdR9vUe3yXQWcfhP6grCLK74ZV4QZFL",
+		index_id: "6280a8465a0c89673d266101",
+		elementId: "sensorp1",
+	},
+	{
+		device_id: "gxaZkwZafNVweTq8HycMKpZMz9MvbTyh",
+		index_id: "6280a8465a0c89673d266101",
+		elementId: "sensorp2",
+	},
+	{
+		device_id: "GDdR9vUe3yXQWcfhP6grCLK74ZV4QZFL",
+		index_id: "6280a8505a0c89673d266102",
+		elementId: "sensork1",
+	},
+	{
+		device_id: "gxaZkwZafNVweTq8HycMKpZMz9MvbTyh",
+		index_id: "6280a8505a0c89673d266102",
+		elementId: "sensork2",
 	},
 	{
 		device_id: "D8fRCvhyRWUNtzfWuhbdb9q5azNkrE4g",
@@ -31,6 +51,21 @@ const datasets = [
 		device_id: "J3c6xgg64gyL8pJ5uCZw69Ec4FJBj97R",
 		index_id: "6142a70446514f50ff8ed6a8",
 		elementId: "sensorst2",
+	},
+	{
+		device_id: "AMJ6RHSdwf4XMv2dhPRh8hxnE92exg7U",
+		index_id: "638d8677245a8f9cc00b4bcc",
+		elementId: "sensordht",
+	},
+	{
+		device_id: "fPMkkgECQndBCs7eFtha09uy57Qv8Xks",
+		index_id: "6129bfebdb963d1d1eaac307",
+		elementId: "sensortds1",
+	},
+	{
+		device_id: "wqZeXsBhFSL6CLzfaUjJsnavudV3WvL7",
+		index_id: "6129bfebdb963d1d1eaac307",
+		elementId: "sensortds2",
 	},
 ];
 
@@ -129,12 +164,19 @@ const datasoil = [
 ];
 function App() {
 	const [data, setData] = React.useState({
-		sensornpk1: null,
-		sensornpk2: null,
+		sensorn1: null,
+		sensorn2: null,
+		sensorp1: null,
+		sensorp2: null,
+		sensork1: null,
+		sensork2: null,
 		sensorph1: null,
 		sensorph2: null,
 		sensorst1: null,
 		sensorst2: null,
+		sensordht: null,
+		sensortds1: null,
+		sensortds2: null,
 	});
 
 	const [soil, setSoil] = React.useState({
@@ -226,6 +268,7 @@ function App() {
 										/>
 										<div className="my-auto">Dashboard</div>
 									</div>
+									<br />
 									<div className="flex gap-3.5">
 										<img
 											loading="lazy"
@@ -714,21 +757,21 @@ function App() {
 													Kemarau
 												</div>
 												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
-													{data?.sensorph2?.value}
+													{data?.sensorn2?.value}
 													<br />
 												</div>
 												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
-													{data?.sensorph2?.value}
+													{data?.sensorp2?.value}
 													<br />
 												</div>
 												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
-													{data?.sensorph2?.value}
+													{data?.sensork2?.value}
 													<br />
 												</div>
 												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
 													
 {/* 													<br /> */}
-													{data?.sensorph2?.value === 0 ? (
+													{data?.sensorn2?.value === 0 ? (
 														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-red-600 bg-red-200 border-red-600 bg-opacity-40 max-md:px-5">
 															{"Anomali"}
 														</div>
@@ -741,24 +784,24 @@ function App() {
 											</div>
 											<div className="flex flex-row gap-3 px-2 py-2 justify-between w-full font-medium border-b border-solid border-zinc-100">
 												<div className="font-medium w-full text-center justify-center items-center content-center">
-													Kemarau
+													Hujan
 												</div>
 												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
-													{data?.sensorph2?.value}
+													{data?.sensorn1?.value}
 													<br />
 												</div>
 												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
-													{data?.sensorph2?.value}
+													{data?.sensorp1?.value}
 													<br />
 												</div>
 												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
-													{data?.sensorph2?.value}
+													{data?.sensork1?.value}
 													<br />
 												</div>
 												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
 													
 {/* 													<br /> */}
-													{data?.sensorph2?.value === 0 ? (
+													{data?.sensorn1?.value === 0 ? (
 														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-red-600 bg-red-200 border-red-600 bg-opacity-40 max-md:px-5">
 															{"Anomali"}
 														</div>
