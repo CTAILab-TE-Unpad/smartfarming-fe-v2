@@ -162,10 +162,7 @@ const datasoil = [
 		elementId: "manualr6",
 	},
 ];
-
 function App() {
-	const [page, setPage] = React.useState('home'); // State untuk menentukan halaman
-
 	const [data, setData] = React.useState({
 		sensorn1: null,
 		sensorn2: null,
@@ -245,106 +242,6 @@ function App() {
 		});
 	}, []);
 
-	const renderContent = () => {
-		if (page === 'home') {
-			return (
-				<div className="flex flex-col mt-4 max-md:mt-10 max-md:max-w-full">
-					<h1 className="text-2xl font-medium text-black max-md:max-w-full">
-						Home
-					</h1>
-					<section className="flex flex-col mt-10 bg-white overflow-y-hidden rounded-[30px] shadow-[0px_10px_60px_rgba(226,236,249,0.5)] w-full">
-						<div className="flex flex-col w-full p-5">
-							<div className="flex gap-5 text-sm tracking-normal w-full">
-								<div className="flex flex-col gap-3 w-full">
-									<h2 className="text-2xl font-semibold tracking-tight text-black">
-										Soil Moisture
-									</h2>
-									<div className="text-teal-500">
-										sensor kelembaban tanah
-									</div>
-									<div className="flex flex-row gap-3 px-2 py-5 justify-between items-center w-full font-medium text-gray-400 border-b border-solid border-zinc-100">
-										<div className="font-medium text-gray-400 w-full text-center justify-center items-center">
-											Baris
-										</div>
-										<div className="font-medium text-gray-400 w-full text-center justify-center items-center">
-											Kemarau
-										</div>
-										<div className="font-medium text-gray-400 w-full text-center justify-center items-center">
-											Hujan
-										</div>
-										<div className="font-medium text-gray-400 w-full text-center justify-center items-center">
-											Manual
-										</div>
-									</div>
-									<div className="flex flex-row gap-3 px-2 py-2 justify-between w-full font-medium border-b border-solid border-zinc-100">
-										<div className="font-medium w-full text-center justify-center items-center content-center">
-											R1
-										</div>
-										<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
-											{soil?.kemaraur1?.value}
-											<br />
-											{soil?.kemaraur1?.value === 0 ? (
-												<div className="justify-center px-3 py-1 w-24 text-center rounded border text-red-600 bg-red-200 border-red-600 bg-opacity-40 max-md:px-5">
-													{"Anomali"}
-												</div>
-											) : (
-												<div className="justify-center px-3 py-1 w-24 text-center rounded border text-emerald-500 border-emerald-500 border-solid bg-teal-500 bg-opacity-40 max-md:px-5">
-													{"Normal"}
-												</div>
-											)}
-										</div>
-										<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
-											{soil?.hujanr1?.value}
-											<br />
-											{soil?.hujanr1?.value === 0 ? (
-												<div className="justify-center px-3 py-1 w-24 text-center rounded border text-red-600 bg-red-200 border-red-600 bg-opacity-40 max-md:px-5">
-													{"Anomali"}
-												</div>
-											) : (
-												<div className="justify-center px-3 py-1 w-24 text-center rounded border text-emerald-500 border-emerald-500 border-solid bg-teal-500 bg-opacity-40 max-md:px-5">
-													{"Normal"}
-												</div>
-											)}
-										</div>
-										<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
-											{soil?.manualr1?.value}
-											<br />
-											{soil?.manualr1?.value === 0 ? (
-												<div className="justify-center px-3 py-1 w-24 text-center rounded border text-red-600 bg-red-200 border-red-600 bg-opacity-40 max-md:px-5">
-													{"Anomali"}
-												</div>
-											) : (
-												<div className="justify-center px-3 py-1 w-24 text-center rounded border text-emerald-500 border-emerald-500 border-solid bg-teal-500 bg-opacity-40 max-md:px-5">
-													{"Normal"}
-												</div>
-											)}
-										</div>
-									</div>
-									// More content
-								</div>
-							</div>
-						</div>
-					</section>
-				</div>
-			);
-		} else if (page === 'analytic') {
-			return (
-				<div className="flex flex-col mt-4 max-md:mt-10 max-md:max-w-full">
-					<h1 className="text-2xl font-medium text-black max-md:max-w-full">
-						Analytic
-					</h1>
-					<section className="flex flex-col mt-10 bg-white overflow-y-hidden rounded-[30px] shadow-[0px_10px_60px_rgba(226,236,249,0.5)] w-full">
-						<div className="flex flex-col w-full p-5">
-							<h2 className="text-2xl font-semibold tracking-tight text-black">
-								This is the Analytic Page
-							</h2>
-						</div>
-					</section>
-				</div>
-			);
-		}
-	};
-
 	return (
 		<>
 			<div className="py-10 pr-20 pl-6 h-screen bg-slate-50 max-md:px-5">
@@ -362,25 +259,25 @@ function App() {
 							</div>
 							<div className="flex flex-col justify-between h-full">
 								<nav className="flex flex-col gap-5 p-3 mt-6 w-full text-sm font-medium tracking-normal text-white bg-green-800 rounded-lg">
-									<div className="flex gap-3.5">
-										<img
-											loading="lazy"
-											src="https://cdn.builder.io/api/v1/image/assets/TEMP/7a3ccde314faf3075248c175cc423bf1ed4941a06ebc81574783391ced639f90?apiKey=d03d160494014eaf8a1af94dd934f586&"
-											alt=""
-											className="shrink-0 w-6 aspect-square"
-										/>
-										<div className="my-auto">Dashboard</div>
-									</div>
-									<div className="bg-white h-2"></div>
-									<div onClick={() => setPage('analytic')} className="flex gap-3.5 cursor-pointer">
-										<img
-											loading="lazy"
-											src="https://cdn.builder.io/api/v1/image/assets/TEMP/7a3ccde314faf3075248c175cc423bf1ed4941a06ebc81574783391ced639f90?apiKey=d03d160494014eaf8a1af94dd934f586&"
-											alt=""
-											className="shrink-0 w-6 aspect-square"
-										/>
-										<div className="my-auto">Analytic</div>
-									</div>
+								    <div className="flex gap-3.5">
+								        <img
+								            loading="lazy"
+								            src="https://cdn.builder.io/api/v1/image/assets/TEMP/7a3ccde314faf3075248c175cc423bf1ed4941a06ebc81574783391ced639f90?apiKey=d03d160494014eaf8a1af94dd934f586&"
+								            alt=""
+								            className="shrink-0 w-6 aspect-square"
+								        />
+								        <div className="my-auto">Dashboard</div>
+								    </div>
+								    <div className="bg-white h-2"></div>
+								    <div className="flex gap-3.5">
+								        <img
+								            loading="lazy"
+								            src="https://cdn.builder.io/api/v1/image/assets/TEMP/7a3ccde314faf3075248c175cc423bf1ed4941a06ebc81574783391ced639f90?apiKey=d03d160494014eaf8a1af94dd934f586&"
+								            alt=""
+								            className="shrink-0 w-6 aspect-square"
+								        />
+								        <div className="my-auto">Analytic</div>
+								    </div>
 								</nav>
 
 								
@@ -408,7 +305,522 @@ function App() {
 						</div>
 					</aside>
 					<main className="flex flex-col max-h-[calc(100vh-10rem)] overflow-y-auto hide-scrollbar ml-5 w-[80%] max-md:ml-0 max-md:w-full">
-						{renderContent()}
+						<div className="flex flex-col mt-4 max-md:mt-10 max-md:max-w-full">
+							<h1 className="text-2xl font-medium text-black max-md:max-w-full">
+								Home
+							</h1>
+							<section className="flex flex-col mt-10 bg-white overflow-y-hidden rounded-[30px] shadow-[0px_10px_60px_rgba(226,236,249,0.5)] w-full">
+								<div className="flex flex-col w-full p-5">
+									<div className="flex gap-5 text-sm tracking-normal w-full">
+										<div className="flex flex-col gap-3 w-full">
+											<h2 className="text-2xl font-semibold tracking-tight text-black">
+												Soil Moisture
+											</h2>
+											<div className="text-teal-500">
+												sensor kelembaban tanah
+											</div>
+											<div className="flex flex-row gap-3 px-2 py-5 justify-between items-center w-full font-medium text-gray-400 border-b border-solid border-zinc-100">
+												<div className="font-medium text-gray-400 w-full text-center justify-center items-center">
+													Baris
+												</div>
+												<div className="font-medium text-gray-400 w-full text-center justify-center items-center">
+													Kemarau
+												</div>
+												<div className="font-medium text-gray-400 w-full text-center justify-center items-center">
+													Hujan
+												</div>
+												<div className="font-medium text-gray-400 w-full text-center justify-center items-center">
+													Manual
+												</div>
+											</div>
+											<div className="flex flex-row gap-3 px-2 py-2 justify-between w-full font-medium border-b border-solid border-zinc-100">
+												<div className="font-medium w-full text-center justify-center items-center content-center">
+													R1
+												</div>
+												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
+													{soil?.kemaraur1?.value}
+													<br />
+													{soil?.kemaraur1?.value === 0 ? (
+														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-red-600 bg-red-200 border-red-600 bg-opacity-40 max-md:px-5">
+															{"Anomali"}
+														</div>
+													) : (
+														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-emerald-500 border-emerald-500 border-solid bg-teal-500 bg-opacity-40 max-md:px-5">
+															{"Normal"}
+														</div>
+													)}
+												</div>
+												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
+													{soil?.hujanr1?.value}
+													<br />
+													{soil?.hujanr1?.value === 0 ? (
+														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-red-600 bg-red-200 border-red-600 bg-opacity-40 max-md:px-5">
+															{"Anomali"}
+														</div>
+													) : (
+														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-emerald-500 border-emerald-500 border-solid bg-teal-500 bg-opacity-40 max-md:px-5">
+															{"Normal"}
+														</div>
+													)}
+												</div>
+												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
+													{soil?.manualr1?.value}
+													<br />
+													{soil?.manualr1?.value === 0 ? (
+														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-red-600 bg-red-200 border-red-600 bg-opacity-40 max-md:px-5">
+															{"Anomali"}
+														</div>
+													) : (
+														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-emerald-500 border-emerald-500 border-solid bg-teal-500 bg-opacity-40 max-md:px-5">
+															{"Normal"}
+														</div>
+													)}
+												</div>
+											</div>
+											<div className="flex flex-row gap-3 px-2 py-2 justify-between w-full font-medium border-b border-solid border-zinc-100">
+												<div className="font-medium w-full text-center justify-center items-center content-center">
+													R2
+												</div>
+												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
+													{soil?.kemaraur2?.value}
+													<br />
+													{soil?.kemaraur2?.value === 0 ? (
+														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-red-600 bg-red-200 border-red-600 bg-opacity-40 max-md:px-5">
+															{"Anomali"}
+														</div>
+													) : (
+														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-emerald-500 border-emerald-500 border-solid bg-teal-500 bg-opacity-40 max-md:px-5">
+															{"Normal"}
+														</div>
+													)}
+												</div>
+												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
+													{soil?.hujanr2?.value}
+													<br />
+													{soil?.hujanr2?.value === 0 ? (
+														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-red-600 bg-red-200 border-red-600 bg-opacity-40 max-md:px-5">
+															{"Anomali"}
+														</div>
+													) : (
+														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-emerald-500 border-emerald-500 border-solid bg-teal-500 bg-opacity-40 max-md:px-5">
+															{"Normal"}
+														</div>
+													)}
+												</div>
+												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
+													{soil?.manualr2?.value}
+													<br />
+													{soil?.manualr2?.value === 0 ? (
+														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-red-600 bg-red-200 border-red-600 bg-opacity-40 max-md:px-5">
+															{"Anomali"}
+														</div>
+													) : (
+														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-emerald-500 border-emerald-500 border-solid bg-teal-500 bg-opacity-40 max-md:px-5">
+															{"Normal"}
+														</div>
+													)}
+												</div>
+											</div>
+											<div className="flex flex-row gap-3 px-2 py-2 justify-between w-full font-medium border-b border-solid border-zinc-100">
+												<div className="font-medium w-full text-center justify-center items-center content-center">
+													R3
+												</div>
+												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
+													{soil?.kemaraur3?.value}
+													<br />
+													{soil?.kemaraur3?.value === 0 ? (
+														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-red-600 bg-red-200 border-red-600 bg-opacity-40 max-md:px-5">
+															{"Anomali"}
+														</div>
+													) : (
+														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-emerald-500 border-emerald-500 border-solid bg-teal-500 bg-opacity-40 max-md:px-5">
+															{"Normal"}
+														</div>
+													)}
+												</div>
+												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
+													{soil?.hujanr3?.value}
+													<br />
+													{soil?.hujanr3?.value === 0 ? (
+														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-red-600 bg-red-200 border-red-600 bg-opacity-40 max-md:px-5">
+															{"Anomali"}
+														</div>
+													) : (
+														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-emerald-500 border-emerald-500 border-solid bg-teal-500 bg-opacity-40 max-md:px-5">
+															{"Normal"}
+														</div>
+													)}
+												</div>
+												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
+													{soil?.manualr3?.value}
+													<br />
+													{soil?.manualr3?.value === 0 ? (
+														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-red-600 bg-red-200 border-red-600 bg-opacity-40 max-md:px-5">
+															{"Anomali"}
+														</div>
+													) : (
+														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-emerald-500 border-emerald-500 border-solid bg-teal-500 bg-opacity-40 max-md:px-5">
+															{"Normal"}
+														</div>
+													)}
+												</div>
+											</div>
+											<div className="flex flex-row gap-3 px-2 py-2 justify-between w-full font-medium border-b border-solid border-zinc-100">
+												<div className="font-medium w-full text-center justify-center items-center content-center">
+													R4
+												</div>
+												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
+													{soil?.kemaraur4?.value}
+													<br />
+													{soil?.kemaraur4?.value === 0 ? (
+														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-red-600 bg-red-200 border-red-600 bg-opacity-40 max-md:px-5">
+															{"Anomali"}
+														</div>
+													) : (
+														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-emerald-500 border-emerald-500 border-solid bg-teal-500 bg-opacity-40 max-md:px-5">
+															{"Normal"}
+														</div>
+													)}
+												</div>
+												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
+													{soil?.hujanr4?.value}
+													<br />
+													{soil?.hujanr4?.value === 0 ? (
+														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-red-600 bg-red-200 border-red-600 bg-opacity-40 max-md:px-5">
+															{"Anomali"}
+														</div>
+													) : (
+														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-emerald-500 border-emerald-500 border-solid bg-teal-500 bg-opacity-40 max-md:px-5">
+															{"Normal"}
+														</div>
+													)}
+												</div>
+												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
+													{soil?.manualr4?.value}
+													<br />
+													{soil?.manualr4?.value === 0 ? (
+														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-red-600 bg-red-200 border-red-600 bg-opacity-40 max-md:px-5">
+															{"Anomali"}
+														</div>
+													) : (
+														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-emerald-500 border-emerald-500 border-solid bg-teal-500 bg-opacity-40 max-md:px-5">
+															{"Normal"}
+														</div>
+													)}
+												</div>
+											</div>
+											<div className="flex flex-row gap-3 px-2 py-2 justify-between w-full font-medium border-b border-solid border-zinc-100">
+												<div className="font-medium w-full text-center justify-center items-center content-center">
+													R5
+												</div>
+												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
+													{soil?.kemaraur5?.value}
+													<br />
+													{soil?.kemaraur5?.value === 0 ? (
+														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-red-600 bg-red-200 border-red-600 bg-opacity-40 max-md:px-5">
+															{"Anomali"}
+														</div>
+													) : (
+														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-emerald-500 border-emerald-500 border-solid bg-teal-500 bg-opacity-40 max-md:px-5">
+															{"Normal"}
+														</div>
+													)}
+												</div>
+												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
+													{soil?.hujanr5?.value}
+													<br />
+													{soil?.hujanr5?.value === 0 ? (
+														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-red-600 bg-red-200 border-red-600 bg-opacity-40 max-md:px-5">
+															{"Anomali"}
+														</div>
+													) : (
+														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-emerald-500 border-emerald-500 border-solid bg-teal-500 bg-opacity-40 max-md:px-5">
+															{"Normal"}
+														</div>
+													)}
+												</div>
+												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
+													{soil?.manualr5?.value}
+													<br />
+													{soil?.manualr5?.value === 0 ? (
+														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-red-600 bg-red-200 border-red-600 bg-opacity-40 max-md:px-5">
+															{"Anomali"}
+														</div>
+													) : (
+														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-emerald-500 border-emerald-500 border-solid bg-teal-500 bg-opacity-40 max-md:px-5">
+															{"Normal"}
+														</div>
+													)}
+												</div>
+											</div>
+											<div className="flex flex-row gap-3 px-2 py-2 justify-between w-full font-medium border-b border-solid border-zinc-100">
+												<div className="font-medium w-full text-center justify-center items-center content-center">
+													R6
+												</div>
+												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
+													{soil?.kemaraur6?.value}
+													<br />
+													{soil?.kemaraur6?.value === 0 ? (
+														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-red-600 bg-red-200 border-red-600 bg-opacity-40 max-md:px-5">
+															{"Anomali"}
+														</div>
+													) : (
+														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-emerald-500 border-emerald-500 border-solid bg-teal-500 bg-opacity-40 max-md:px-5">
+															{"Normal"}
+														</div>
+													)}
+												</div>
+												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
+													{soil?.hujanr6?.value}
+													<br />
+													{soil?.hujanr6?.value === 0 ? (
+														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-red-600 bg-red-200 border-red-600 bg-opacity-40 max-md:px-5">
+															{"Anomali"}
+														</div>
+													) : (
+														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-emerald-500 border-emerald-500 border-solid bg-teal-500 bg-opacity-40 max-md:px-5">
+															{"Normal"}
+														</div>
+													)}
+												</div>
+												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
+													{soil?.manualr6?.value}
+													<br />
+													{soil?.manualr6?.value === 0 ? (
+														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-red-600 bg-red-200 border-red-600 bg-opacity-40 max-md:px-5">
+															{"Anomali"}
+														</div>
+													) : (
+														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-emerald-500 border-emerald-500 border-solid bg-teal-500 bg-opacity-40 max-md:px-5">
+															{"Normal"}
+														</div>
+													)}
+												</div>
+											</div>
+											
+										</div>
+									</div>
+								</div>
+							</section>
+
+							<section className="flex flex-col mt-10 bg-white overflow-y-hidden rounded-[30px] shadow-[0px_10px_60px_rgba(226,236,249,0.5)] w-full">
+								<div className="flex flex-col w-full p-5">
+									<div className="flex gap-5 text-sm tracking-normal w-full">
+										<div className="flex flex-col gap-3 w-full">
+											<h2 className="text-2xl font-semibold tracking-tight text-black">
+												PH dan Suhu Tanah
+											</h2>
+											<div className="text-teal-500">
+												nilai PH dan suhu pada tanah
+											</div>
+											<div className="flex flex-row gap-3 px-2 py-5 justify-between items-center w-full font-medium text-gray-400 border-b border-solid border-zinc-100">
+												<div className="font-medium text-gray-400 w-full text-center justify-center items-center">
+													Sensor
+												</div>
+												<div className="font-medium text-gray-400 w-full text-center justify-center items-center">
+													Bedeng
+												</div>
+												<div className="font-medium text-gray-400 w-full text-center justify-center items-center">
+													Nilai
+												</div>
+												<div className="font-medium text-gray-400 w-full text-center justify-center items-center">
+													Status
+												</div>
+											</div>
+											<div className="flex flex-row gap-3 px-2 py-2 justify-between w-full font-medium border-b border-solid border-zinc-100">
+												<div className="font-medium w-full text-center justify-center items-center content-center">
+													PH
+												</div>
+												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
+													Kemarau
+												</div>
+												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
+													{data?.sensorph2?.value}
+													<br />
+												</div>
+												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
+													
+{/* 													<br /> */}
+													{data?.sensorph2?.value === 0 ? (
+														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-red-600 bg-red-200 border-red-600 bg-opacity-40 max-md:px-5">
+															{"Anomali"}
+														</div>
+													) : (
+														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-emerald-500 border-emerald-500 border-solid bg-teal-500 bg-opacity-40 max-md:px-5">
+															{"Normal"}
+														</div>
+													)}
+												</div>
+											</div>
+											<div className="flex flex-row gap-3 px-2 py-2 justify-between w-full font-medium border-b border-solid border-zinc-100">
+												<div className="font-medium w-full text-center justify-center items-center content-center">
+													PH
+												</div>
+												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
+													Hujan
+												</div>
+												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
+													{data?.sensorph1?.value}
+												</div>
+												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
+													{data?.sensorph1?.value === 0 ? (
+														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-red-600 bg-red-200 border-red-600 bg-opacity-40 max-md:px-5">
+															{"Anomali"}
+														</div>
+													) : (
+														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-emerald-500 border-emerald-500 border-solid bg-teal-500 bg-opacity-40 max-md:px-5">
+															{"Normal"}
+														</div>
+													)}
+												</div>
+											</div>
+											<div className="flex flex-row gap-3 px-2 py-2 justify-between w-full font-medium border-b border-solid border-zinc-100">
+												<div className="font-medium w-full text-center justify-center items-center content-center">
+													ST
+												</div>
+												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
+													Kemarau
+												</div>
+												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
+													{data?.sensorst2?.value}
+												</div>
+												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
+													{data?.sensorst2?.value === 0 ? (
+														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-red-600 bg-red-200 border-red-600 bg-opacity-40 max-md:px-5">
+															{"Anomali"}
+														</div>
+													) : (
+														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-emerald-500 border-emerald-500 border-solid bg-teal-500 bg-opacity-40 max-md:px-5">
+															{"Normal"}
+														</div>
+													)}
+												</div>
+												
+											</div>
+											<div className="flex flex-row gap-3 px-2 py-2 justify-between w-full font-medium border-b border-solid border-zinc-100">
+												<div className="font-medium w-full text-center justify-center items-center content-center">
+													ST
+												</div>
+												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
+													Hujan
+												</div>
+												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
+													{data?.sensorst1?.value}
+												</div>
+												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
+													{data?.sensorst1?.value === 0 ? (
+														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-red-600 bg-red-200 border-red-600 bg-opacity-40 max-md:px-5">
+															{"Anomali"}
+														</div>
+													) : (
+														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-emerald-500 border-emerald-500 border-solid bg-teal-500 bg-opacity-40 max-md:px-5">
+															{"Normal"}
+														</div>
+													)}
+												</div>
+												
+											</div>
+											
+										</div>
+									</div>
+								</div>
+							</section>
+
+							<section className="flex flex-col mt-10 bg-white overflow-y-hidden rounded-[30px] shadow-[0px_10px_60px_rgba(226,236,249,0.5)] w-full">
+								<div className="flex flex-col w-full p-5">
+									<div className="flex gap-5 text-sm tracking-normal w-full">
+										<div className="flex flex-col gap-3 w-full">
+											<h2 className="text-2xl font-semibold tracking-tight text-black">
+												Sensor NPK
+											</h2>
+											<div className="text-teal-500">
+												Nilai NPK pada tanah
+											</div>
+											<div className="flex flex-row gap-3 px-2 py-5 justify-between items-center w-full font-medium text-gray-400 border-b border-solid border-zinc-100">
+												<div className="font-medium text-gray-400 w-full text-center justify-center items-center">
+													Bedeng
+												</div>
+												<div className="font-medium text-gray-400 w-full text-center justify-center items-center">
+													N
+												</div>
+												<div className="font-medium text-gray-400 w-full text-center justify-center items-center">
+													P
+												</div>
+												<div className="font-medium text-gray-400 w-full text-center justify-center items-center">
+													K
+												</div>
+												<div className="font-medium text-gray-400 w-full text-center justify-center items-center">
+													Status
+												</div>
+											</div>
+											<div className="flex flex-row gap-3 px-2 py-2 justify-between w-full font-medium border-b border-solid border-zinc-100">
+												<div className="font-medium w-full text-center justify-center items-center content-center">
+													Kemarau
+												</div>
+												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
+													{data?.sensorn2?.value}
+													<br />
+												</div>
+												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
+													{data?.sensorp2?.value}
+													<br />
+												</div>
+												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
+													{data?.sensork2?.value}
+													<br />
+												</div>
+												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
+													
+{/* 													<br /> */}
+													{data?.sensorn2?.value === 0 ? (
+														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-red-600 bg-red-200 border-red-600 bg-opacity-40 max-md:px-5">
+															{"Anomali"}
+														</div>
+													) : (
+														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-emerald-500 border-emerald-500 border-solid bg-teal-500 bg-opacity-40 max-md:px-5">
+															{"Normal"}
+														</div>
+													)}
+												</div>
+											</div>
+											<div className="flex flex-row gap-3 px-2 py-2 justify-between w-full font-medium border-b border-solid border-zinc-100">
+												<div className="font-medium w-full text-center justify-center items-center content-center">
+													Hujan
+												</div>
+												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
+													{data?.sensorn1?.value}
+													<br />
+												</div>
+												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
+													{data?.sensorp1?.value}
+													<br />
+												</div>
+												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
+													{data?.sensork1?.value}
+													<br />
+												</div>
+												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
+													
+{/* 													<br /> */}
+													{data?.sensorn1?.value === 0 ? (
+														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-red-600 bg-red-200 border-red-600 bg-opacity-40 max-md:px-5">
+															{"Anomali"}
+														</div>
+													) : (
+														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-emerald-500 border-emerald-500 border-solid bg-teal-500 bg-opacity-40 max-md:px-5">
+															{"Normal"}
+														</div>
+													)}
+												</div>
+											</div>
+											
+											
+										</div>
+									</div>
+								</div>
+							</section>
+							
+						</div>
 					</main>
 				</div>
 			</div>
@@ -417,4 +829,3 @@ function App() {
 }
 
 export default App;
-
