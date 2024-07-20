@@ -916,7 +916,7 @@ function App() {
 							</section>
 
 
-{/* 							<section className="flex flex-col mt-10 bg-white overflow-y-hidden rounded-[30px] shadow-[0px_10px_60px_rgba(226,236,249,0.5)] w-full">
+							<section className="flex flex-col mt-10 bg-white overflow-y-hidden rounded-[30px] shadow-[0px_10px_60px_rgba(226,236,249,0.5)] w-full">
 								<div className="flex flex-col w-full p-5">
 									<div className="flex gap-5 text-sm tracking-normal w-full">
 										<div className="flex flex-col gap-3 w-full">
@@ -937,7 +937,7 @@ function App() {
 													Bukaan (0-225)
 												</div>
 											</div>
-											<div className="flex flex-row gap-3 px-2 py-2 justify-between w-full font-medium border-b border-solid border-zinc-100">
+{/* 											<div className="flex flex-row gap-3 px-2 py-2 justify-between w-full font-medium border-b border-solid border-zinc-100">
 												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
 													{new Date(
 														dataB?.khaliwaktu?.createdAt
@@ -953,13 +953,27 @@ function App() {
 													<br />
 												</div>
 												
+											</div> */}
+									                {dataB.khaliwaktu.map((item, index) => (
+									                <div className="flex flex-row gap-3 px-2 py-2 justify-between w-full font-medium border-b border-solid border-zinc-100" key={index} >
+												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
+													{new Date(item.createdAt).toLocaleDateString()}
+												</div>
+												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
+													{item.value}
+												</div>
+												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
+													{dataB.khalipersen[index]?.value}
+												</div>
 											</div>
+											))}
+									                
 										</div>
 									</div>
 								</div>
-							</section> */}
+							</section>
 
-							<section className="flex flex-col mt-10 bg-white overflow-y-hidden rounded-[30px] shadow-[0px_10px_60px_rgba(226,236,249,0.5)] w-full">
+{/* 							<section className="flex flex-col mt-10 bg-white overflow-y-hidden rounded-[30px] shadow-[0px_10px_60px_rgba(226,236,249,0.5)] w-full">
 						                <div className="flex flex-col w-full p-5">
 						                  <h2 className="text-2xl font-semibold tracking-tight text-black">Data Khaliwaktu dan Khalipersen</h2>
 						                  <div className="flex flex-row gap-3 px-2 py-5 justify-between items-center w-full font-medium text-gray-400 border-b border-solid border-zinc-100">
@@ -987,7 +1001,7 @@ function App() {
 						                    </div>
 						                  ))}
 						                </div>
-							</section>
+							</section> */}
 							
 						</div>
 					</main>
