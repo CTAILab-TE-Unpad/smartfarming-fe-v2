@@ -67,31 +67,31 @@ const datasets = [
 		index_id: "6129bfebdb963d1d1eaac307",
 		elementId: "sensortds2",
 	},
-	{
-		device_id: "gxaZkwZafNVweTq8HycMKpZMz9MvbTyh",
-		index_id: "65792115cc701ed1363c640f",
-		elementId: "khaliwaktu",
-	},
-	{
-		device_id: "XniD6mBlnKqagRJ8qD9WhR6JGK4yle1d",
-		index_id: "65792115cc701ed1363c640f",
-		elementId: "khalipersen",
-	},
-	{
-		device_id: "ODw83libBAixNsPMGTmqQer2gn2mZrOC",
-		index_id: "6280a8465a0c89673d266101",
-		elementId: "musan1",
-	},
-	{
-		device_id: "ODw83libBAixNsPMGTmqQer2gn2mZrOC",
-		index_id: "6280a8275a0c89673d266100",
-		elementId: "musap1",
-	},
-	{
-		device_id: "ODw83libBAixNsPMGTmqQer2gn2mZrOC",
-		index_id: "6280a8505a0c89673d266102",
-		elementId: "musak1",
-	},
+	// {
+	// 	device_id: "gxaZkwZafNVweTq8HycMKpZMz9MvbTyh",
+	// 	index_id: "65792115cc701ed1363c640f",
+	// 	elementId: "khaliwaktu",
+	// },
+	// {
+	// 	device_id: "XniD6mBlnKqagRJ8qD9WhR6JGK4yle1d",
+	// 	index_id: "65792115cc701ed1363c640f",
+	// 	elementId: "khalipersen",
+	// },
+	// {
+	// 	device_id: "ODw83libBAixNsPMGTmqQer2gn2mZrOC",
+	// 	index_id: "6280a8465a0c89673d266101",
+	// 	elementId: "musan1",
+	// },
+	// {
+	// 	device_id: "ODw83libBAixNsPMGTmqQer2gn2mZrOC",
+	// 	index_id: "6280a8275a0c89673d266100",
+	// 	elementId: "musap1",
+	// },
+	// {
+	// 	device_id: "ODw83libBAixNsPMGTmqQer2gn2mZrOC",
+	// 	index_id: "6280a8505a0c89673d266102",
+	// 	elementId: "musak1",
+	// },
 ];
 
 const datasoil = [
@@ -188,33 +188,33 @@ const datasoil = [
 	},
 ];
 
-// const datasetsB = [
-// 	{
-// 		device_id: "gxaZkwZafNVweTq8HycMKpZMz9MvbTyh",
-// 		index_id: "65792115cc701ed1363c640f",
-// 		elementId: "khaliwaktu",
-// 	},
-// 	{
-// 		device_id: "XniD6mBlnKqagRJ8qD9WhR6JGK4yle1d",
-// 		index_id: "65792115cc701ed1363c640f",
-// 		elementId: "khalipersen",
-// 	},
-// 	{
-// 		device_id: "ODw83libBAixNsPMGTmqQer2gn2mZrOC",
-// 		index_id: "6280a8465a0c89673d266101",
-// 		elementId: "musan1",
-// 	},
-// 	{
-// 		device_id: "ODw83libBAixNsPMGTmqQer2gn2mZrOC",
-// 		index_id: "6280a8275a0c89673d266100",
-// 		elementId: "musap1",
-// 	},
-// 	{
-// 		device_id: "ODw83libBAixNsPMGTmqQer2gn2mZrOC",
-// 		index_id: "6280a8505a0c89673d266102",
-// 		elementId: "musak1",
-// 	},
-// ];
+const datasetsB = [
+	{
+		device_id: "gxaZkwZafNVweTq8HycMKpZMz9MvbTyh",
+		index_id: "65792115cc701ed1363c640f",
+		elementId: "khaliwaktu",
+	},
+	{
+		device_id: "XniD6mBlnKqagRJ8qD9WhR6JGK4yle1d",
+		index_id: "65792115cc701ed1363c640f",
+		elementId: "khalipersen",
+	},
+	{
+		device_id: "ODw83libBAixNsPMGTmqQer2gn2mZrOC",
+		index_id: "6280a8465a0c89673d266101",
+		elementId: "musan1",
+	},
+	{
+		device_id: "ODw83libBAixNsPMGTmqQer2gn2mZrOC",
+		index_id: "6280a8275a0c89673d266100",
+		elementId: "musap1",
+	},
+	{
+		device_id: "ODw83libBAixNsPMGTmqQer2gn2mZrOC",
+		index_id: "6280a8505a0c89673d266102",
+		elementId: "musak1",
+	},
+];
 function App() {
 	const [data, setData] = React.useState({
 		sensorn1: null,
@@ -258,13 +258,13 @@ function App() {
 		manualr6: null,
 	});
 
-	// const [dataB, setDataB] = React.useState({
-	// 	khaliwaktu: null,
-	// 	khalipersen: null,
-	// 	musan1: null,
-	// 	musap1: null,
-	// 	musak1: null,
-	// });
+	const [dataB, setDataB] = React.useState({
+		khaliwaktu: null,
+		khalipersen: null,
+		musan1: null,
+		musap1: null,
+		musak1: null,
+	});
 
 	// const [khaliwaktu, setKhaliwaktu] = useState(null);
  //  	const [khalipersen, setKhalipersen] = useState(null);
@@ -272,7 +272,7 @@ function App() {
 	React.useEffect(() => {
 		datasets.forEach((dataset) => {
 			axios
-				.get("https://smartfarming2-be.vercel.app/datalist", {
+				.get("https://smartfarming2-be.vercel.app/dataset", {
 					params: {
 						device_id: dataset.device_id,
 						index_id: dataset.index_id,
@@ -310,24 +310,25 @@ function App() {
 				});
 		});
 
-		// datasetsB.forEach((datasetB) => {
-		// 	axios
-		// 		.get("https://smartfarming2-be.vercel.app/dataset", {
-		// 			params: {
-		// 				device_id: datasetsB.device_id,
-		// 				index_id: datasetsB.index_id,
-		// 			},
-		// 		})
-		// 		.then((res) => {
-		// 			setDataB((prevState) => ({
-		// 				...prevState,
-		// 				[datasetsB.elementId]: res?.data[0] || "No data",
-		// 			}));
-		// 		})
-		// 		.catch((err) => {
-		// 			console.log("error => ", err);
-		// 		});
-		// });
+		datasetsB.forEach((datasetB) => {
+			console.log("datasetB", datasetB);
+			axios
+				.get("https://smartfarming2-be.vercel.app/datalist", {
+					params: {
+						device_id: datasetB.device_id,
+						index_id: datasetB.index_id,
+					},
+				})
+				.then((res) => {
+					setDataB((prevState) => ({
+						...prevState,
+						[dataset.elementId]: res?.data[0] || "No data",
+					}));
+				})
+				.catch((err) => {
+					console.log("error => ", err);
+				});
+		});
 
 
 		// // Fetch data for khaliwaktu
@@ -970,16 +971,16 @@ function App() {
 											<div className="flex flex-row gap-3 px-2 py-2 justify-between w-full font-medium border-b border-solid border-zinc-100">
 												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
 													{new Date(
-														data?.khaliwaktu?.createdAt
+														dataB?.khaliwaktu?.createdAt
 													).toLocaleDateString()}{" "}
 													<br />
 												</div>
 												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
-													{data?.khaliwaktu?.value}
+													{dataB?.khaliwaktu?.value}
 													<br />
 												</div>
 												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
-													{data?.khalipersen?.value}
+													{dataB?.khalipersen?.value}
 													<br />
 												</div>
 												
@@ -1060,20 +1061,20 @@ function App() {
 											<div className="flex flex-row gap-3 px-2 py-2 justify-between w-full font-medium border-b border-solid border-zinc-100">
 												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
 													{new Date(
-														data?.musan1?.createdAt
+														dataB?.musan1?.createdAt
 													).toLocaleDateString()}{" "}
 													<br />
 												</div>
 												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
-													{data?.musan1?.value}
+													{dataB?.musan1?.value}
 													<br />
 												</div>
 												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
-													{data?.musap1?.value}
+													{dataB?.musap1?.value}
 													<br />
 												</div>
 												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
-													{data?.musak1?.value}
+													{dataB?.musak1?.value}
 													<br />
 												</div>
 												
