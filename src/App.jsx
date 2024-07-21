@@ -67,31 +67,6 @@ const datasets = [
 		index_id: "6129bfebdb963d1d1eaac307",
 		elementId: "sensortds2",
 	}, 
-	// {
-	// 	device_id: "gxaZkwZafNVweTq8HycMKpZMz9MvbTyh",
-	// 	index_id: "65792115cc701ed1363c640f",
-	// 	elementId: "khaliwaktu",
-	// },
-	// {
-	// 	device_id: "XniD6mBlnKqagRJ8qD9WhR6JGK4yle1d",
-	// 	index_id: "65792115cc701ed1363c640f",
-	// 	elementId: "khalipersen",
-	// },
-	// {
-	// 	device_id: "ODw83libBAixNsPMGTmqQer2gn2mZrOC",
-	// 	index_id: "6280a8465a0c89673d266101",
-	// 	elementId: "musan1",
-	// },
-	// {
-	// 	device_id: "ODw83libBAixNsPMGTmqQer2gn2mZrOC",
-	// 	index_id: "6280a8275a0c89673d266100",
-	// 	elementId: "musap1",
-	// },
-	// {
-	// 	device_id: "ODw83libBAixNsPMGTmqQer2gn2mZrOC",
-	// 	index_id: "6280a8505a0c89673d266102",
-	// 	elementId: "musak1",
-	// },
 ];
 
 const datasoil = [
@@ -230,11 +205,6 @@ function App() {
 		sensordht: null,
 		sensortds1: null,
 		sensortds2: null,
-		khaliwaktu: null,
-		khalipersen: null,
-		musan1: null,
-		musap1: null,
-		musak1: null,
 	});
 
 	const [soil, setSoil] = React.useState({
@@ -258,13 +228,6 @@ function App() {
 		manualr6: null,
 	});
 
-	// const [dataB, setDataB] = React.useState({
-	// 	khaliwaktu: null,
-	// 	khalipersen: null,
-	// 	musan1: null,
-	// 	musap1: null,
-	// 	musak1: null,
-	// });
 	const [dataB, setDataB] = React.useState({
 	    khaliwaktu: [],
 	    khalipersen: [],
