@@ -296,7 +296,7 @@ function App() {
 		datasoil.forEach((dtsoil) => {
 			console.log("dtsoil", dtsoil);
 			axios
-				.get("https://smartfarming2-be.vercel.app/dataset", {
+				.get("https://smartfarming2-be.vercel.app/datalist", {
 					params: {
 						device_id: dtsoil.device_id,
 						index_id: dtsoil.index_id,
@@ -750,7 +750,7 @@ function App() {
 													Kemarau
 												</div>
 												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
-													{dataC?.sensorph2?.value}
+													{data?.sensorph2?.value}
 													<br />
 												</div>
 												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
@@ -766,7 +766,7 @@ function App() {
 														</div>
 													)} */}
 
-													{dataC?.sensorph2?.anomaly === 1 ? (
+													{data?.sensorph2?.anomaly === 1 ? (
 														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-red-600 bg-red-200 border-red-600 bg-opacity-40 max-md:px-5">
 															{"Anomali"}
 														</div>
@@ -785,10 +785,10 @@ function App() {
 													Hujan
 												</div>
 												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
-													{dataC?.sensorph1?.value}
+													{data?.sensorph1?.value}
 												</div>
 												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
-													{dataC?.sensorph1?.anomaly === 1 ? (
+													{data?.sensorph1?.anomaly === 1 ? (
 														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-red-600 bg-red-200 border-red-600 bg-opacity-40 max-md:px-5">
 															{"Anomali"}
 														</div>
@@ -807,10 +807,10 @@ function App() {
 													Kemarau
 												</div>
 												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
-													{dataC?.sensorst2?.value}
+													{data?.sensorst2?.value}
 												</div>
 												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
-													{dataC?.sensorst2?.anomaly === 1 ? (
+													{data?.sensorst2?.anomaly === 1 ? (
 														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-red-600 bg-red-200 border-red-600 bg-opacity-40 max-md:px-5">
 															{"Anomali"}
 														</div>
@@ -830,10 +830,10 @@ function App() {
 													Hujan
 												</div>
 												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
-													{dataC?.sensorst1?.value}
+													{data?.sensorst1?.value}
 												</div>
 												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
-													{dataC?.sensorst1?.anomaly === 1 ? (
+													{data?.sensorst1?.anomaly === 1 ? (
 														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-red-600 bg-red-200 border-red-600 bg-opacity-40 max-md:px-5">
 															{"Anomali"}
 														</div>
