@@ -959,7 +959,8 @@ function App() {
 													Bukaan (0-225)
 												</div>
 											</div>
-											<div className="flex flex-row gap-3 px-2 py-2 justify-between w-full font-medium border-b border-solid border-zinc-100">
+											{dataB.khaliwaktu.map((item, index) => (
+												<div className="flex flex-row gap-3 px-2 py-2 justify-between w-full font-medium border-b border-solid border-zinc-100">
 {/* 												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
 													{new Date(
 														dataB?.khaliwaktu?.createdAt
@@ -974,7 +975,7 @@ function App() {
 													{dataB?.khalipersen?.value}
 													<br />
 												</div> */}
-												{dataB.khaliwaktu.map((item, index) => (
+{/* 												{dataB.khaliwaktu.map((item, index) => ( */}
 													<div key={index} className="flex flex-row gap-3 px-2 py-2 justify-between w-full font-medium border-b border-solid border-zinc-100">
 														<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
 															{new Date(item.createdAt).toLocaleDateString()}
@@ -989,10 +990,11 @@ function App() {
 															<br />
 														</div>
 													</div>
-												))}
+												// ))}
 	
 												
-											</div>
+												</div>
+											))}
 {/* 									                {dataB.khaliwaktu.map((item, index) => (
 									                <div className="flex flex-row gap-3 px-2 py-2 justify-between w-full font-medium border-b border-solid border-zinc-100" key={index} >
 												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
