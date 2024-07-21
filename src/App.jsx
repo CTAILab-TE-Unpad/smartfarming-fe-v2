@@ -281,7 +281,7 @@ function App() {
 				.then((res) => {
 					setData((prevState) => ({
 						...prevState,
-						[dataset.elementId]: res?.data[0] || "No data",
+						[dataset.elementId]: res?.dataB[0] || "No data",
 					}));
 				})
 				.catch((err) => {
