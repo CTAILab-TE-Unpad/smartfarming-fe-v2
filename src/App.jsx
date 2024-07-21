@@ -322,7 +322,7 @@ function App() {
 				.then((res) => {
 					setDataB((prevState) => ({
 						...prevState,
-						[dataset.elementId]: res?.data[0] || "No data",
+						[datasetB.elementId]: res?.data[0] || "No data",
 					}));
 				})
 				.catch((err) => {
