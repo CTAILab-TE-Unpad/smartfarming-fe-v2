@@ -280,8 +280,7 @@ function App() {
 				});
 		});
 
-		datasets.forEach((datasetB) => {
-			console.log("datasetB", datasetB);
+		datasetsB.forEach((datasetB) => {
 			axios
 				.get("https://smartfarming2-be.vercel.app/dataset", {
 					params: {
@@ -299,6 +298,7 @@ function App() {
 					console.log("error => ", err);
 				});
 		});
+
 
 		// // Fetch data for khaliwaktu
 		//     axios
