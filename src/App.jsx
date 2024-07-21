@@ -280,10 +280,10 @@ function App() {
 				});
 		});
 
-		React.useEffect(() => {
 		datasets.forEach((datasetB) => {
+			console.log("datasetB", datasetB);
 			axios
-				.get("https://smartfarming2-be.vercel.app/dataset", {
+				.get("https://smartfarming2-be.vercel.app/datalist", {
 					params: {
 						device_id: datasetB.device_id,
 						index_id: datasetB.index_id,
