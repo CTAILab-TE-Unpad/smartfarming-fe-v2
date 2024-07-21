@@ -309,7 +309,7 @@ function App() {
 		datasetsC.forEach((datasetC) => {
 			console.log("datasetC", datasetC);
 			axios
-				.get("https://smartfarming2-be.vercel.app/dataset", {
+				.get("https://smartfarming2-be.vercel.app/datasetC", {
 					params: {
 						device_id: datasetC.device_id,
 						index_id: datasetC.index_id,
