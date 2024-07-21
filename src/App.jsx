@@ -284,14 +284,14 @@ function App() {
 			axios
 				.get("https://smartfarming2-be.vercel.app/dataset", {
 					params: {
-						device_id: datasetB.device_id,
-						index_id: datasetB.index_id,
+						device_id: datasetsB.device_id,
+						index_id: datasetsB.index_id,
 					},
 				})
 				.then((res) => {
 					setDataB((prevState) => ({
 						...prevState,
-						[dataset.elementId]: res?.data[0] || "No data",
+						[datasetsB.elementId]: res?.data[0] || "No data",
 					}));
 				})
 				.catch((err) => {
