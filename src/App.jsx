@@ -3,36 +3,6 @@ import axios from "axios";
 
 const datasets = [
 	{
-		device_id: "GDdR9vUe3yXQWcfhP6grCLK74ZV4QZFL",
-		index_id: "6280a8275a0c89673d266100",
-		elementId: "sensorn1",
-	},
-	{
-		device_id: "gxaZkwZafNVweTq8HycMKpZMz9MvbTyh",
-		index_id: "6280a8275a0c89673d266100",
-		elementId: "sensorn2",
-	},
-	{
-		device_id: "GDdR9vUe3yXQWcfhP6grCLK74ZV4QZFL",
-		index_id: "6280a8465a0c89673d266101",
-		elementId: "sensorp1",
-	},
-	{
-		device_id: "gxaZkwZafNVweTq8HycMKpZMz9MvbTyh",
-		index_id: "6280a8465a0c89673d266101",
-		elementId: "sensorp2",
-	},
-	{
-		device_id: "GDdR9vUe3yXQWcfhP6grCLK74ZV4QZFL",
-		index_id: "6280a8505a0c89673d266102",
-		elementId: "sensork1",
-	},
-	{
-		device_id: "gxaZkwZafNVweTq8HycMKpZMz9MvbTyh",
-		index_id: "6280a8505a0c89673d266102",
-		elementId: "sensork2",
-	},
-	{
 		device_id: "D8fRCvhyRWUNtzfWuhbdb9q5azNkrE4g",
 		index_id: "618bce88109f491b98e68b59",
 		elementId: "sensorph1",
@@ -190,14 +160,42 @@ const datasetsB = [
 		elementId: "musak1",
 	},
 ];
+
+const datasetsC = [
+	{
+		device_id: "GDdR9vUe3yXQWcfhP6grCLK74ZV4QZFL",
+		index_id: "6280a8275a0c89673d266100",
+		elementId: "sensorn1",
+	},
+	{
+		device_id: "gxaZkwZafNVweTq8HycMKpZMz9MvbTyh",
+		index_id: "6280a8275a0c89673d266100",
+		elementId: "sensorn2",
+	},
+	{
+		device_id: "GDdR9vUe3yXQWcfhP6grCLK74ZV4QZFL",
+		index_id: "6280a8465a0c89673d266101",
+		elementId: "sensorp1",
+	},
+	{
+		device_id: "gxaZkwZafNVweTq8HycMKpZMz9MvbTyh",
+		index_id: "6280a8465a0c89673d266101",
+		elementId: "sensorp2",
+	},
+	{
+		device_id: "GDdR9vUe3yXQWcfhP6grCLK74ZV4QZFL",
+		index_id: "6280a8505a0c89673d266102",
+		elementId: "sensork1",
+	},
+	{
+		device_id: "gxaZkwZafNVweTq8HycMKpZMz9MvbTyh",
+		index_id: "6280a8505a0c89673d266102",
+		elementId: "sensork2",
+	},
+]
+
 function App() {
 	const [data, setData] = React.useState({
-		sensorn1: null,
-		sensorn2: null,
-		sensorp1: null,
-		sensorp2: null,
-		sensork1: null,
-		sensork2: null,
 		sensorph1: null,
 		sensorph2: null,
 		sensorst1: null,
@@ -234,6 +232,15 @@ function App() {
 	    musan1: [],
 	    musap1: [],
 	    musak1: [],
+	});
+	
+	const [dataC, setDataC] = React.useState({
+		sensorn1: null,
+		sensorn2: null,
+		sensorp1: null,
+		sensorp2: null,
+		sensork1: null,
+		sensork2: null,
 	});
 
 
@@ -279,26 +286,6 @@ function App() {
 				});
 		});
 
-		// datasetsB.forEach((datasetB) => {
-		// 	console.log("datasetB", datasetB);
-		// 	axios
-		// 		.get("https://smartfarming2-be.vercel.app/datalist", {
-		// 			params: {
-		// 				device_id: datasetB.device_id,
-		// 				index_id: datasetB.index_id,
-		// 			},
-		// 		})
-		// 		.then((res) => {
-		// 			setDataB((prevState) => ({
-		// 				...prevState,
-		// 				[datasetB.elementId]: res?.data[0] || "No data",
-		// 			}));
-		// 		})
-		// 		.catch((err) => {
-		// 			console.log("error => ", err);
-		// 		});
-		// });
-		
 		datasetsB.forEach((datasetB) => {
 			console.log("datasetB", datasetB);
 			axios
@@ -318,6 +305,26 @@ function App() {
 					console.log("error => ", err);
 					});
 			});
+		
+		datasetsC.forEach((datasetC) => {
+			console.log("datasetC", datasetC);
+			axios
+				.get("https://smartfarming2-be.vercel.app/dataset", {
+					params: {
+						device_id: datasetC.device_id,
+						index_id: datasetC.index_id,
+					},
+				})
+				.then((res) => {
+					setDataC((prevState) => ({
+						...prevState,
+						[datasetC.elementId]: res?.data[0] || "No data",
+					}));
+				})
+				.catch((err) => {
+					console.log("error => ", err);
+				});
+		});
 
 
 	}, []);
@@ -838,21 +845,21 @@ function App() {
 													Kemarau
 												</div>
 												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
-													{data?.sensorn2?.value}
+													{dataC?.sensorn2?.value}
 													<br />
 												</div>
 												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
-													{data?.sensorp2?.value}
+													{dataC?.sensorp2?.value}
 													<br />
 												</div>
 												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
-													{data?.sensork2?.value}
+													{dataC?.sensork2?.value}
 													<br />
 												</div>
 												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
 													
 {/* 													<br /> */}
-													{data?.sensorn2?.value === 0 ? (
+													{dataC?.sensorn2?.value === 0 ? (
 														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-red-600 bg-red-200 border-red-600 bg-opacity-40 max-md:px-5">
 															{"Anomali"}
 														</div>
@@ -868,21 +875,21 @@ function App() {
 													Hujan
 												</div>
 												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
-													{data?.sensorn1?.value}
+													{dataC?.sensorn1?.value}
 													<br />
 												</div>
 												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
-													{data?.sensorp1?.value}
+													{dataC?.sensorp1?.value}
 													<br />
 												</div>
 												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
-													{data?.sensork1?.value}
+													{dataC?.sensork1?.value}
 													<br />
 												</div>
 												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
 													
 {/* 													<br /> */}
-													{data?.sensorn1?.value === 0 ? (
+													{dataC?.sensorn1?.value === 0 ? (
 														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-red-600 bg-red-200 border-red-600 bg-opacity-40 max-md:px-5">
 															{"Anomali"}
 														</div>
