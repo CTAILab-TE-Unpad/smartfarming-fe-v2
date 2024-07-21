@@ -163,7 +163,7 @@ const datasoil = [
 	},
 ];
 
-const databareng = [
+const datasetsB = [
 	{
 		device_id: "gxaZkwZafNVweTq8HycMKpZMz9MvbTyh",
 		index_id: "65792115cc701ed1363c640f",
@@ -280,19 +280,19 @@ function App() {
 				});
 		});
 
-		databareng.forEach((dtbareng) => {
-			console.log("dtbareng", dtbareng);
+		React.useEffect(() => {
+		datasets.forEach((datasetB) => {
 			axios
-				.get("https://smartfarming2-be.vercel.app/datalist", {
+				.get("https://smartfarming2-be.vercel.app/dataset", {
 					params: {
-						device_id: dtbareng.device_id,
-						index_id: dtbareng.index_id,
+						device_id: datasetB.device_id,
+						index_id: datasetB.index_id,
 					},
 				})
 				.then((res) => {
-					setData((prevState) => ({
+					setDataB((prevState) => ({
 						...prevState,
-						[dtbareng.elementId]: res?.data[0] || "No data",
+						[dataset.elementId]: res?.data[0] || "No data",
 					}));
 				})
 				.catch((err) => {
@@ -1030,7 +1030,7 @@ function App() {
 											<div className="flex flex-row gap-3 px-2 py-2 justify-between w-full font-medium border-b border-solid border-zinc-100">
 												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
 													{new Date(
-														data?.sensorn1?.createdAt
+														dataB?.musan1?.createdAt
 													).toLocaleDateString()}{" "}
 													<br />
 												</div>
