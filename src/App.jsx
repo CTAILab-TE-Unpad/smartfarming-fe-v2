@@ -66,7 +66,7 @@ const datasets = [
 		device_id: "wqZeXsBhFSL6CLzfaUjJsnavudV3WvL7",
 		index_id: "6129bfebdb963d1d1eaac307",
 		elementId: "sensortds2",
-	},
+	}, 
 	// {
 	// 	device_id: "gxaZkwZafNVweTq8HycMKpZMz9MvbTyh",
 	// 	index_id: "65792115cc701ed1363c640f",
@@ -258,16 +258,22 @@ function App() {
 		manualr6: null,
 	});
 
+	// const [dataB, setDataB] = React.useState({
+	// 	khaliwaktu: null,
+	// 	khalipersen: null,
+	// 	musan1: null,
+	// 	musap1: null,
+	// 	musak1: null,
+	// });
 	const [dataB, setDataB] = React.useState({
-		khaliwaktu: null,
-		khalipersen: null,
-		musan1: null,
-		musap1: null,
-		musak1: null,
+	    khaliwaktu: [],
+	    khalipersen: [],
+	    musan1: [],
+	    musap1: [],
+	    musak1: [],
 	});
 
-	// const [khaliwaktu, setKhaliwaktu] = useState(null);
- //  	const [khalipersen, setKhalipersen] = useState(null);
+
 
 	React.useEffect(() => {
 		datasets.forEach((dataset) => {
@@ -310,6 +316,26 @@ function App() {
 				});
 		});
 
+		// datasetsB.forEach((datasetB) => {
+		// 	console.log("datasetB", datasetB);
+		// 	axios
+		// 		.get("https://smartfarming2-be.vercel.app/datalist", {
+		// 			params: {
+		// 				device_id: datasetB.device_id,
+		// 				index_id: datasetB.index_id,
+		// 			},
+		// 		})
+		// 		.then((res) => {
+		// 			setDataB((prevState) => ({
+		// 				...prevState,
+		// 				[datasetB.elementId]: res?.data[0] || "No data",
+		// 			}));
+		// 		})
+		// 		.catch((err) => {
+		// 			console.log("error => ", err);
+		// 		});
+		// });
+		
 		datasetsB.forEach((datasetB) => {
 			console.log("datasetB", datasetB);
 			axios
@@ -317,55 +343,20 @@ function App() {
 					params: {
 						device_id: datasetB.device_id,
 						index_id: datasetB.index_id,
-					},
-				})
+						},
+					})
 				.then((res) => {
 					setDataB((prevState) => ({
 						...prevState,
-						[datasetB.elementId]: res?.data[0] || "No data",
-					}));
-				})
+						[datasetB.elementId]: res.data || [],
+						}));
+					})
 				.catch((err) => {
 					console.log("error => ", err);
-				});
-		});
+					});
+			});
 
 
-		// // Fetch data for khaliwaktu
-		//     axios
-		//       .get('https://smartfarming2-be.vercel.app/datalist', {
-		//         params: {
-		//           device_id: 'gxaZkwZafNVweTq8HycMKpZMz9MvbTyh',
-		//           index_id: '65792115cc701ed1363c640f',
-		//         },
-		//       })
-		//       .then((res) => {
-		//         setDataB((prevState) => ({
-		//           ...prevState,
-		//           khaliwaktu: res.data,
-		//         }));
-		//       })
-		//       .catch((err) => {
-		//         console.log('error => ', err);
-		//       });
-		// // Fetch data for khalipersen
-		//    axios
-		//       .get('https://smartfarming2-be.vercel.app/datalist', {
-		//         params: {
-		//           device_id: 'XniD6mBlnKqagRJ8qD9WhR6JGK4yle1d',
-		//           index_id: '65792115cc701ed1363c640f',
-		//         },
-		//       })
-		//       .then((res) => {
-		//         setDataB((prevState) => ({
-		//           ...prevState,
-		//           khalipersen: res.data,
-		//         }));
-		//       })
-		//       .catch((err) => {
-		//         console.log('error => ', err);
-		//       });
-		
 	}, []);
 
 	return (
@@ -969,7 +960,7 @@ function App() {
 												</div>
 											</div>
 											<div className="flex flex-row gap-3 px-2 py-2 justify-between w-full font-medium border-b border-solid border-zinc-100">
-												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
+{/* 												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
 													{new Date(
 														dataB?.khaliwaktu?.createdAt
 													).toLocaleDateString()}{" "}
@@ -982,7 +973,24 @@ function App() {
 												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
 													{dataB?.khalipersen?.value}
 													<br />
-												</div>
+												</div> */}
+												{dataB.khaliwaktu.map((item, index) => (
+													<div key={index} className="flex flex-row gap-3 px-2 py-2 justify-between w-full font-medium border-b border-solid border-zinc-100">
+														<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
+															{new Date(item.createdAt).toLocaleDateString()}
+															<br />
+														</div>
+														<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
+															{item.value}
+															<br />
+														</div>
+														<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
+															{dataB.khalipersen[index] ? dataB.khalipersen[index].value : "No data"}
+															<br />
+														</div>
+													</div>
+												))}
+	
 												
 											</div>
 {/* 									                {dataB.khaliwaktu.map((item, index) => (
