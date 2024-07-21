@@ -272,7 +272,7 @@ function App() {
 	React.useEffect(() => {
 		datasets.forEach((dataset) => {
 			axios
-				.get("https://smartfarming2-be.vercel.app/dataset", {
+				.get("https://smartfarming2-be.vercel.app/datalist", {
 					params: {
 						device_id: dataset.device_id,
 						index_id: dataset.index_id,
