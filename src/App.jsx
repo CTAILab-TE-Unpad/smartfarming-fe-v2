@@ -140,33 +140,33 @@ const datasoil = [
 	},
 ];
 
-const datasetsB = [
-	{
-		device_id: "gxaZkwZafNVweTq8HycMKpZMz9MvbTyh",
-		index_id: "65792115cc701ed1363c640f",
-		elementId: "khaliwaktu",
-	},
-	{
-		device_id: "XniD6mBlnKqagRJ8qD9WhR6JGK4yle1d",
-		index_id: "65792115cc701ed1363c640f",
-		elementId: "khalipersen",
-	},
-	{
-		device_id: "ODw83libBAixNsPMGTmqQer2gn2mZrOC",
-		index_id: "6280a8465a0c89673d266101",
-		elementId: "musan1",
-	},
-	{
-		device_id: "ODw83libBAixNsPMGTmqQer2gn2mZrOC",
-		index_id: "6280a8275a0c89673d266100",
-		elementId: "musap1",
-	},
-	{
-		device_id: "ODw83libBAixNsPMGTmqQer2gn2mZrOC",
-		index_id: "6280a8505a0c89673d266102",
-		elementId: "musak1",
-	},
-];
+// const datasetsB = [
+// 	{
+// 		device_id: "gxaZkwZafNVweTq8HycMKpZMz9MvbTyh",
+// 		index_id: "65792115cc701ed1363c640f",
+// 		elementId: "khaliwaktu",
+// 	},
+// 	{
+// 		device_id: "XniD6mBlnKqagRJ8qD9WhR6JGK4yle1d",
+// 		index_id: "65792115cc701ed1363c640f",
+// 		elementId: "khalipersen",
+// 	},
+// 	{
+// 		device_id: "ODw83libBAixNsPMGTmqQer2gn2mZrOC",
+// 		index_id: "6280a8465a0c89673d266101",
+// 		elementId: "musan1",
+// 	},
+// 	{
+// 		device_id: "ODw83libBAixNsPMGTmqQer2gn2mZrOC",
+// 		index_id: "6280a8275a0c89673d266100",
+// 		elementId: "musap1",
+// 	},
+// 	{
+// 		device_id: "ODw83libBAixNsPMGTmqQer2gn2mZrOC",
+// 		index_id: "6280a8505a0c89673d266102",
+// 		elementId: "musak1",
+// 	},
+// ];
 
 const datasetsC = [
 	{
@@ -199,18 +199,60 @@ const datasetsC = [
 		index_id: "6280a8505a0c89673d266102",
 		elementId: "sensork2",
 	},
+		{
+		device_id: "D8fRCvhyRWUNtzfWuhbdb9q5azNkrE4g",
+		index_id: "618bce88109f491b98e68b59",
+		elementId: "sensorph1",
+		sensor_name: "PH1"
+	},
+	{
+		device_id: "lWwWZ7RHI5HToRocg122mLHgmqKsT7F7",
+		index_id: "618bce88109f491b98e68b59",
+		elementId: "sensorph2",
+		sensor_name: "PH2"
+	},
+	{
+		device_id: "BngyuCFVukyQakpJyBug4WubAdpnt2g5",
+		index_id: "6142a70446514f50ff8ed6a8",
+		elementId: "sensorst1",
+		sensor_name: "ST1"
+	},
+	{
+		device_id: "J3c6xgg64gyL8pJ5uCZw69Ec4FJBj97R",
+		index_id: "6142a70446514f50ff8ed6a8",
+		elementId: "sensorst2",
+		sensor_name: "ST1"
+	},
+	{
+		device_id: "AMJ6RHSdwf4XMv2dhPRh8hxnE92exg7U",
+		index_id: "638d8677245a8f9cc00b4bcc",
+		elementId: "sensordht",
+		sensor_name: "DHT"
+	},
+	{
+		device_id: "fPMkkgECQndBCs7eFtha09uy57Qv8Xks",
+		index_id: "6129bfebdb963d1d1eaac307",
+		elementId: "sensortds1",
+		sensor_name: "tds1"
+	},
+	{
+		device_id: "wqZeXsBhFSL6CLzfaUjJsnavudV3WvL7",
+		index_id: "6129bfebdb963d1d1eaac307",
+		elementId: "sensortds2",
+		sensor_name: "tds2"
+	},
 ]
 
 function App() {
-	const [data, setData] = React.useState({
-		sensorph1: null,
-		sensorph2: null,
-		sensorst1: null,
-		sensorst2: null,
-		sensordht: null,
-		sensortds1: null,
-		sensortds2: null,
-	});
+	// const [data, setData] = React.useState({
+	// 	sensorph1: null,
+	// 	sensorph2: null,
+	// 	sensorst1: null,
+	// 	sensorst2: null,
+	// 	sensordht: null,
+	// 	sensortds1: null,
+	// 	sensortds2: null,
+	// });
 
 	const [soil, setSoil] = React.useState({
 		kemaraur1: null,
@@ -248,6 +290,13 @@ function App() {
 		sensorp2: null,
 		sensork1: null,
 		sensork2: null,
+		sensorph1: null,
+		sensorph2: null,
+		sensorst1: null,
+		sensorst2: null,
+		sensordht: null,
+		sensortds1: null,
+		sensortds2: null,
 	});
 
 
@@ -273,25 +322,25 @@ function App() {
 		// });
 
 		//fetch yang anomali
-		datasets.forEach((dataset) => {
-			axios
-				.get("https://smartfarming2-be.vercel.app/dataset", {
-					params: {
-						device_id: dataset.device_id,
-						index_id: dataset.index_id,
-						sensor_name: dataset.sensor_name
-					},
-				})
-				.then((res) => {
-					setData((prevState) => ({
-						...prevState,
-						[dataset.elementId]: res?.data[0] || "No data",
-					}));
-				})
-				.catch((err) => {
-					console.log("error => ", err);
-				});
-		});
+		// datasets.forEach((dataset) => {
+		// 	axios
+		// 		.get("https://smartfarming2-be.vercel.app/dataset", {
+		// 			params: {
+		// 				device_id: dataset.device_id,
+		// 				index_id: dataset.index_id,
+		// 				sensor_name: dataset.sensor_name
+		// 			},
+		// 		})
+		// 		.then((res) => {
+		// 			setData((prevState) => ({
+		// 				...prevState,
+		// 				[dataset.elementId]: res?.data[0] || "No data",
+		// 			}));
+		// 		})
+		// 		.catch((err) => {
+		// 			console.log("error => ", err);
+		// 		});
+		// });
 
 		datasoil.forEach((dtsoil) => {
 			console.log("dtsoil", dtsoil);
@@ -750,7 +799,7 @@ function App() {
 													Kemarau
 												</div>
 												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
-													{data?.sensorph2?.value}
+													{dataC?.sensorph2?.value}
 													<br />
 												</div>
 												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
@@ -766,7 +815,7 @@ function App() {
 														</div>
 													)} */}
 
-													{data?.sensorph2?.anomaly === 1 ? (
+													{dataC?.sensorph2?.anomaly === 1 ? (
 														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-red-600 bg-red-200 border-red-600 bg-opacity-40 max-md:px-5">
 															{"Anomali"}
 														</div>
@@ -785,10 +834,10 @@ function App() {
 													Hujan
 												</div>
 												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
-													{data?.sensorph1?.value}
+													{dataC?.sensorph1?.value}
 												</div>
 												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
-													{data?.sensorph1?.anomaly === 1 ? (
+													{dataC?.sensorph1?.anomaly === 1 ? (
 														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-red-600 bg-red-200 border-red-600 bg-opacity-40 max-md:px-5">
 															{"Anomali"}
 														</div>
@@ -807,10 +856,10 @@ function App() {
 													Kemarau
 												</div>
 												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
-													{data?.sensorst2?.value}
+													{dataC?.sensorst2?.value}
 												</div>
 												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
-													{data?.sensorst2?.anomaly === 1 ? (
+													{dataC?.sensorst2?.anomaly === 1 ? (
 														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-red-600 bg-red-200 border-red-600 bg-opacity-40 max-md:px-5">
 															{"Anomali"}
 														</div>
@@ -830,10 +879,10 @@ function App() {
 													Hujan
 												</div>
 												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
-													{data?.sensorst1?.value}
+													{dataC?.sensorst1?.value}
 												</div>
 												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
-													{data?.sensorst1?.anomaly === 1 ? (
+													{dataC?.sensorst1?.anomaly === 1 ? (
 														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-red-600 bg-red-200 border-red-600 bg-opacity-40 max-md:px-5">
 															{"Anomali"}
 														</div>
