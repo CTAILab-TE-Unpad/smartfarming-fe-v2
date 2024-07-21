@@ -961,24 +961,10 @@ function App() {
 											</div>
 											{dataB.khaliwaktu.map((item, index) => (
 												<div className="flex flex-row gap-3 px-2 py-2 justify-between w-full font-medium border-b border-solid border-zinc-100">
-{/* 												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
-													{new Date(
-														dataB?.khaliwaktu?.createdAt
-													).toLocaleDateString()}{" "}
-													<br />
-												</div>
-												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
-													{dataB?.khaliwaktu?.value}
-													<br />
-												</div>
-												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
-													{dataB?.khalipersen?.value}
-													<br />
-												</div> */}
-{/* 												{dataB.khaliwaktu.map((item, index) => ( */}
 													<div key={index} className="flex flex-row gap-3 px-2 py-2 justify-between w-full font-medium border-b border-solid border-zinc-100">
 														<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
 															{new Date(item.createdAt).toLocaleDateString()}
+															{new Date(item.createdAt).toLocaleTimeString()}
 															<br />
 														</div>
 														<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
@@ -989,61 +975,13 @@ function App() {
 															{dataB.khalipersen[index] ? dataB.khalipersen[index].value : "No data"}
 															<br />
 														</div>
-													</div>
-												// ))}
-	
-												
+													</div>												
 												</div>
 											))}
-{/* 									                {dataB.khaliwaktu.map((item, index) => (
-									                <div className="flex flex-row gap-3 px-2 py-2 justify-between w-full font-medium border-b border-solid border-zinc-100" key={index} >
-												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
-													{new Date(item.createdAt).toLocaleDateString()}
-												</div>
-												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
-													{item.value}
-												</div>
-												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
-													{dataB.khalipersen[index]?.value}
-												</div>
-											</div>
-											))} */}
-									                
 										</div>
 									</div>
 								</div>
 							</section>
-
-{/* 							<section className="flex flex-col mt-10 bg-white overflow-y-hidden rounded-[30px] shadow-[0px_10px_60px_rgba(226,236,249,0.5)] w-full">
-						                <div className="flex flex-col w-full p-5">
-						                  <h2 className="text-2xl font-semibold tracking-tight text-black">Data Khaliwaktu dan Khalipersen</h2>
-						                  <div className="flex flex-row gap-3 px-2 py-5 justify-between items-center w-full font-medium text-gray-400 border-b border-solid border-zinc-100">
-						                    <div className="font-medium text-gray-400 w-full text-center justify-center items-center">
-						                      Waktu
-						                    </div>
-						                    <div className="font-medium text-gray-400 w-full text-center justify-center items-center">
-						                      Durasi (detik)
-						                    </div>
-						                    <div className="font-medium text-gray-400 w-full text-center justify-center items-center">
-						                      Bukaan (0-225)
-						                    </div>
-						                  </div>
-						                  {dataB.khaliwaktu.map((item, index) => (
-						                    <div className="flex flex-row gap-3 px-2 py-2 justify-between w-full font-medium border-b border-solid border-zinc-100" key={index} >
-						                      <div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
-						                        {new Date(item.createdAt).toLocaleDateString()}
-						                      </div>
-						                      <div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
-						                        {item.value}
-						                      </div>
-						                      <div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
-						                        {dataB.khalipersen[index]?.value}
-						                      </div>
-						                    </div>
-						                  ))}
-						                </div>
-							</section> */}
-
 							<section className="flex flex-col mt-10 bg-white overflow-y-hidden rounded-[30px] shadow-[0px_10px_60px_rgba(226,236,249,0.5)] w-full">
 								<div className="flex flex-col w-full p-5">
 									<div className="flex gap-5 text-sm tracking-normal w-full">
@@ -1068,27 +1006,29 @@ function App() {
 													K
 												</div>
 											</div>
-											<div className="flex flex-row gap-3 px-2 py-2 justify-between w-full font-medium border-b border-solid border-zinc-100">
-												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
-													{new Date(
-														dataB?.musan1?.createdAt
-													).toLocaleDateString()}{" "}
-													<br />
+											{dataB.musan1.map((item, index) => (
+												<div className="flex flex-row gap-3 px-2 py-2 justify-between w-full font-medium border-b border-solid border-zinc-100">
+													<div key={index} className="flex flex-row gap-3 px-2 py-2 justify-between w-full font-medium border-b border-solid border-zinc-100">
+														<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
+															{new Date(item.createdAt).toLocaleDateString()}
+															{new Date(item.createdAt).toLocaleTimeString()}
+															<br />
+														</div>
+														<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
+															{item.value}
+															<br />
+														</div>
+														<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
+															{dataB.musap1[index] ? dataB.musap1[index].value : "No data"}
+															<br />
+														</div>
+														<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
+															{dataB.musak1[index] ? dataB.musak1[index].value : "No data"}
+															<br />
+														</div>
+													</div>												
 												</div>
-												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
-													{dataB?.musan1?.value}
-													<br />
-												</div>
-												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
-													{dataB?.musap1?.value}
-													<br />
-												</div>
-												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
-													{dataB?.musak1?.value}
-													<br />
-												</div>
-												
-											</div>
+											))}
 										</div>
 									</div>
 								</div>
