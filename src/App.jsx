@@ -236,6 +236,23 @@ const datasoil = [
 		elementId: "musak1",
 	},
 	
+	//ganti punya iryna nanti
+	{
+		device_id: "ODw83libBAixNsPMGTmqQer2gn2mZrOC",
+		index_id: "6280a8465a0c89673d266101",
+		elementId: "irynan1",
+	},
+	{
+		device_id: "ODw83libBAixNsPMGTmqQer2gn2mZrOC",
+		index_id: "6280a8275a0c89673d266100",
+		elementId: "irynap1",
+	},
+	{
+		device_id: "ODw83libBAixNsPMGTmqQer2gn2mZrOC",
+		index_id: "6280a8505a0c89673d266102",
+		elementId: "irynak1",
+	},
+	
 ];
 
 // dataset buat nampilin hasil prediksi dan log
@@ -393,6 +410,9 @@ function App() {
 	    musan1: [],
 	    musap1: [],
 	    musak1: [],
+	    irynan1: [],
+	    irynap1: [],
+	    irynak1: [],
 	    
 	    
 	});
@@ -508,6 +528,9 @@ function App() {
 // 		});
 
 
+    
+
+
 	}, []);
 
 	return (
@@ -526,27 +549,17 @@ function App() {
 								<div className="flex-auto self-start mt-3">SmartFarming</div>
 							</div>
 							<div className="flex flex-col justify-between h-full">
-								<nav className="flex flex-col gap-5 p-3 mt-6 w-full text-sm font-medium tracking-normal text-white bg-green-800 rounded-lg">
-								    <div className="flex gap-3.5">
-								        <img
-								            loading="lazy"
-								            src="https://cdn.builder.io/api/v1/image/assets/TEMP/7a3ccde314faf3075248c175cc423bf1ed4941a06ebc81574783391ced639f90?apiKey=d03d160494014eaf8a1af94dd934f586&"
-								            alt=""
-								            className="shrink-0 w-6 aspect-square"
-								        />
-								        <div className="my-auto">Dashboard</div>
-								    </div>
-{/* 								    <div className="bg-white h-2"></div>
-								    <div className="flex gap-3.5">
-								        <img
-								            loading="lazy"
-								            src="https://cdn.builder.io/api/v1/image/assets/TEMP/7a3ccde314faf3075248c175cc423bf1ed4941a06ebc81574783391ced639f90?apiKey=d03d160494014eaf8a1af94dd934f586&"
-								            alt=""
-								            className="shrink-0 w-6 aspect-square"
-								        />
-								        <div className="my-auto">Analytic</div>
-								    </div> */}
-								</nav>
+								// <nav className="flex flex-col gap-5 p-3 mt-6 w-full text-sm font-medium tracking-normal text-white bg-green-800 rounded-lg">
+								//     <div className="flex gap-3.5">
+								//         <img
+								//             loading="lazy"
+								//             src="https://cdn.builder.io/api/v1/image/assets/TEMP/7a3ccde314faf3075248c175cc423bf1ed4941a06ebc81574783391ced639f90?apiKey=d03d160494014eaf8a1af94dd934f586&"
+								//             alt=""
+								//             className="shrink-0 w-6 aspect-square"
+								//         />
+								//         <div className="my-auto">Dashboard</div>
+								//     </div>
+								// </nav>
 
 								
 								// <div className="flex gap-5 justify-between">
@@ -569,6 +582,7 @@ function App() {
 								// 		</div>
 								// 	</div>
 								// </div>
+								
 							</div>
 						</div>
 					</aside>
@@ -577,6 +591,83 @@ function App() {
 							<h1 className="text-2xl font-medium text-black max-md:max-w-full">
 								Home
 							</h1>
+							
+							
+// 							/////// nanti buat bagian analisis
+							
+// 							<section className="flex flex-col mt-10 bg-white overflow-y-hidden rounded-[30px] shadow-[0px_10px_60px_rgba(226,236,249,0.5)] w-full">
+// 								<div className="flex flex-col w-full p-5">
+// 									<div className="flex gap-5 text-sm tracking-normal w-full">
+// 										<div className="flex flex-col gap-3 w-full">
+// 											<h2 className="text-2xl font-semibold tracking-tight text-black">
+// 												INFORMASI!!!!
+// 											</h2>
+											
+// 											////bagian informasi erornya sensor
+// 											if(soil?.sensorph1?.anomaly === 1 && soil?.sensorph2?.anomaly === 1 && soil?.sensorst1?.anomaly === 1 soil?.sensorst2?.anomaly === 1 && soil?.sensorn1?.anomaly === 1 && soil?.sensorp1?.anomaly === 1 soil?.sensork1?.anomaly === 1 && soil?.sensorn2?.anomaly === 1 && soil?.sensorp2?.anomaly === 1 soil?.sensork2?.anomaly === 1) {
+// 											    <div className="text-teal-500">
+// 											        Terdapat beberapa sensor dalam kondisi tidak baik, tertera di tabel dengan status ANOMALI. Harap cek ke lokasi.
+// 											    </div>
+// 											} else {
+// 											    <div className="text-teal-500">
+// 											        Semua sensor dalam keadaan baik.
+// 											    </div>
+// 											}
+
+//                                             ////cek apakah pemberian air dan nutrisinya sudah sesuai?
+// 											    if({soil?musan1.value} === {soil?iryna.value} && {soil?musap1.value} === {soil?iryna.value}){
+											        
+// 											    }
+											    
+											    
+// 												<div className="justify-center px-3 py-1 w-24 text-center rounded border text-red-600 bg-red-200 border-red-600 bg-opacity-40 max-md:px-5">
+// 														{"Anomali"}
+// 												</div>
+// 												) : (
+// 												<div className="justify-center px-3 py-1 w-24 text-center rounded border text-emerald-500 border-emerald-500 border-solid bg-teal-500 bg-opacity-40 max-md:px-5">
+// 													{"Normal"}
+// 												</div>
+
+											
+// 											<div className="text-teal-500">
+// 												Pemberian air dan nutrisi sudah sesuai kebutuhan tanaman
+// 											</div>
+
+// 											<div className="flex flex-row gap-3 px-2 py-2 justify-between w-full font-medium border-b border-solid border-zinc-100">
+// 												<div className="font-medium w-full text-center justify-center items-center content-center">
+// 													Hujan
+// 												</div>
+// 												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
+// 													{soil?.sensorn1?.value}
+// 													<br />
+// 												</div>
+// 												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
+// 													{soil?.sensorp1?.value}
+// 													<br />
+// 												</div>
+// 												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
+// 													{soil?.sensork1?.value}
+// 													<br />
+// 												</div>
+// 												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
+													
+// {/* 													<br /> */}
+// 													{soil?.sensorn1?.value === 0 ? (
+// 														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-red-600 bg-red-200 border-red-600 bg-opacity-40 max-md:px-5">
+// 															{"Anomali"}
+// 														</div>
+// 													) : (
+// 														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-emerald-500 border-emerald-500 border-solid bg-teal-500 bg-opacity-40 max-md:px-5">
+// 															{"Normal"}
+// 														</div>
+// 													)}
+// 												</div>
+// 											</div>
+// 										</div>
+// 									</div>
+// 								</div>
+// 							</section>
+							
 							<section className="flex flex-col mt-10 bg-white overflow-y-hidden rounded-[30px] shadow-[0px_10px_60px_rgba(226,236,249,0.5)] w-full">
 								<div className="flex flex-col w-full p-5">
 									<div className="flex gap-5 text-sm tracking-normal w-full">
