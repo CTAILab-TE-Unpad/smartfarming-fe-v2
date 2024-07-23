@@ -1123,53 +1123,13 @@ function App() {
 											))}
 								
 								        
-								            // {soil.khaliwaktu.filter(item => item.value !== 0) // Menyaring item yang nilainya tidak sama dengan 0
-								            //     .map((item, index) => (
-								            //     <div key={index} className="flex flex-row gap-3 px-2 py-2 justify-between w-full font-medium border-b border-solid border-zinc-100">
-								            //         <div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
-								            //             {new Date(item.createdAt).toLocaleDateString()}
-								            //             {new Date(item.createdAt).toLocaleTimeString()}
-								            //         <br />
-								            //         </div>
-								            //         <div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
-								            //             {item.value}
-								            //             <br />
-								            //         </div>
-								            //         <div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
-								            //             {soil.khalipersen[index] ? soil.khalipersen[index].value : "No data"}
-								            //             <br />
-								            //         </div>
-								            //     </div>
-								            // ))
-								                
-								            // }
-								            // {soil.khaliwaktu.filter(item => item.value !== 0) // Menyaring item yang nilainya tidak sama dengan 0
-                    //                             .map((item, index) => (
-                    //                                 <div key={index} className="flex flex-row gap-3 px-2 py-2 justify-between w-full font-medium border-b border-solid border-zinc-100">
-                    //                                     <div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
-                    //                                         {new Date(item.createdAt).toLocaleDateString()}
-                    //                                         {new Date(item.createdAt).toLocaleTimeString()}
-                    //                                         <br />
-                    //                                     </div>
-                    //                                     <div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
-                    //                                         {item.value}
-                    //                                         <br />
-                    //                                     </div>
-                    //                                     <div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
-                    //                                         {soil.khalipersen[index] ? soil.khalipersen[index].value : "No data"}
-                    //                                         <br />
-                    //                                     </div>
-                    //                                 </div>
-                    //                             ))
-                    //                         }
-
-
-
-								            
+						   
 										</div>
 									</div>
 								</div>
+								
 							</section>
+							
 							<section className="flex flex-col mt-10 bg-white overflow-y-hidden rounded-[30px] shadow-[0px_10px_60px_rgba(226,236,249,0.5)] w-full">
 								<div className="flex flex-col w-full p-5">
 									<div className="flex gap-5 text-sm tracking-normal w-full">
