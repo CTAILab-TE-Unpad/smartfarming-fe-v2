@@ -1102,25 +1102,25 @@ function App() {
 													Bukaan (0-225)
 												</div>
 											</div>
-								// 			{soil.khaliwaktu.map((item, index) => (
-								// 				<div className="flex flex-row gap-3 px-2 py-2 justify-between w-full font-medium border-b border-solid border-zinc-100">
-								// 					<div key={index} className="flex flex-row gap-3 px-2 py-2 justify-between w-full font-medium border-b border-solid border-zinc-100">
-								// 						<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
-								// 							{new Date(item.createdAt).toLocaleDateString()}
-								// 							{new Date(item.createdAt).toLocaleTimeString()}
-								// 							<br />
-								// 						</div>
-								// 						<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
-								// 							{item.value}
-								// 							<br />
-								// 						</div>
-								// 						<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
-								// 							{soil.khalipersen[index] ? soil.khalipersen[index].value : "No data"}
-								// 							<br />
-								// 						</div>
-								// 					</div>												
-								// 				</div>
-								// 			))}
+											{soil.khaliwaktu.map((item, index) => (
+												<div className="flex flex-row gap-3 px-2 py-2 justify-between w-full font-medium border-b border-solid border-zinc-100">
+													<div key={index} className="flex flex-row gap-3 px-2 py-2 justify-between w-full font-medium border-b border-solid border-zinc-100">
+														<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
+															{new Date(item.createdAt).toLocaleDateString()}
+															{new Date(item.createdAt).toLocaleTimeString()}
+															<br />
+														</div>
+														<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
+															{item.value}
+															<br />
+														</div>
+														<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
+															{soil.khalipersen[index] ? soil.khalipersen[index].value : "No data"}
+															<br />
+														</div>
+													</div>												
+												</div>
+											))}
 								
 								        
 								            // {soil.khaliwaktu.filter(item => item.value !== 0) // Menyaring item yang nilainya tidak sama dengan 0
@@ -1143,25 +1143,26 @@ function App() {
 								            // ))
 								                
 								            // }
-								            {soil.khaliwaktu.filter(item => item.value !== 0) // Menyaring item yang nilainya tidak sama dengan 0
-                                                .map((item, index) => (
-                                                    <div key={index} className="flex flex-row gap-3 px-2 py-2 justify-between w-full font-medium border-b border-solid border-zinc-100">
-                                                        <div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
-                                                            {new Date(item.createdAt).toLocaleDateString()}
-                                                            {new Date(item.createdAt).toLocaleTimeString()}
-                                                            <br />
-                                                        </div>
-                                                        <div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
-                                                            {item.value}
-                                                            <br />
-                                                        </div>
-                                                        <div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
-                                                            {soil.khalipersen[index] ? soil.khalipersen[index].value : "No data"}
-                                                            <br />
-                                                        </div>
-                                                    </div>
-                                                ))
-                                            }
+								            // {soil.khaliwaktu.filter(item => item.value !== 0) // Menyaring item yang nilainya tidak sama dengan 0
+                    //                             .map((item, index) => (
+                    //                                 <div key={index} className="flex flex-row gap-3 px-2 py-2 justify-between w-full font-medium border-b border-solid border-zinc-100">
+                    //                                     <div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
+                    //                                         {new Date(item.createdAt).toLocaleDateString()}
+                    //                                         {new Date(item.createdAt).toLocaleTimeString()}
+                    //                                         <br />
+                    //                                     </div>
+                    //                                     <div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
+                    //                                         {item.value}
+                    //                                         <br />
+                    //                                     </div>
+                    //                                     <div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
+                    //                                         {soil.khalipersen[index] ? soil.khalipersen[index].value : "No data"}
+                    //                                         <br />
+                    //                                     </div>
+                    //                                 </div>
+                    //                             ))
+                    //                         }
+
 
 
 								            
