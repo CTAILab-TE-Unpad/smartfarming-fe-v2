@@ -568,7 +568,7 @@ function App() {
 // 											</h2>
 											
 // 											////bagian informasi erornya sensor
-// 											if(soil?.sensorph1?.anomaly === 1 && soil?.sensorph2?.anomaly === 1 && soil?.sensorst1?.anomaly === 1 soil?.sensorst2?.anomaly === 1 && soil?.sensorn1?.anomaly === 1 && soil?.sensorp1?.anomaly === 1 soil?.sensork1?.anomaly === 1 && soil?.sensorn2?.anomaly === 1 && soil?.sensorp2?.anomaly === 1 soil?.sensork2?.anomaly === 1) {
+								// 			if(soil?.sensorph1?.anomaly === 1 && soil?.sensorph2?.anomaly === 1 && soil?.sensorst1?.anomaly === 1 soil?.sensorst2?.anomaly === 1 && soil?.sensorn1?.anomaly === 1 && soil?.sensorp1?.anomaly === 1 soil?.sensork1?.anomaly === 1 && soil?.sensorn2?.anomaly === 1 && soil?.sensorp2?.anomaly === 1 soil?.sensork2?.anomaly === 1) {
 // 											    <div className="text-teal-500">
 // 											        Terdapat beberapa sensor dalam kondisi tidak baik, tertera di tabel dengan status ANOMALI. Harap cek ke lokasi.
 // 											    </div>
