@@ -410,9 +410,9 @@ function App() {
 	    musan1: [],
 	    musap1: [],
 	    musak1: [],
-	    irynan1: [],
-	    irynap1: [],
-	    irynak1: [],
+	   // irynan1: [],
+	   // irynap1: [],
+	   // irynak1: [],
 	    
 	    
 	});
