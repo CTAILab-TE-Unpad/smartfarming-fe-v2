@@ -1,7 +1,9 @@
 import * as React from "react";
 import axios from "axios";
 
-// const datasets = [
+
+//pake endpoin datasetsAnomali
+// const datasetsAnomali = [
 // 	{
 // 		device_id: "D8fRCvhyRWUNtzfWuhbdb9q5azNkrE4g",
 // 		index_id: "618bce88109f491b98e68b59",
@@ -46,6 +48,8 @@ import axios from "axios";
 // 	}, 
 // ];
 
+
+//pake endpoin datalist
 const datasoil = [
 	{
 		device_id: "Tdr4a4bKp5AzrCe6KGki8bUDF0ynE9l9",
@@ -138,37 +142,10 @@ const datasoil = [
 		index_id: "618dc5c2553f46dc235bcfed",
 		elementId: "manualr6",
 	},
-];
-
-const datasetsB = [
-	{
-		device_id: "gxaZkwZafNVweTq8HycMKpZMz9MvbTyh",
-		index_id: "65792115cc701ed1363c640f",
-		elementId: "khaliwaktu",
-	},
-	{
-		device_id: "XniD6mBlnKqagRJ8qD9WhR6JGK4yle1d",
-		index_id: "65792115cc701ed1363c640f",
-		elementId: "khalipersen",
-	},
-	{
-		device_id: "ODw83libBAixNsPMGTmqQer2gn2mZrOC",
-		index_id: "6280a8465a0c89673d266101",
-		elementId: "musan1",
-	},
-	{
-		device_id: "ODw83libBAixNsPMGTmqQer2gn2mZrOC",
-		index_id: "6280a8275a0c89673d266100",
-		elementId: "musap1",
-	},
-	{
-		device_id: "ODw83libBAixNsPMGTmqQer2gn2mZrOC",
-		index_id: "6280a8505a0c89673d266102",
-		elementId: "musak1",
-	},
-];
-
-const datasetsC = [
+	
+	
+///sensor NPK
+	
 	{
 		device_id: "GDdR9vUe3yXQWcfhP6grCLK74ZV4QZFL",
 		index_id: "6280a8275a0c89673d266100",
@@ -199,7 +176,9 @@ const datasetsC = [
 		index_id: "6280a8505a0c89673d266102",
 		elementId: "sensork2",
 	},
-		{
+	
+	////sensor_name dipake buat di ngirim ke codingan ML
+	{
 		device_id: "D8fRCvhyRWUNtzfWuhbdb9q5azNkrE4g",
 		index_id: "618bce88109f491b98e68b59",
 		elementId: "sensorph1",
@@ -229,22 +208,142 @@ const datasetsC = [
 		elementId: "sensordht",
 		sensor_name: "DHT"
 	},
+	
+		////log buat prediksi tambahin yang iryna nanti
 	{
-		device_id: "fPMkkgECQndBCs7eFtha09uy57Qv8Xks",
-		index_id: "6129bfebdb963d1d1eaac307",
-		elementId: "sensortds1",
-		sensor_name: "tds1"
+		device_id: "gxaZkwZafNVweTq8HycMKpZMz9MvbTyh",
+		index_id: "65792115cc701ed1363c640f",
+		elementId: "khaliwaktu",
 	},
 	{
-		device_id: "wqZeXsBhFSL6CLzfaUjJsnavudV3WvL7",
-		index_id: "6129bfebdb963d1d1eaac307",
-		elementId: "sensortds2",
-		sensor_name: "tds2"
+		device_id: "XniD6mBlnKqagRJ8qD9WhR6JGK4yle1d",
+		index_id: "65792115cc701ed1363c640f",
+		elementId: "khalipersen",
 	},
-]
+	{
+		device_id: "ODw83libBAixNsPMGTmqQer2gn2mZrOC",
+		index_id: "6280a8465a0c89673d266101",
+		elementId: "musan1",
+	},
+	{
+		device_id: "ODw83libBAixNsPMGTmqQer2gn2mZrOC",
+		index_id: "6280a8275a0c89673d266100",
+		elementId: "musap1",
+	},
+	{
+		device_id: "ODw83libBAixNsPMGTmqQer2gn2mZrOC",
+		index_id: "6280a8505a0c89673d266102",
+		elementId: "musak1",
+	},
+	
+];
+
+// dataset buat nampilin hasil prediksi dan log
+// const datasetsB = [
+// 	{
+// 		device_id: "gxaZkwZafNVweTq8HycMKpZMz9MvbTyh",
+// 		index_id: "65792115cc701ed1363c640f",
+// 		elementId: "khaliwaktu",
+// 	},
+// 	{
+// 		device_id: "XniD6mBlnKqagRJ8qD9WhR6JGK4yle1d",
+// 		index_id: "65792115cc701ed1363c640f",
+// 		elementId: "khalipersen",
+// 	},
+// 	{
+// 		device_id: "ODw83libBAixNsPMGTmqQer2gn2mZrOC",
+// 		index_id: "6280a8465a0c89673d266101",
+// 		elementId: "musan1",
+// 	},
+// 	{
+// 		device_id: "ODw83libBAixNsPMGTmqQer2gn2mZrOC",
+// 		index_id: "6280a8275a0c89673d266100",
+// 		elementId: "musap1",
+// 	},
+// 	{
+// 		device_id: "ODw83libBAixNsPMGTmqQer2gn2mZrOC",
+// 		index_id: "6280a8505a0c89673d266102",
+// 		elementId: "musak1",
+// 	},
+// ];
+
+// const datasetsC = [
+// 	{
+// 		device_id: "GDdR9vUe3yXQWcfhP6grCLK74ZV4QZFL",
+// 		index_id: "6280a8275a0c89673d266100",
+// 		elementId: "sensorn1",
+// 	},
+// 	{
+// 		device_id: "gxaZkwZafNVweTq8HycMKpZMz9MvbTyh",
+// 		index_id: "6280a8275a0c89673d266100",
+// 		elementId: "sensorn2",
+// 	},
+// 	{
+// 		device_id: "GDdR9vUe3yXQWcfhP6grCLK74ZV4QZFL",
+// 		index_id: "6280a8465a0c89673d266101",
+// 		elementId: "sensorp1",
+// 	},
+// 	{
+// 		device_id: "gxaZkwZafNVweTq8HycMKpZMz9MvbTyh",
+// 		index_id: "6280a8465a0c89673d266101",
+// 		elementId: "sensorp2",
+// 	},
+// 	{
+// 		device_id: "GDdR9vUe3yXQWcfhP6grCLK74ZV4QZFL",
+// 		index_id: "6280a8505a0c89673d266102",
+// 		elementId: "sensork1",
+// 	},
+// 	{
+// 		device_id: "gxaZkwZafNVweTq8HycMKpZMz9MvbTyh",
+// 		index_id: "6280a8505a0c89673d266102",
+// 		elementId: "sensork2",
+// 	},
+// 		{
+// 		device_id: "D8fRCvhyRWUNtzfWuhbdb9q5azNkrE4g",
+// 		index_id: "618bce88109f491b98e68b59",
+// 		elementId: "sensorph1",
+// 		sensor_name: "PH1"
+// 	},
+// 	{
+// 		device_id: "lWwWZ7RHI5HToRocg122mLHgmqKsT7F7",
+// 		index_id: "618bce88109f491b98e68b59",
+// 		elementId: "sensorph2",
+// 		sensor_name: "PH2"
+// 	},
+// 	{
+// 		device_id: "BngyuCFVukyQakpJyBug4WubAdpnt2g5",
+// 		index_id: "6142a70446514f50ff8ed6a8",
+// 		elementId: "sensorst1",
+// 		sensor_name: "ST1"
+// 	},
+// 	{
+// 		device_id: "J3c6xgg64gyL8pJ5uCZw69Ec4FJBj97R",
+// 		index_id: "6142a70446514f50ff8ed6a8",
+// 		elementId: "sensorst2",
+// 		sensor_name: "ST1"
+// 	},
+// 	{
+// 		device_id: "AMJ6RHSdwf4XMv2dhPRh8hxnE92exg7U",
+// 		index_id: "638d8677245a8f9cc00b4bcc",
+// 		elementId: "sensordht",
+// 		sensor_name: "DHT"
+// 	},
+// 	{
+// 		device_id: "fPMkkgECQndBCs7eFtha09uy57Qv8Xks",
+// 		index_id: "6129bfebdb963d1d1eaac307",
+// 		elementId: "sensortds1",
+// 		sensor_name: "tds1"
+// 	},
+// 	{
+// 		device_id: "wqZeXsBhFSL6CLzfaUjJsnavudV3WvL7",
+// 		index_id: "6129bfebdb963d1d1eaac307",
+// 		elementId: "sensortds2",
+// 		sensor_name: "tds2"
+// 	},
+// ]
 
 function App() {
-	// const [data, setData] = React.useState({
+	// const [dataAnomali, setDataAnomali] = React.useState({
 	// 	sensorph1: null,
 	// 	sensorph2: null,
 	// 	sensorst1: null,
@@ -254,6 +353,8 @@ function App() {
 	// 	sensortds2: null,
 	// });
 
+
+//nanti dipisah yang NPK
 	const [soil, setSoil] = React.useState({
 		kemaraur1: null,
 		hujanr1: null,
@@ -273,18 +374,7 @@ function App() {
 		kemaraur6: null,
 		hujanr6: null,
 		manualr6: null,
-	});
-
-	const [dataB, setDataB] = React.useState({
-	    khaliwaktu: [],
-	    khalipersen: [],
-	    musan1: [],
-	    musap1: [],
-	    musak1: [],
-	});
-	
-	const [dataC, setDataC] = React.useState({
-		sensorn1: null,
+	    sensorn1: null,
 		sensorn2: null,
 		sensorp1: null,
 		sensorp2: null,
@@ -295,25 +385,58 @@ function App() {
 		sensorst1: null,
 		sensorst2: null,
 		sensordht: null,
-		sensortds1: null,
-		sensortds2: null,
+
+		
+		//log prediksi tambahin iryna
+		khaliwaktu: [],
+	    khalipersen: [],
+	    musan1: [],
+	    musap1: [],
+	    musak1: [],
+	    
+	    
 	});
+
+// 	const [dataB, setDataB] = React.useState({
+// 	    khaliwaktu: [],
+// 	    khalipersen: [],
+// 	    musan1: [],
+// 	    musap1: [],
+// 	    musak1: [],
+// 	});
+	
+// 	const [dataC, setDataC] = React.useState({
+// 		sensorn1: null,
+// 		sensorn2: null,
+// 		sensorp1: null,
+// 		sensorp2: null,
+// 		sensork1: null,
+// 		sensork2: null,
+// 		sensorph1: null,
+// 		sensorph2: null,
+// 		sensorst1: null,
+// 		sensorst2: null,
+// 		sensordht: null,
+// 		sensortds1: null,
+// 		sensortds2: null,
+// 	});
 
 
 
 	React.useEffect(() => {
-		// datasets.forEach((dataset) => {
+		//////fetch yang anomali, bikin juga buat NPK karena pisah
+		// datasetsAnomali.forEach((datasetAnomali) => {
 		// 	axios
-		// 		.get("https://smartfarming2-be.vercel.app/dataset", {
+		// 		.get("https://https://api.sf2.ctailab.com/datasetAnomali", {
 		// 			params: {
-		// 				device_id: dataset.device_id,
-		// 				index_id: dataset.index_id,
+		// 				device_id: datasetAnomali.device_id,
+		// 				index_id: datasetAnomali.index_id,
 		// 			},
 		// 		})
 		// 		.then((res) => {
-		// 			setData((prevState) => ({
+		// 			setDataAnomali((prevState) => ({
 		// 				...prevState,
-		// 				[dataset.elementId]: res?.data[0] || "No data",
+		// 				[datasetAnomali.elementId]: res?.data[0] || "No data",
 		// 			}));
 		// 		})
 		// 		.catch((err) => {
@@ -321,31 +444,12 @@ function App() {
 		// 		});
 		// });
 
-		//fetch yang anomali
-		// datasets.forEach((dataset) => {
-		// 	axios
-		// 		.get("https://smartfarming2-be.vercel.app/dataset", {
-		// 			params: {
-		// 				device_id: dataset.device_id,
-		// 				index_id: dataset.index_id,
-		// 				sensor_name: dataset.sensor_name
-		// 			},
-		// 		})
-		// 		.then((res) => {
-		// 			setData((prevState) => ({
-		// 				...prevState,
-		// 				[dataset.elementId]: res?.data[0] || "No data",
-		// 			}));
-		// 		})
-		// 		.catch((err) => {
-		// 			console.log("error => ", err);
-		// 		});
-		// });
 
+        //nanti ini dipake buat log aja paling ya?
 		datasoil.forEach((dtsoil) => {
 			console.log("dtsoil", dtsoil);
 			axios
-				.get("https://smartfarming2-be.vercel.app/datalist", {
+				.get("https://https://api.sf2.ctailab.com/datalist", {
 					params: {
 						device_id: dtsoil.device_id,
 						index_id: dtsoil.index_id,
@@ -363,45 +467,45 @@ function App() {
 				});
 		});
 
-		datasetsB.forEach((datasetB) => {
-			console.log("datasetB", datasetB);
-			axios
-				.get("https://smartfarming2-be.vercel.app/datalist", {
-					params: {
-						device_id: datasetB.device_id,
-						index_id: datasetB.index_id,
-						},
-					})
-				.then((res) => {
-					setDataB((prevState) => ({
-						...prevState,
-						[datasetB.elementId]: res.data || [],
-						}));
-					})
-				.catch((err) => {
-					console.log("error => ", err);
-					});
-			});
+// 		datasetsB.forEach((datasetB) => {
+// 			console.log("datasetB", datasetB);
+// 			axios
+// 				.get("https://https://api.sf2.ctailab.com/datalist", {
+// 					params: {
+// 						device_id: datasetB.device_id,
+// 						index_id: datasetB.index_id,
+// 						},
+// 					})
+// 				.then((res) => {
+// 					setDataB((prevState) => ({
+// 						...prevState,
+// 						[datasetB.elementId]: res.data || [],
+// 						}));
+// 					})
+// 				.catch((err) => {
+// 					console.log("error => ", err);
+// 					});
+// 			});
 		
-		datasetsC.forEach((datasetC) => {
-			console.log("datasetC", datasetC);
-			axios
-				.get("https://smartfarming2-be.vercel.app/datalist", {
-					params: {
-						device_id: datasetC.device_id,
-						index_id: datasetC.index_id,
-					},
-				})
-				.then((res) => {
-					setDataC((prevState) => ({
-						...prevState,
-						[datasetC.elementId]: res?.data[0] || "No data",
-					}));
-				})
-				.catch((err) => {
-					console.log("error => ", err);
-				});
-		});
+// 		datasetsC.forEach((datasetC) => {
+// 			console.log("datasetC", datasetC);
+// 			axios
+// 				.get("https://https://api.sf2.ctailab.com/datalist", {
+// 					params: {
+// 						device_id: datasetC.device_id,
+// 						index_id: datasetC.index_id,
+// 					},
+// 				})
+// 				.then((res) => {
+// 					setDataC((prevState) => ({
+// 						...prevState,
+// 						[datasetC.elementId]: res?.data[0] || "No data",
+// 					}));
+// 				})
+// 				.catch((err) => {
+// 					console.log("error => ", err);
+// 				});
+// 		});
 
 
 	}, []);
@@ -445,26 +549,26 @@ function App() {
 								</nav>
 
 								
-								<div className="flex gap-5 justify-between">
-									<div className="flex flex-col">
-										<div className="flex gap-3">
-											<img
-												loading="lazy"
-												src="https://cdn.builder.io/api/v1/image/assets/TEMP/43d1c0acb4bf7511249027250d203281f760c879fdb33a13c138a87b9ee0a5fd?apiKey=d03d160494014eaf8a1af94dd934f586&"
-												alt="Lidia Marserlina"
-												className="shrink-0 rounded-full aspect-square w-[42px]"
-											/>
-											<div className="flex flex-col my-auto">
-												<div className="text-sm font-medium tracking-normal text-black">
-													by
-												</div>
-												<div className="mt-1.5 text-xs tracking-normal text-neutral-500">
-													Lidia Marserlina
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
+								// <div className="flex gap-5 justify-between">
+								// 	<div className="flex flex-col">
+								// 		<div className="flex gap-3">
+								// 			<img
+								// 				loading="lazy"
+								// 				src="https://cdn.builder.io/api/v1/image/assets/TEMP/43d1c0acb4bf7511249027250d203281f760c879fdb33a13c138a87b9ee0a5fd?apiKey=d03d160494014eaf8a1af94dd934f586&"
+								// 				alt="Lidia Marserlina"
+								// 				className="shrink-0 rounded-full aspect-square w-[42px]"
+								// 			/>
+								// 			<div className="flex flex-col my-auto">
+								// 				<div className="text-sm font-medium tracking-normal text-black">
+								// 					by
+								// 				</div>
+								// 				<div className="mt-1.5 text-xs tracking-normal text-neutral-500">
+								// 					Lidia Marserlina
+								// 				</div>
+								// 			</div>
+								// 		</div>
+								// 	</div>
+								// </div>
 							</div>
 						</div>
 					</aside>
@@ -815,7 +919,7 @@ function App() {
 														</div>
 													)} */}
 
-													{dataC?.sensorph2?.anomaly === 1 ? (
+													{soil?.sensorph2?.anomaly === 1 ? (
 														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-red-600 bg-red-200 border-red-600 bg-opacity-40 max-md:px-5">
 															{"Anomali"}
 														</div>
@@ -834,10 +938,10 @@ function App() {
 													Hujan
 												</div>
 												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
-													{dataC?.sensorph1?.value}
+													{soil?.sensorph1?.value}
 												</div>
 												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
-													{dataC?.sensorph1?.anomaly === 1 ? (
+													{soil?.sensorph1?.anomaly === 1 ? (
 														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-red-600 bg-red-200 border-red-600 bg-opacity-40 max-md:px-5">
 															{"Anomali"}
 														</div>
@@ -856,10 +960,10 @@ function App() {
 													Kemarau
 												</div>
 												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
-													{dataC?.sensorst2?.value}
+													{soil?.sensorst2?.value}
 												</div>
 												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
-													{dataC?.sensorst2?.anomaly === 1 ? (
+													{soil?.sensorst2?.anomaly === 1 ? (
 														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-red-600 bg-red-200 border-red-600 bg-opacity-40 max-md:px-5">
 															{"Anomali"}
 														</div>
@@ -879,10 +983,10 @@ function App() {
 													Hujan
 												</div>
 												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
-													{dataC?.sensorst1?.value}
+													{soil?.sensorst1?.value}
 												</div>
 												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
-													{dataC?.sensorst1?.anomaly === 1 ? (
+													{soil?.sensorst1?.anomaly === 1 ? (
 														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-red-600 bg-red-200 border-red-600 bg-opacity-40 max-md:px-5">
 															{"Anomali"}
 														</div>
@@ -932,21 +1036,21 @@ function App() {
 													Kemarau
 												</div>
 												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
-													{dataC?.sensorn2?.value}
+													{soil?.sensorn2?.value}
 													<br />
 												</div>
 												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
-													{dataC?.sensorp2?.value}
+													{soil?.sensorp2?.value}
 													<br />
 												</div>
 												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
-													{dataC?.sensork2?.value}
+													{soil?.sensork2?.value}
 													<br />
 												</div>
 												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
 													
 {/* 													<br /> */}
-													{dataC?.sensorn2?.value === 0 ? (
+													{soil?.sensorn2?.value === 0 ? (
 														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-red-600 bg-red-200 border-red-600 bg-opacity-40 max-md:px-5">
 															{"Anomali"}
 														</div>
@@ -962,21 +1066,21 @@ function App() {
 													Hujan
 												</div>
 												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
-													{dataC?.sensorn1?.value}
+													{soil?.sensorn1?.value}
 													<br />
 												</div>
 												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
-													{dataC?.sensorp1?.value}
+													{soil?.sensorp1?.value}
 													<br />
 												</div>
 												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
-													{dataC?.sensork1?.value}
+													{soil?.sensork1?.value}
 													<br />
 												</div>
 												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
 													
 {/* 													<br /> */}
-													{dataC?.sensorn1?.value === 0 ? (
+													{soil?.sensorn1?.value === 0 ? (
 														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-red-600 bg-red-200 border-red-600 bg-opacity-40 max-md:px-5">
 															{"Anomali"}
 														</div>
@@ -1016,7 +1120,7 @@ function App() {
 													Bukaan (0-225)
 												</div>
 											</div>
-											{dataB.khaliwaktu.map((item, index) => (
+											{soil.khaliwaktu.map((item, index) => (
 												<div className="flex flex-row gap-3 px-2 py-2 justify-between w-full font-medium border-b border-solid border-zinc-100">
 													<div key={index} className="flex flex-row gap-3 px-2 py-2 justify-between w-full font-medium border-b border-solid border-zinc-100">
 														<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
@@ -1029,7 +1133,7 @@ function App() {
 															<br />
 														</div>
 														<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
-															{dataB.khalipersen[index] ? dataB.khalipersen[index].value : "No data"}
+															{soil.khalipersen[index] ? soil.khalipersen[index].value : "No data"}
 															<br />
 														</div>
 													</div>												
@@ -1063,7 +1167,7 @@ function App() {
 													K
 												</div>
 											</div>
-											{dataB.musan1.map((item, index) => (
+											{soil.musan1.map((item, index) => (
 												<div className="flex flex-row gap-3 px-2 py-2 justify-between w-full font-medium border-b border-solid border-zinc-100">
 													<div key={index} className="flex flex-row gap-3 px-2 py-2 justify-between w-full font-medium border-b border-solid border-zinc-100">
 														<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
@@ -1076,11 +1180,11 @@ function App() {
 															<br />
 														</div>
 														<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
-															{dataB.musap1[index] ? dataB.musap1[index].value : "No data"}
+															{soil.musap1[index] ? dataB.musap1[index].value : "No data"}
 															<br />
 														</div>
 														<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
-															{dataB.musak1[index] ? dataB.musak1[index].value : "No data"}
+															{soil.musak1[index] ? dataB.musak1[index].value : "No data"}
 															<br />
 														</div>
 													</div>												
@@ -1118,20 +1222,20 @@ function App() {
 {/* 											<div className="flex flex-row gap-3 px-2 py-2 justify-between w-full font-medium border-b border-solid border-zinc-100">
 												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
 													{new Date(
-														dataB?.musan1?.createdAt
+														soil?.musan1?.createdAt
 													).toLocaleDateString()}{" "}
 													<br />
 												</div>
 												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
-													{dataB?.musan1?.value}
+													{soil?.musan1?.value}
 													<br />
 												</div>
 												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
-													{dataB?.musap1?.value}
+													{soil?.musap1?.value}
 													<br />
 												</div>
 												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
-													{dataB?.musak1?.value}
+													{soil?.musak1?.value}
 													<br />
 												</div>
 												
