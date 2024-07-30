@@ -345,7 +345,7 @@ function App() {
 		datasoil.forEach((dtsoil) => {
 			console.log("dtsoil", dtsoil);
 			axios
-				.get("https://smartfarming2-be.vercel.app/datalist", {
+				.get("https://api.sf2.ctailab.com/datalist", {
 					params: {
 						device_id: dtsoil.device_id,
 						index_id: dtsoil.index_id,
@@ -366,7 +366,7 @@ function App() {
 		datasetsB.forEach((datasetB) => {
 			console.log("datasetB", datasetB);
 			axios
-				.get("https://smartfarming2-be.vercel.app/datalist", {
+				.get("https://api.sf2.ctailab.com/datalist", {
 					params: {
 						device_id: datasetB.device_id,
 						index_id: datasetB.index_id,
@@ -386,7 +386,7 @@ function App() {
 		datasetsC.forEach((datasetC) => {
 			console.log("datasetC", datasetC);
 			axios
-				.get("https://smartfarming2-be.vercel.app/datalist", {
+				.get("https://api.sf2.ctailab.com/datalist", {
 					params: {
 						device_id: datasetC.device_id,
 						index_id: datasetC.index_id,
