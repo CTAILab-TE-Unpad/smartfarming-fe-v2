@@ -819,11 +819,12 @@ function App() {
 // 	    ],
 // 	};
     
+    //bedeng manual
     const chartSM_C1R1 = {
 	    labels: SM_C1R1Chart.map((item)=> new Date(item.createdAt).toLocaleString()),
 	    datasets: [
 	        {
-	            label: "R1 Manual",
+	           // label: "R1 Manual",
 	            data: SM_C1R1Chart.map((item) => item.anomaly),
 	            fill: false,
 	            backgroundColor: "rgba(75,192,192,1)",
@@ -836,7 +837,7 @@ function App() {
 	    labels: SM_C1R2Chart.map((item)=> new Date(item.createdAt).toLocaleString()),
 	    datasets: [
 	        {
-	            label: "R2 Manual",
+	           // label: "R2 Manual",
 	            data: SM_C1R2Chart.map((item) => item.anomaly),
 	            fill: false,
 	            backgroundColor: "rgba(75,192,192,1)",
@@ -850,7 +851,7 @@ function App() {
 	    labels: SM_C1R3Chart.map((item)=> new Date(item.createdAt).toLocaleString()),
 	    datasets: [
 	        {
-	            label: "R3 Manual",
+	           // label: "R3 Manual",
 	            data: SM_C1R3Chart.map((item) => item.anomaly),
 	            fill: false,
 	            backgroundColor: "rgba(75,192,192,1)",
@@ -864,7 +865,7 @@ function App() {
 	    labels: SM_C1R4Chart.map((item)=> new Date(item.createdAt).toLocaleString()),
 	    datasets: [
 	        {
-	            label: "R4 Manual",
+	           // label: "R4 Manual",
 	            data: SM_C1R4Chart.map((item) => item.anomaly),
 	            fill: false,
 	            backgroundColor: "rgba(75,192,192,1)",
@@ -878,7 +879,7 @@ function App() {
 	    labels: SM_C1R5Chart.map((item)=> new Date(item.createdAt).toLocaleString()),
 	    datasets: [
 	        {
-	            label: "R5 Manual",
+	           // label: "R5 Manual",
 	            data: SM_C1R5Chart.map((item) => item.anomaly),
 	            fill: false,
 	            backgroundColor: "rgba(75,192,192,1)",
@@ -892,7 +893,7 @@ function App() {
 	    labels: SM_C1R6Chart.map((item)=> new Date(item.createdAt).toLocaleString()),
 	    datasets: [
 	        {
-	            label: "R6 Manual",
+	           // label: "R6 Manual",
 	            data: SM_C1R6Chart.map((item) => item.anomaly),
 	            fill: false,
 	            backgroundColor: "rgba(75,192,192,1)",
@@ -902,6 +903,279 @@ function App() {
 	    ],
 	};
 	
+	
+	//bedeng hujan
+	const chartSM_C2R1 = {
+	    labels: SM_C2R1Chart.map((item)=> new Date(item.createdAt).toLocaleString()),
+	    datasets: [
+	        {
+	           // label: "R1 Hujan",
+	            data: SM_C2R1Chart.map((item) => item.anomaly),
+	            fill: false,
+	            backgroundColor: "rgba(75,192,192,1)",
+	            borderColor: "rgba(75,192,192,1)",
+	            
+	        },
+	    ],
+	};
+	const chartSM_C2R2 = {
+	    labels: SM_C2R2Chart.map((item)=> new Date(item.createdAt).toLocaleString()),
+	    datasets: [
+	        {
+	           // label: "R2 Manual",
+	            data: SM_C2R2Chart.map((item) => item.anomaly),
+	            fill: false,
+	            backgroundColor: "rgba(75,192,192,1)",
+	            borderColor: "rgba(75,192,192,1)",
+	            
+	        },
+	    ],
+	};
+	
+	const chartSM_C2R3 = {
+	    labels: SM_C2R3Chart.map((item)=> new Date(item.createdAt).toLocaleString()),
+	    datasets: [
+	        {
+	           // label: "R3 Manual",
+	            data: SM_C2R3Chart.map((item) => item.anomaly),
+	            fill: false,
+	            backgroundColor: "rgba(75,192,192,1)",
+	            borderColor: "rgba(75,192,192,1)",
+	            
+	        },
+	    ],
+	};
+	
+	const chartSM_C2R4 = {
+	    labels: SM_C2R4Chart.map((item)=> new Date(item.createdAt).toLocaleString()),
+	    datasets: [
+	        {
+	           // label: "R4 Manual",
+	            data: SM_C2R4Chart.map((item) => item.anomaly),
+	            fill: false,
+	            backgroundColor: "rgba(75,192,192,1)",
+	            borderColor: "rgba(75,192,192,1)",
+	            
+	        },
+	    ],
+	};
+	
+	const chartSM_C2R5 = {
+	    labels: SM_C2R5Chart.map((item)=> new Date(item.createdAt).toLocaleString()),
+	    datasets: [
+	        {
+	           // label: "R5 Manual",
+	            data: SM_C2R5Chart.map((item) => item.anomaly),
+	            fill: false,
+	            backgroundColor: "rgba(75,192,192,1)",
+	            borderColor: "rgba(75,192,192,1)",
+	            
+	        },
+	    ],
+	};
+	
+	const chartSM_C2R6 = {
+	    labels: SM_C2R6Chart.map((item)=> new Date(item.createdAt).toLocaleString()),
+	    datasets: [
+	        {
+	           // label: "R6 Manual",
+	            data: SM_C2R6Chart.map((item) => item.anomaly),
+	            fill: false,
+	            backgroundColor: "rgba(75,192,192,1)",
+	            borderColor: "rgba(75,192,192,1)",
+	            
+	        },
+	    ],
+	};
+	
+	const chartPH1 = {
+	    labels: PH1Chart.map((item)=> new Date(item.createdAt).toLocaleString()),
+	    datasets: [
+	        {
+	           // label: "R6 Manual",
+	            data: PH1Chart.map((item) => item.anomaly),
+	            fill: false,
+	            backgroundColor: "rgba(75,192,192,1)",
+	            borderColor: "rgba(75,192,192,1)",
+	            
+	        },
+	    ],
+	};
+	
+	const chartST1 = {
+	    labels: ST1Chart.map((item)=> new Date(item.createdAt).toLocaleString()),
+	    datasets: [
+	        {
+	           // label: "R6 Manual",
+	            data: ST1Chart.map((item) => item.anomaly),
+	            fill: false,
+	            backgroundColor: "rgba(75,192,192,1)",
+	            borderColor: "rgba(75,192,192,1)",
+	            
+	        },
+	    ],
+	};
+	
+	const chartNPK1 = {
+	    labels: NPK1Chart.map((item)=> new Date(item.createdAt).toLocaleString()),
+	    datasets: [
+	        {
+	           // label: "R6 Manual",
+	            data: NPK1Chart.map((item) => item.anomaly),
+	            fill: false,
+	            backgroundColor: "rgba(75,192,192,1)",
+	            borderColor: "rgba(75,192,192,1)",
+	            
+	        },
+	    ],
+	};
+	
+	const chartDHT = {
+	    labels: DHTChart.map((item)=> new Date(item.createdAt).toLocaleString()),
+	    datasets: [
+	        {
+	           // label: "R6 Manual",
+	            data: DHTChart.map((item) => item.anomaly),
+	            fill: false,
+	            backgroundColor: "rgba(75,192,192,1)",
+	            borderColor: "rgba(75,192,192,1)",
+	            
+	        },
+	    ],
+	};
+	
+	
+	
+	//bedeng kemarau
+	const chartSM_C3R1 = {
+	    labels: SM_C3R1Chart.map((item)=> new Date(item.createdAt).toLocaleString()),
+	    datasets: [
+	        {
+	           // label: "R1 Hujan",
+	            data: SM_C3R1Chart.map((item) => item.anomaly),
+	            fill: false,
+	            backgroundColor: "rgba(75,192,192,1)",
+	            borderColor: "rgba(75,192,192,1)",
+	            
+	        },
+	    ],
+	};
+	const chartSM_C3R2 = {
+	    labels: SM_C3R2Chart.map((item)=> new Date(item.createdAt).toLocaleString()),
+	    datasets: [
+	        {
+	           // label: "R2 Manual",
+	            data: SM_C3R2Chart.map((item) => item.anomaly),
+	            fill: false,
+	            backgroundColor: "rgba(75,192,192,1)",
+	            borderColor: "rgba(75,192,192,1)",
+	            
+	        },
+	    ],
+	};
+	
+	const chartSM_C3R3 = {
+	    labels: SM_C3R3Chart.map((item)=> new Date(item.createdAt).toLocaleString()),
+	    datasets: [
+	        {
+	           // label: "R3 Manual",
+	            data: SM_C3R3Chart.map((item) => item.anomaly),
+	            fill: false,
+	            backgroundColor: "rgba(75,192,192,1)",
+	            borderColor: "rgba(75,192,192,1)",
+	            
+	        },
+	    ],
+	};
+	
+	const chartSM_C3R4 = {
+	    labels: SM_C3R4Chart.map((item)=> new Date(item.createdAt).toLocaleString()),
+	    datasets: [
+	        {
+	           // label: "R4 Manual",
+	            data: SM_C3R4Chart.map((item) => item.anomaly),
+	            fill: false,
+	            backgroundColor: "rgba(75,192,192,1)",
+	            borderColor: "rgba(75,192,192,1)",
+	            
+	        },
+	    ],
+	};
+	
+	const chartSM_C3R5 = {
+	    labels: SM_C3R5Chart.map((item)=> new Date(item.createdAt).toLocaleString()),
+	    datasets: [
+	        {
+	           // label: "R5 Manual",
+	            data: SM_C3R5Chart.map((item) => item.anomaly),
+	            fill: false,
+	            backgroundColor: "rgba(75,192,192,1)",
+	            borderColor: "rgba(75,192,192,1)",
+	            
+	        },
+	    ],
+	};
+	
+	const chartSM_C3R6 = {
+	    labels: SM_C3R6Chart.map((item)=> new Date(item.createdAt).toLocaleString()),
+	    datasets: [
+	        {
+	           // label: "R6 Manual",
+	            data: SM_C3R6Chart.map((item) => item.anomaly),
+	            fill: false,
+	            backgroundColor: "rgba(75,192,192,1)",
+	            borderColor: "rgba(75,192,192,1)",
+	            
+	        },
+	    ],
+	};
+	
+	const chartPH2 = {
+	    labels: PH2Chart.map((item)=> new Date(item.createdAt).toLocaleString()),
+	    datasets: [
+	        {
+	           // label: "R6 Manual",
+	            data: PH2Chart.map((item) => item.anomaly),
+	            fill: false,
+	            backgroundColor: "rgba(75,192,192,1)",
+	            borderColor: "rgba(75,192,192,1)",
+	            
+	        },
+	    ],
+	};
+	
+	const chartST2 = {
+	    labels: ST2Chart.map((item)=> new Date(item.createdAt).toLocaleString()),
+	    datasets: [
+	        {
+	           // label: "R6 Manual",
+	            data: ST2Chart.map((item) => item.anomaly),
+	            fill: false,
+	            backgroundColor: "rgba(75,192,192,1)",
+	            borderColor: "rgba(75,192,192,1)",
+	            
+	        },
+	    ],
+	};
+	
+	const chartNPK2 = {
+	    labels: NPK2Chart.map((item)=> new Date(item.createdAt).toLocaleString()),
+	    datasets: [
+	        {
+	           // label: "R6 Manual",
+	            data: NPK2Chart.map((item) => item.anomaly),
+	            fill: false,
+	            backgroundColor: "rgba(75,192,192,1)",
+	            borderColor: "rgba(75,192,192,1)",
+	            
+	        },
+	    ],
+	};
+	
+
+	
+	
+	//beda section
 	
 	const options = {
 	    scales: {
@@ -1694,8 +1968,6 @@ function App() {
 													<Line data={chartSM_C1R6} options={options} />
 												</div>
 											</div>
-											
-							               
 							             </div>
 							         </div>
 							     </div>
@@ -1709,19 +1981,107 @@ function App() {
 							                    Anomali Sensor Bedeng Hujan
 							                 </h2>
 							                 <div className="text-teal-500">Nilai 0 berarti normal dan nilai 1 berarti anomali</div>
-							                 <div style={{ width: '400px', height: '300px' }}>
-    							                 <Line data={chartSM_C1R1} options={options} />
-    							                 <Line data={chartSM_C1R3} options={options} />
-							                 </div>
-							                 <div style={{ width: '400px', height: '300px' }}>
-    							                 <Line data={chartSM_C1R2} options={options} />
-							                 </div>
 							                 
-							                 
+											<div className="flex flex-row gap-3 px-2 py-5 justify-between items-center w-full font-medium border-b border-solid border-zinc-100">
+												<div className="font-medium text-gray-400 w-full text-center justify-center items-center">
+													<Line data={chartSM_C2R1} options={options} />
+												</div>
+												<div className="font-medium text-gray-400 w-full text-center justify-center items-center">
+													<Line data={chartSM_C2R2} options={options} />
+												</div>
+											</div>
+											<div className="flex flex-row gap-3 px-2 py-5 justify-between items-center w-full font-medium border-b border-solid border-zinc-100">
+												<div className="font-medium text-gray-400 w-full text-center justify-center items-center">
+													<Line data={chartSM_C2R3} options={options} />
+												</div>
+												<div className="font-medium text-gray-400 w-full text-center justify-center items-center">
+													<Line data={chartSM_C2R4} options={options} />
+												</div>
+											</div>
+											<div className="flex flex-row gap-3 px-2 py-5 justify-between items-center w-full font-medium border-b border-solid border-zinc-100">
+												<div className="font-medium text-gray-400 w-full text-center justify-center items-center">
+													<Line data={chartSM_C2R5} options={options} />
+												</div>
+												<div className="font-medium text-gray-400 w-full text-center justify-center items-center">
+													<Line data={chartSM_C2R6} options={options} />
+												</div>
+											</div>
+											<div className="flex flex-row gap-3 px-2 py-5 justify-between items-center w-full font-medium border-b border-solid border-zinc-100">
+												<div className="font-medium text-gray-400 w-full text-center justify-center items-center">
+													<Line data={chartST1} options={options} />
+												</div>
+												<div className="font-medium text-gray-400 w-full text-center justify-center items-center">
+													<Line data={chartPH1} options={options} />
+												</div>
+											</div>
+											<div className="flex flex-row gap-3 px-2 py-5 justify-between items-center w-full font-medium border-b border-solid border-zinc-100">
+												<div className="font-medium text-gray-400 w-full text-center justify-center items-center">
+													<Line data={chartNPK1} options={options} />
+												</div>
+												<div className="font-medium text-gray-400 w-full text-center justify-center items-center">
+													<Line data={chartDHT} options={options} />
+												</div>
+											</div>
 							             </div>
 							         </div>
 							     </div>
 							 </section>
+							 
+							 <section className="flex flex-col mt-10 bg-white overflow-y-hidden rounded-[30px] shadow-[0px_10px_60px_rgba(226,236,249,0.5)] w-full">
+							    <div className="flex flex-col w-full p-5">
+							        <div className="flex gap-5 text-sm tracking-normal w-full">
+							            <div className="flex flex-col gap-3 w-full">
+							                <h2 className="text-2xl font-semibold tracking-tight text-black">
+							                    Anomali Sensor Bedeng Kemarau
+							                 </h2>
+							                 <div className="text-teal-500">Nilai 0 berarti normal dan nilai 1 berarti anomali</div>
+							                 
+											<div className="flex flex-row gap-3 px-2 py-5 justify-between items-center w-full font-medium border-b border-solid border-zinc-100">
+												<div className="font-medium text-gray-400 w-full text-center justify-center items-center">
+													<Line data={chartSM_C3R1} options={options} />
+												</div>
+												<div className="font-medium text-gray-400 w-full text-center justify-center items-center">
+													<Line data={chartSM_C3R2} options={options} />
+												</div>
+											</div>
+											<div className="flex flex-row gap-3 px-2 py-5 justify-between items-center w-full font-medium border-b border-solid border-zinc-100">
+												<div className="font-medium text-gray-400 w-full text-center justify-center items-center">
+													<Line data={chartSM_C3R3} options={options} />
+												</div>
+												<div className="font-medium text-gray-400 w-full text-center justify-center items-center">
+													<Line data={chartSM_C3R4} options={options} />
+												</div>
+											</div>
+											<div className="flex flex-row gap-3 px-2 py-5 justify-between items-center w-full font-medium border-b border-solid border-zinc-100">
+												<div className="font-medium text-gray-400 w-full text-center justify-center items-center">
+													<Line data={chartSM_C3R5} options={options} />
+												</div>
+												<div className="font-medium text-gray-400 w-full text-center justify-center items-center">
+													<Line data={chartSM_C3R6} options={options} />
+												</div>
+											</div>
+											<div className="flex flex-row gap-3 px-2 py-5 justify-between items-center w-full font-medium border-b border-solid border-zinc-100">
+												<div className="font-medium text-gray-400 w-full text-center justify-center items-center">
+													<Line data={chartST2} options={options} />
+												</div>
+												<div className="font-medium text-gray-400 w-full text-center justify-center items-center">
+													<Line data={chartPH2} options={options} />
+												</div>
+											</div>
+											<div className="flex flex-row gap-3 px-2 py-5 justify-between items-center w-full font-medium border-b border-solid border-zinc-100">
+												<div className="font-medium text-gray-400 w-full text-center justify-center items-center">
+													<Line data={chartNPK2} options={options} />
+												</div>
+												<div className="font-medium text-gray-400 w-full text-center justify-center items-center">
+													<Line data={chartDHT} options={options} />
+												</div>
+											</div>
+							             </div>
+							         </div>
+							     </div>
+							 </section>
+							 
+							 
 							 
 							 
 							
