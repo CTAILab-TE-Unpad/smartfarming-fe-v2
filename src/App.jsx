@@ -251,6 +251,148 @@ const datasetsB = [
 ];
 
 
+//nanti ini buat menampillkan anomaly detection
+const datasetsC = [
+	{
+		device_id: "Tdr4a4bKp5AzrCe6KGki8bUDF0ynE9l9",
+		index_id: "611f7d7f4750382956b468e4",
+		elementId: "SM_C3R1",
+	},
+	{
+		device_id: "XniD6mBlnKqagRJ8qD9WhR6JGK4yle1d",
+		index_id: "611f7d7f4750382956b468e4",
+		elementId: "SM_C2R1",
+	},
+	{
+		device_id: "ODw83libBAixNsPMGTmqQer2gn2mZrOC",
+		index_id: "611f7d7f4750382956b468e4",
+		elementId: "SM_C1R1",
+	},
+
+	{
+		device_id: "Tdr4a4bKp5AzrCe6KGki8bUDF0ynE9l9",
+		index_id: "61305378590b802f53935e9a",
+		elementId: "SM_C3R2",
+	},
+	{
+		device_id: "XniD6mBlnKqagRJ8qD9WhR6JGK4yle1d",
+		index_id: "61305378590b802f53935e9a",
+		elementId: "SM_C2R2",
+	},
+	{
+		device_id: "ODw83libBAixNsPMGTmqQer2gn2mZrOC",
+		index_id: "61305378590b802f53935e9a",
+		elementId: "SM_C1R2",
+	},
+	{
+		device_id: "Tdr4a4bKp5AzrCe6KGki8bUDF0ynE9l9",
+		index_id: "6130523e590b802f53935e99",
+		elementId: "SM_C3R3",
+	},
+	{
+		device_id: "XniD6mBlnKqagRJ8qD9WhR6JGK4yle1d",
+		index_id: "6130523e590b802f53935e99",
+		elementId: "SM_C2R3",
+	},
+	{
+		device_id: "ODw83libBAixNsPMGTmqQer2gn2mZrOC",
+		index_id: "6130523e590b802f53935e99",
+		elementId: "SM_C1R3",
+	},
+	{
+		device_id: "Tdr4a4bKp5AzrCe6KGki8bUDF0ynE9l9",
+		index_id: "618f89476941b53a5d35606f",
+		elementId: "SM_C3R4",
+	},
+	{
+		device_id: "XniD6mBlnKqagRJ8qD9WhR6JGK4yle1d",
+		index_id: "618f89476941b53a5d35606f",
+		elementId: "SM_C2R4",
+	},
+	{
+		device_id: "ODw83libBAixNsPMGTmqQer2gn2mZrOC",
+		index_id: "618f89476941b53a5d35606f",
+		elementId: "SM_C1R4",
+	},
+	{
+		device_id: "Tdr4a4bKp5AzrCe6KGki8bUDF0ynE9l9",
+		index_id: "61910bcfd2cd6b06225ee0ca",
+		elementId: "SM_C3R5",
+	},
+	{
+		device_id: "XniD6mBlnKqagRJ8qD9WhR6JGK4yle1d",
+		index_id: "61910bcfd2cd6b06225ee0ca",
+		elementId: "SM_C2R5",
+	},
+	{
+		device_id: "ODw83libBAixNsPMGTmqQer2gn2mZrOC",
+		index_id: "61910bcfd2cd6b06225ee0ca",
+		elementId: "SM_C1R5",
+	},
+	{
+		device_id: "Tdr4a4bKp5AzrCe6KGki8bUDF0ynE9l9",
+		index_id: "618dc5c2553f46dc235bcfed",
+		elementId: "SM_C3R6",
+	},
+	{
+		device_id: "XniD6mBlnKqagRJ8qD9WhR6JGK4yle1d",
+		index_id: "618dc5c2553f46dc235bcfed",
+		elementId: "SM_C2R6",
+	},
+	{
+		device_id: "ODw83libBAixNsPMGTmqQer2gn2mZrOC",
+		index_id: "618dc5c2553f46dc235bcfed",
+		elementId: "SM_C1R6",
+	},
+
+	//sensor lainnya
+	{
+		device_id: "GDdR9vUe3yXQWcfhP6grCLK74ZV4QZFL",
+		index_id: "6280a8275a0c89673d266100",
+		elementId: "NPK1",
+	},
+	{
+		device_id: "gxaZkwZafNVweTq8HycMKpZMz9MvbTyh",
+		index_id: "6280a8465a0c89673d266101",
+		elementId: "NPK2",
+	},
+	{
+		device_id: "D8fRCvhyRWUNtzfWuhbdb9q5azNkrE4g",
+		index_id: "618bce88109f491b98e68b59",
+		elementId: "PH1A",
+	},
+	{
+		device_id: "lWwWZ7RHI5HToRocg122mLHgmqKsT7F7",
+		index_id: "618bce88109f491b98e68b59",
+		elementId: "PH2A",
+	},
+	{
+		device_id: "BngyuCFVukyQakpJyBug4WubAdpnt2g5",
+		index_id: "6142a70446514f50ff8ed6a8",
+		elementId: "ST1A",
+	},
+	{
+		device_id: "J3c6xgg64gyL8pJ5uCZw69Ec4FJBj97R",
+		index_id: "6142a70446514f50ff8ed6a8",
+		elementId: "ST2A",
+	},
+	{
+		device_id: "AMJ6RHSdwf4XMv2dhPRh8hxnE92exg7U",
+		index_id: "638d8677245a8f9cc00b4bcc",
+		elementId: "DHT1",
+	},
+	{
+		device_id: "fPMkkgECQndBCs7eFtha09uy57Qv8Xks",
+		index_id: "6129bfebdb963d1d1eaac307",
+		elementId: "TDS1A",
+	},
+	{
+		device_id: "wqZeXsBhFSL6CLzfaUjJsnavudV3WvL7",
+		index_id: "6129bfebdb963d1d1eaac307",
+		elementId: "TDS2A",
+	},
+];
+
 function App() {
 
 	const [soil, setSoil] = React.useState({
@@ -308,12 +450,55 @@ function App() {
 
 	});
 	
-	
-	const [musan1ChartData, setMusan1ChartData] = React.useState([]);
-	const [musap1ChartData, setMusap1ChartData] = React.useState([]);
-	const [musak1ChartData, setMusak1ChartData] = React.useState([]);
-	
+	//ini nanti buat anomaly
+	const [dataC, setDataC] = React.useState({
+		SM_C1R1: null,
+		SM_C2R1: null,
+		SM_C3R1: null,
+		SM_C1R2: null,
+		SM_C2R2: null,
+		SM_C3R2: null,
+		SM_C1R3: null,
+		SM_C2R3: null,
+		SM_C3R3: null,
+		SM_C1R4: null,
+		SM_C2R4: null,
+		SM_C3R4: null,
+		SM_C1R5: null,
+		SM_C2R5: null,
+		SM_C3R5: null,
+		SM_C1R6: null,
+		SM_C2R6: null,
+		SM_C3R6: null,
+		SM_C1R7: null,
+		SM_C2R7: null,
+		SM_C3R7: null,
+		//sensor lain
+		NPK1: null,
+		NPK2: null,
+		PH1A: null,
+		PH2A: null,
+		ST1A: null,
+		ST2A: null,
+		DHTA: null,
+		TDS1A: null,
+		TDS2A: null,
 
+	});
+	
+	
+// 	const [musan1ChartData, setMusan1ChartData] = React.useState([]);
+// 	const [musap1ChartData, setMusap1ChartData] = React.useState([]);
+// 	const [musak1ChartData, setMusak1ChartData] = React.useState([]);
+	
+	
+	const [SM_C1R1Chart, setSM_C1R1Chart] = React.useState([]);
+	const [SM_C1R2Chart, setSM_C1R2Chart] = React.useState([]);
+	const [SM_C1R3Chart, setSM_C1R3Chart] = React.useState([]);
+	const [SM_C1R4Chart, setSM_C1R4Chart] = React.useState([]);
+	const [SM_C1R5Chart, setSM_C1R5Chart] = React.useState([]);
+	const [SM_C1R6Chart, setSM_C1R6Chart] = React.useState([]);
+	
 
 	React.useEffect(() => {
 		datasoil.forEach((dtsoil) => {
@@ -352,13 +537,13 @@ function App() {
 						[datasetB.elementId]: res.data || [],
 						}));
 						
-					if (datasetB.elementId === "musan1"){
-					    setMusan1ChartData(res.data);
-					} else if (datasetB.elementId === "musap1"){
-					    setMusap1ChartData(res.data)
-					} else if (datasetB.elementId === "musak1"){
-					    setMusak1ChartData(res.data)
-					}
+				// 	if (datasetB.elementId === "musan1"){
+				// 	    setMusan1ChartData(res.data);
+				// 	} else if (datasetB.elementId === "musap1"){
+				// 	    setMusap1ChartData(res.data)
+				// 	} else if (datasetB.elementId === "musak1"){
+				// 	    setMusak1ChartData(res.data)
+				// 	}
 					
 					})
 				.catch((err) => {
@@ -368,31 +553,95 @@ function App() {
 		
 	}, []);
 	
+	
+	
+		datasetsC.forEach((datasetC) => {
+			console.log("datasetC", datasetC);
+			axios
+				.get("https://api.sf2.ctailab.com/dataBanyak", {
+					params: {
+						device_id: datasetC.device_id,
+						index_id: datasetC.index_id,
+						},
+					})
+				.then((res) => {
+					setDataC((prevState) => ({
+						...prevState,
+						[datasetC.elementId]: res.data || [],
+						}));
+						
+					if (datasetC.elementId === "SM_C1R1"){
+					    setSM_C1R1Chart(res.data);
+					} else if (datasetB.elementId === "SM_C1R2"){
+					    setSM_C1R2Chart(res.data);
+					} else if (datasetB.elementId === "SM_C1R3"){
+					    setSM_C1R3Chart(res.data);
+					} else if (datasetB.elementId === "SM_C1R4"){
+					    setSM_C1R4Chart(res.data);
+					} else if (datasetB.elementId === "SM_C1R5"){
+					    setSM_C1R5Chart(res.data);
+					} else if (datasetB.elementId === "SM_C1R6"){
+					    setSM_C1R6Chart(res.data);
+					} 
+					})
+				.catch((err) => {
+					console.log("error => ", err);
+					});
+			});
+		
+	}, []);
+	
+	
+	
 	const chartData = {
-	    labels: musan1ChartData.map((item)=> new Date(item.createdAt).toLocaleString()),
+	    labels: SM_C1R1Chart.map((item)=> new Date(item.createdAt).toLocaleString()),
 	    datasets: [
 	        {
-	            label: "Musa N1",
-	            data: musan1ChartData.map((item) => item.value),
+	            label: "R1 Manual",
+	            data: SM_C1R1Chart.map((item) => item.value),
 	            fill: false,
 	            backgroundColor: "rgba(75,192,192,1)",
 	            borderColor: "rgba(75,192,192,1)",
 	            
 	        },
 	        {
-	            label: "Musa P1",
-	            data: musap1ChartData.map((item) => item.value),
+	            label: "R2 Manual",
+	            data: SM_C1R2Chart.map((item) => item.value),
 	            fill: false,
 	            backgroundColor: "rgba(255,99,132,1)",
 	            borderColor: "rgba(255,99,132,1)",
 	            
 	        },
 	        {
-	            label: "Musa K1",
-	            data: musak1ChartData.map((item) => item.value),
+	            label: "R3 Manual",
+	            data: SM_C1R3Chart.map((item) => item.value),
 	            fill: false,
 	            backgroundColor: "rgba(54,162,235,1)",
 	            borderColor: "rgba(54,162,235,1)",
+	            
+	        },
+	        {
+	            label: "R4 Manual",
+	            data: SM_C1R4Chart.map((item) => item.value),
+	            fill: false,
+	            backgroundColor: "rgba(255, 206, 86, 1)",
+	            borderColor: "rgba(255, 206, 86, 1)",
+	            
+	        },
+	        {
+	            label: "R4 Manual",
+	            data: SM_C1R4Chart.map((item) => item.value),
+	            fill: false,
+	            backgroundColor: "rgba(153, 102, 255, 1)",
+	            borderColor: "rgba(153, 102, 255, 1)",
+	            
+	        },
+	        {
+	            label: "R4 Manual",
+	            data: SM_C1R4Chart.map((item) => item.value),
+	            fill: false,
+	            backgroundColor: "rgba(255, 159, 64, 1)",
+	            borderColor: "rgba(255, 159, 64, 1)",
 	            
 	        },
 	    ],
