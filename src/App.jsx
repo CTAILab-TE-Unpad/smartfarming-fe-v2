@@ -452,27 +452,24 @@ function App() {
 	
 	//ini nanti buat anomaly
 	const [dataC, setDataC] = React.useState({
-		SM_C1R1: null,
-		SM_C2R1: null,
 		SM_C3R1: null,
-		SM_C1R2: null,
-		SM_C2R2: null,
+		SM_C2R1: null,
+		SM_C1R1: null,
 		SM_C3R2: null,
-		SM_C1R3: null,
-		SM_C2R3: null,
+		SM_C2R2: null,
+		SM_C1R2: null,
 		SM_C3R3: null,
-		SM_C1R4: null,
-		SM_C2R4: null,
+		SM_C2R3: null,
+		SM_C1R3: null,
 		SM_C3R4: null,
-		SM_C1R5: null,
-		SM_C2R5: null,
+		SM_C2R4: null,
+		SM_C1R4: null,
 		SM_C3R5: null,
-		SM_C1R6: null,
-		SM_C2R6: null,
+		SM_C2R5: null,
+		SM_C1R5: null,
 		SM_C3R6: null,
-		SM_C1R7: null,
-		SM_C2R7: null,
-		SM_C3R7: null,
+		SM_C2R6: null,
+		SM_C1R6: null,
 		//sensor lain
 		NPK1: null,
 		NPK2: null,
@@ -572,15 +569,15 @@ function App() {
 						
 					if (datasetC.elementId === "SM_C1R1"){
 					    setSM_C1R1Chart(res.data);
-					} else if (datasetB.elementId === "SM_C1R2"){
+					} else if (datasetC.elementId === "SM_C1R2"){
 					    setSM_C1R2Chart(res.data);
-					} else if (datasetB.elementId === "SM_C1R3"){
+					} else if (datasetC.elementId === "SM_C1R3"){
 					    setSM_C1R3Chart(res.data);
-					} else if (datasetB.elementId === "SM_C1R4"){
+					} else if (datasetC.elementId === "SM_C1R4"){
 					    setSM_C1R4Chart(res.data);
-					} else if (datasetB.elementId === "SM_C1R5"){
+					} else if (datasetC.elementId === "SM_C1R5"){
 					    setSM_C1R5Chart(res.data);
-					} else if (datasetB.elementId === "SM_C1R6"){
+					} else if (datasetC.elementId === "SM_C1R6"){
 					    setSM_C1R6Chart(res.data);
 					} 
 					})
