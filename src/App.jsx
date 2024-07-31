@@ -705,7 +705,61 @@ function App() {
 	
 	
 	
-	const chartData = {
+// 	const chartData = {
+// 	    labels: SM_C1R1Chart.map((item)=> new Date(item.createdAt).toLocaleString()),
+// 	    datasets: [
+// 	        {
+// 	            label: "R1 Manual",
+// 	            data: SM_C1R1Chart.map((item) => item.anomaly),
+// 	            fill: false,
+// 	            backgroundColor: "rgba(75,192,192,1)",
+// 	            borderColor: "rgba(75,192,192,1)",
+	            
+// 	        },
+// 	        {
+// 	            label: "R2 Manual",
+// 	            data: SM_C1R2Chart.map((item) => item.anomaly),
+// 	            fill: false,
+// 	            backgroundColor: "rgba(255,99,132,1)",
+// 	            borderColor: "rgba(255,99,132,1)",
+	            
+// 	        },
+// 	        {
+// 	            label: "R3 Manual",
+// 	            data: SM_C1R3Chart.map((item) => item.anomaly),
+// 	            fill: false,
+// 	            backgroundColor: "rgba(54,162,235,1)",
+// 	            borderColor: "rgba(54,162,235,1)",
+	            
+// 	        },
+// 	        {
+// 	            label: "R4 Manual",
+// 	            data: SM_C1R4Chart.map((item) => item.anomaly),
+// 	            fill: false,
+// 	            backgroundColor: "rgba(255, 206, 86, 1)",
+// 	            borderColor: "rgba(255, 206, 86, 1)",
+	            
+// 	        },
+// 	        {
+// 	            label: "R5 Manual",
+// 	            data: SM_C1R5Chart.map((item) => item.anomaly),
+// 	            fill: false,
+// 	            backgroundColor: "rgba(153, 102, 255, 1)",
+// 	            borderColor: "rgba(153, 102, 255, 1)",
+	            
+// 	        },
+// 	        {
+// 	            label: "R6 Manual",
+// 	            data: SM_C1R6Chart.map((item) => item.anomaly),
+// 	            fill: false,
+// 	            backgroundColor: "rgba(255, 159, 64, 1)",
+// 	            borderColor: "rgba(255, 159, 64, 1)",
+	            
+// 	        },
+// 	    ],
+// 	};
+    
+    const chartSM_C1R1 = {
 	    labels: SM_C1R1Chart.map((item)=> new Date(item.createdAt).toLocaleString()),
 	    datasets: [
 	        {
@@ -716,44 +770,17 @@ function App() {
 	            borderColor: "rgba(75,192,192,1)",
 	            
 	        },
+	    ],
+	};
+	const chartSM_C1R2 = {
+	    labels: SM_C1R2Chart.map((item)=> new Date(item.createdAt).toLocaleString()),
+	    datasets: [
 	        {
 	            label: "R2 Manual",
 	            data: SM_C1R2Chart.map((item) => item.anomaly),
 	            fill: false,
-	            backgroundColor: "rgba(255,99,132,1)",
-	            borderColor: "rgba(255,99,132,1)",
-	            
-	        },
-	        {
-	            label: "R3 Manual",
-	            data: SM_C1R3Chart.map((item) => item.anomaly),
-	            fill: false,
-	            backgroundColor: "rgba(54,162,235,1)",
-	            borderColor: "rgba(54,162,235,1)",
-	            
-	        },
-	        {
-	            label: "R4 Manual",
-	            data: SM_C1R4Chart.map((item) => item.anomaly),
-	            fill: false,
-	            backgroundColor: "rgba(255, 206, 86, 1)",
-	            borderColor: "rgba(255, 206, 86, 1)",
-	            
-	        },
-	        {
-	            label: "R5 Manual",
-	            data: SM_C1R5Chart.map((item) => item.anomaly),
-	            fill: false,
-	            backgroundColor: "rgba(153, 102, 255, 1)",
-	            borderColor: "rgba(153, 102, 255, 1)",
-	            
-	        },
-	        {
-	            label: "R6 Manual",
-	            data: SM_C1R6Chart.map((item) => item.anomaly),
-	            fill: false,
-	            backgroundColor: "rgba(255, 159, 64, 1)",
-	            borderColor: "rgba(255, 159, 64, 1)",
+	            backgroundColor: "rgba(75,192,192,1)",
+	            borderColor: "rgba(75,192,192,1)",
 	            
 	        },
 	    ],
@@ -1520,7 +1547,10 @@ function App() {
 							                    Anomali Sensor Soil Moisture Bedeng Manual
 							                 </h2>
 							                 <div className="text-teal-500">Nilai 0 berarti normal dan nilai 1 berarti anomali</div>
-							                 <Line data={chartData} options={options} />
+							                 <Line data={chartSM_C1R1} options={options} />
+							                 <br />
+							                 <Line data={chartSM_C1R2} options={options} />
+							                 <br />
 							             </div>
 							         </div>
 							     </div>
