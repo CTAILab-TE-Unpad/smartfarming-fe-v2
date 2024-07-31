@@ -400,13 +400,12 @@ const datasetsC = [
 		sensor_name: "SM_C2R1",
 		elementId: "SM_C2R1",
 	},
-// 	{
-// 		sensor_name: "SM_C1R1",
-// 		elementId: "SM_C1R1",
-// 	},
-
 	{
-		sensor_name: "SM_C3R2"
+		sensor_name: "SM_C1R2",
+		elementId: "SM_C1R1",
+	},
+	{
+		sensor_name: "SM_C3R2",
 		elementId: "SM_C3R2",
 	},
 	{
