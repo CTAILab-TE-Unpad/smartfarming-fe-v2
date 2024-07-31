@@ -365,7 +365,7 @@ function App() {
 	    labels: musan1ChartData.map((item)=> new Date(item.createdAt).toLocaleString()),
 	    datasets: [
 	        {
-	            lebel: "Musa N1"
+	            lebel: "Musa N1",
 	            data: musan1ChartData.map((item) => item.value),
 	            fill: false,
 	            backgroundColor: "rgba(75,192,192,1)",
