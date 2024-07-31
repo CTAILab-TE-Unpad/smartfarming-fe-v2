@@ -917,9 +917,9 @@ function App() {
 	                text: "Value",
 	            },
 	            ticks:{
-	              stepSize: 1,
-	              min: 0,
-	              maxL 1,
+	                stepSize: 1,
+	                min: 0,
+	                max: 1,
 	            },
 	        },
 	    },
