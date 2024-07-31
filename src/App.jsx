@@ -610,6 +610,28 @@ function App() {
 	const [SM_C1R5Chart, setSM_C1R5Chart] = React.useState([]);
 	const [SM_C1R6Chart, setSM_C1R6Chart] = React.useState([]);
 	
+	const [SM_C2R1Chart, setSM_C2R1Chart] = React.useState([]);
+	const [SM_C2R2Chart, setSM_C2R2Chart] = React.useState([]);
+	const [SM_C2R3Chart, setSM_C2R3Chart] = React.useState([]);
+	const [SM_C2R4Chart, setSM_C2R4Chart] = React.useState([]);
+	const [SM_C2R5Chart, setSM_C2R5Chart] = React.useState([]);
+	const [SM_C2R6Chart, setSM_C2R6Chart] = React.useState([]);
+	
+	const [SM_C3R1Chart, setSM_C3R1Chart] = React.useState([]);
+	const [SM_C3R2Chart, setSM_C3R2Chart] = React.useState([]);
+	const [SM_C3R3Chart, setSM_C3R3Chart] = React.useState([]);
+	const [SM_C3R4Chart, setSM_C3R4Chart] = React.useState([]);
+	const [SM_C3R5Chart, setSM_C3R5Chart] = React.useState([]);
+	const [SM_C3R6Chart, setSM_C3R6Chart] = React.useState([]);
+
+	const [NPK1Chart, setNPK1Chart] = React.useState([]);
+	const [NPK2Chart, setNPK2Chart] = React.useState([]);	
+	const [PH1Chart, setPH1Chart] = React.useState([]);
+	const [PH2Chart, setPH2Chart] = React.useState([]);
+	const [ST1Chart, setST1Chart] = React.useState([]);
+	const [ST2Chart, ST2Chart] = React.useState([]);
+	const [DHTChart, setDHTChart] = React.useState([]);
+
 
 	React.useEffect(() => {
 		datasoil.forEach((dtsoil) => {
@@ -694,6 +716,44 @@ function App() {
 					    setSM_C1R5Chart(res.data);
 					} else if (datasetC.elementId === "SM_C1R6"){
 					    setSM_C1R6Chart(res.data);
+					} else if (datasetC.elementId === "SM_C2R1"){
+					    setSM_C2R1Chart(res.data);
+					} else if (datasetC.elementId === "SM_C2R2"){
+					    setSM_C2R2Chart(res.data);
+					} else if (datasetC.elementId === "SM_C2R3"){
+					    setSM_C2R3Chart(res.data);
+					} else if (datasetC.elementId === "SM_C2R4"){
+					    setSM_C2R4Chart(res.data);
+					} else if (datasetC.elementId === "SM_C2R5"){
+					    setSM_C2R5Chart(res.data);
+					} else if (datasetC.elementId === "SM_C2R6"){
+					    setSM_C2R6Chart(res.data);
+					} else if (datasetC.elementId === "SM_C3R1"){
+					    setSM_C3R1Chart(res.data);
+					} else if (datasetC.elementId === "SM_C3R2"){
+					    setSM_C3R2Chart(res.data);
+					} else if (datasetC.elementId === "SM_C3R3"){
+					    setSM_C3R3Chart(res.data);
+					} else if (datasetC.elementId === "SM_C3R4"){
+					    setSM_C3R4Chart(res.data);
+					} else if (datasetC.elementId === "SM_C3R5"){
+					    setSM_C3R5Chart(res.data);
+					} else if (datasetC.elementId === "SM_C3R6"){
+					    setSM_C3R6Chart(res.data);
+					} else if (datasetC.elementId === "NPK1"){
+					    setNPK1Chart(res.data);
+					} else if (datasetC.elementId === "NPK2"){
+					    setNPK2Chart(res.data);
+					} else if (datasetC.elementId === "PH1A"){
+					    setPH1Chart(res.data);
+					} else if (datasetC.elementId === "PH2A"){
+					    setPH2Chart(res.data);
+					} else if (datasetC.elementId === "DHTA"){
+					    setDHTChart(res.data);
+					} else if (datasetC.elementId === "ST1A"){
+					    setST1Chart(res.data);
+					} else if (datasetC.elementId === "ST2A"){
+					    setST2Chart(res.data);
 					} 
 					})
 				.catch((err) => {
@@ -785,6 +845,63 @@ function App() {
 	        },
 	    ],
 	};
+	
+	const chartSM_C1R3 = {
+	    labels: SM_C1R3Chart.map((item)=> new Date(item.createdAt).toLocaleString()),
+	    datasets: [
+	        {
+	            label: "R3 Manual",
+	            data: SM_C1R3Chart.map((item) => item.anomaly),
+	            fill: false,
+	            backgroundColor: "rgba(75,192,192,1)",
+	            borderColor: "rgba(75,192,192,1)",
+	            
+	        },
+	    ],
+	};
+	
+	const chartSM_C1R4 = {
+	    labels: SM_C1R4Chart.map((item)=> new Date(item.createdAt).toLocaleString()),
+	    datasets: [
+	        {
+	            label: "R4 Manual",
+	            data: SM_C1R4Chart.map((item) => item.anomaly),
+	            fill: false,
+	            backgroundColor: "rgba(75,192,192,1)",
+	            borderColor: "rgba(75,192,192,1)",
+	            
+	        },
+	    ],
+	};
+	
+	const chartSM_C1R5 = {
+	    labels: SM_C1R5Chart.map((item)=> new Date(item.createdAt).toLocaleString()),
+	    datasets: [
+	        {
+	            label: "R5 Manual",
+	            data: SM_C1R5Chart.map((item) => item.anomaly),
+	            fill: false,
+	            backgroundColor: "rgba(75,192,192,1)",
+	            borderColor: "rgba(75,192,192,1)",
+	            
+	        },
+	    ],
+	};
+	
+	const chartSM_C1R6 = {
+	    labels: SM_C1R6Chart.map((item)=> new Date(item.createdAt).toLocaleString()),
+	    datasets: [
+	        {
+	            label: "R6 Manual",
+	            data: SM_C1R6Chart.map((item) => item.anomaly),
+	            fill: false,
+	            backgroundColor: "rgba(75,192,192,1)",
+	            borderColor: "rgba(75,192,192,1)",
+	            
+	        },
+	    ],
+	};
+	
 	
 	const options = {
 	    scales: {
@@ -1544,7 +1661,7 @@ function App() {
 							        <div className="flex gap-5 text-sm tracking-normal w-full">
 							            <div className="flex flex-col gap-3 w-full">
 							                <h2 className="text-2xl font-semibold tracking-tight text-black">
-							                    Anomali Sensor Soil Moisture Bedeng Manual
+							                    Anomali Sensor Bedeng Manual
 							                 </h2>
 							                 <div className="text-teal-500">Nilai 0 berarti normal dan nilai 1 berarti anomali</div>
 							                 <Line data={chartSM_C1R1} options={options} />
@@ -1555,6 +1672,33 @@ function App() {
 							         </div>
 							     </div>
 							 </section>
+							 
+							 <section className="flex flex-col mt-10 bg-white overflow-y-hidden rounded-[30px] shadow-[0px_10px_60px_rgba(226,236,249,0.5)] w-full">
+							    <div className="flex flex-col w-full p-5">
+							        <div className="flex gap-5 text-sm tracking-normal w-full">
+							            <div className="flex flex-col gap-3 w-full">
+							                <h2 className="text-2xl font-semibold tracking-tight text-black">
+							                    Anomali Sensor Bedeng Hujan
+							                 </h2>
+							                 <div className="text-teal-500">Nilai 0 berarti normal dan nilai 1 berarti anomali</div>
+							                 <Line data={chartSM_C1R1} options={options} />
+							                 <br />
+							                 <Line data={chartSM_C1R2} options={options} />
+							                 <br />
+							                 <Line data={chartSM_C1R3} options={options} />
+							                 <br />
+							                 <Line data={chartSM_C1R4} options={options} />
+							                 <br />
+							                 <Line data={chartSM_C1R5} options={options} />
+							                 <br />
+							                 <Line data={chartSM_C1R6} options={options} />
+							                 <br />
+							             </div>
+							         </div>
+							     </div>
+							 </section>
+							 
+							 
 							
 						</div>
 					</main>
