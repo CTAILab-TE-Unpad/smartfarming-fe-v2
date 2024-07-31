@@ -372,7 +372,7 @@ function App() {
 	    labels: musan1ChartData.map((item)=> new Date(item.createdAt).toLocaleString()),
 	    datasets: [
 	        {
-	            lebel: "Musa N1",
+	            label: "Musa N1",
 	            data: musan1ChartData.map((item) => item.value),
 	            fill: false,
 	            backgroundColor: "rgba(75,192,192,1)",
@@ -380,7 +380,7 @@ function App() {
 	            
 	        },
 	        {
-	            lebel: "Musa P1",
+	            label: "Musa P1",
 	            data: musap1ChartData.map((item) => item.value),
 	            fill: false,
 	            backgroundColor: "rgba(255,99,132,1)",
@@ -388,7 +388,7 @@ function App() {
 	            
 	        },
 	        {
-	            lebel: "Musa K1",
+	            label: "Musa K1",
 	            data: musak1ChartData.map((item) => item.value),
 	            fill: false,
 	            backgroundColor: "rgba(54,162,235,1)",
