@@ -711,7 +711,7 @@ function App() {
 	    datasets: [
 	        {
 	            label: "R1 Manual",
-	            data: SM_C1R1Chart.map((item) => item.value),
+	            data: SM_C1R1Chart.map((item) => item.anomaly),
 	            fill: false,
 	            backgroundColor: "rgba(75,192,192,1)",
 	            borderColor: "rgba(75,192,192,1)",
@@ -719,7 +719,7 @@ function App() {
 	        },
 	        {
 	            label: "R2 Manual",
-	            data: SM_C1R2Chart.map((item) => item.value),
+	            data: SM_C1R2Chart.map((item) => item.anomaly),
 	            fill: false,
 	            backgroundColor: "rgba(255,99,132,1)",
 	            borderColor: "rgba(255,99,132,1)",
@@ -727,7 +727,7 @@ function App() {
 	        },
 	        {
 	            label: "R3 Manual",
-	            data: SM_C1R3Chart.map((item) => item.value),
+	            data: SM_C1R3Chart.map((item) => item.anomaly),
 	            fill: false,
 	            backgroundColor: "rgba(54,162,235,1)",
 	            borderColor: "rgba(54,162,235,1)",
@@ -735,7 +735,7 @@ function App() {
 	        },
 	        {
 	            label: "R4 Manual",
-	            data: SM_C1R4Chart.map((item) => item.value),
+	            data: SM_C1R4Chart.map((item) => item.anomaly),
 	            fill: false,
 	            backgroundColor: "rgba(255, 206, 86, 1)",
 	            borderColor: "rgba(255, 206, 86, 1)",
@@ -743,7 +743,7 @@ function App() {
 	        },
 	        {
 	            label: "R5 Manual",
-	            data: SM_C1R5Chart.map((item) => item.value),
+	            data: SM_C1R5Chart.map((item) => item.anomaly),
 	            fill: false,
 	            backgroundColor: "rgba(153, 102, 255, 1)",
 	            borderColor: "rgba(153, 102, 255, 1)",
@@ -751,7 +751,7 @@ function App() {
 	        },
 	        {
 	            label: "R6 Manual",
-	            data: SM_C1R6Chart.map((item) => item.value),
+	            data: SM_C1R6Chart.map((item) => item.anomaly),
 	            fill: false,
 	            backgroundColor: "rgba(255, 159, 64, 1)",
 	            borderColor: "rgba(255, 159, 64, 1)",
@@ -1518,9 +1518,9 @@ function App() {
 							        <div className="flex gap-5 text-sm tracking-normal w-full">
 							            <div className="flex flex-col gap-3 w-full">
 							                <h2 className="text-2xl font-semibold tracking-tight text-black">
-							                    Musa N1 Line Chart
+							                    Anomali Sensor Soil Moisture Bedeng Manual
 							                 </h2>
-							                 <div className="text-teal-500">Grafik nilai Musa N1</div>
+							                 <div className="text-teal-500">Nilai 0 berarti normal dan nilai 1 berarti anomali</div>
 							                 <Line data={chartData} options={options} />
 							             </div>
 							         </div>
