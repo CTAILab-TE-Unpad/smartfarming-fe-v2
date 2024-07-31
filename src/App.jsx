@@ -362,16 +362,16 @@ function App() {
 	}, []);
 	
 	const chartData = {
-	    labels: musan1ChartData.map((item)=>
-	        new Date(item.createdAt).toLocaleString()
-	    ),
+	    labels: musan1ChartData.map((item)=> new Date(item.createdAt).toLocaleString()),
 	    datasets: [
-	        lebel: "Musa N1"
-	        labels: musan1ChartData.map((item) => item.value),
-	        fill: false,
-	        backgroundColor: "rgba(75,192,192,1)",
-	        borderColor: "rgba(75,192,192,1)",
-	        ),
+	        {
+	            lebel: "Musa N1"
+	            data: musan1ChartData.map((item) => item.value),
+	            fill: false,
+	            backgroundColor: "rgba(75,192,192,1)",
+	            borderColor: "rgba(75,192,192,1)",
+	            
+	        },
 	    ],
 	};
 	
