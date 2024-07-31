@@ -916,6 +916,11 @@ function App() {
 	                display: true,
 	                text: "Value",
 	            },
+	            ticks:{
+	              stepSize: 1,
+	              min: 0,
+	              maxL 1,
+	            },
 	        },
 	    },
 	};
