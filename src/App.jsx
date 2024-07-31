@@ -253,144 +253,259 @@ const datasetsB = [
 
 //nanti ini buat menampillkan anomaly detection
 const datasetsC = [
-	{
-		device_id: "Tdr4a4bKp5AzrCe6KGki8bUDF0ynE9l9",
-		index_id: "611f7d7f4750382956b468e4",
+// 	{
+// 		device_id: "Tdr4a4bKp5AzrCe6KGki8bUDF0ynE9l9",
+// 		index_id: "611f7d7f4750382956b468e4",
+// 		elementId: "SM_C3R1",
+// 	},
+// 	{
+// 		device_id: "XniD6mBlnKqagRJ8qD9WhR6JGK4yle1d",
+// 		index_id: "611f7d7f4750382956b468e4",
+// 		elementId: "SM_C2R1",
+// 	},
+// 	{
+// 		device_id: "ODw83libBAixNsPMGTmqQer2gn2mZrOC",
+// 		index_id: "611f7d7f4750382956b468e4",
+// 		elementId: "SM_C1R1",
+// 	},
+
+// 	{
+// 		device_id: "Tdr4a4bKp5AzrCe6KGki8bUDF0ynE9l9",
+// 		index_id: "61305378590b802f53935e9a",
+// 		elementId: "SM_C3R2",
+// 	},
+// 	{
+// 		device_id: "XniD6mBlnKqagRJ8qD9WhR6JGK4yle1d",
+// 		index_id: "61305378590b802f53935e9a",
+// 		elementId: "SM_C2R2",
+// 	},
+// 	{
+// 		device_id: "ODw83libBAixNsPMGTmqQer2gn2mZrOC",
+// 		index_id: "61305378590b802f53935e9a",
+// 		elementId: "SM_C1R2",
+// 	},
+// 	{
+// 		device_id: "Tdr4a4bKp5AzrCe6KGki8bUDF0ynE9l9",
+// 		index_id: "6130523e590b802f53935e99",
+// 		elementId: "SM_C3R3",
+// 	},
+// 	{
+// 		device_id: "XniD6mBlnKqagRJ8qD9WhR6JGK4yle1d",
+// 		index_id: "6130523e590b802f53935e99",
+// 		elementId: "SM_C2R3",
+// 	},
+// 	{
+// 		device_id: "ODw83libBAixNsPMGTmqQer2gn2mZrOC",
+// 		index_id: "6130523e590b802f53935e99",
+// 		elementId: "SM_C1R3",
+// 	},
+// 	{
+// 		device_id: "Tdr4a4bKp5AzrCe6KGki8bUDF0ynE9l9",
+// 		index_id: "618f89476941b53a5d35606f",
+// 		elementId: "SM_C3R4",
+// 	},
+// 	{
+// 		device_id: "XniD6mBlnKqagRJ8qD9WhR6JGK4yle1d",
+// 		index_id: "618f89476941b53a5d35606f",
+// 		elementId: "SM_C2R4",
+// 	},
+// 	{
+// 		device_id: "ODw83libBAixNsPMGTmqQer2gn2mZrOC",
+// 		index_id: "618f89476941b53a5d35606f",
+// 		elementId: "SM_C1R4",
+// 	},
+// 	{
+// 		device_id: "Tdr4a4bKp5AzrCe6KGki8bUDF0ynE9l9",
+// 		index_id: "61910bcfd2cd6b06225ee0ca",
+// 		elementId: "SM_C3R5",
+// 	},
+// 	{
+// 		device_id: "XniD6mBlnKqagRJ8qD9WhR6JGK4yle1d",
+// 		index_id: "61910bcfd2cd6b06225ee0ca",
+// 		elementId: "SM_C2R5",
+// 	},
+// 	{
+// 		device_id: "ODw83libBAixNsPMGTmqQer2gn2mZrOC",
+// 		index_id: "61910bcfd2cd6b06225ee0ca",
+// 		elementId: "SM_C1R5",
+// 	},
+// 	{
+// 		device_id: "Tdr4a4bKp5AzrCe6KGki8bUDF0ynE9l9",
+// 		index_id: "618dc5c2553f46dc235bcfed",
+// 		elementId: "SM_C3R6",
+// 	},
+// 	{
+// 		device_id: "XniD6mBlnKqagRJ8qD9WhR6JGK4yle1d",
+// 		index_id: "618dc5c2553f46dc235bcfed",
+// 		elementId: "SM_C2R6",
+// 	},
+// 	{
+// 		device_id: "ODw83libBAixNsPMGTmqQer2gn2mZrOC",
+// 		index_id: "618dc5c2553f46dc235bcfed",
+// 		elementId: "SM_C1R6",
+// 	},
+
+// 	//sensor lainnya
+// 	{
+// 		device_id: "GDdR9vUe3yXQWcfhP6grCLK74ZV4QZFL",
+// 		index_id: "6280a8275a0c89673d266100",
+// 		elementId: "NPK1",
+// 	},
+// 	{
+// 		device_id: "gxaZkwZafNVweTq8HycMKpZMz9MvbTyh",
+// 		index_id: "6280a8465a0c89673d266101",
+// 		elementId: "NPK2",
+// 	},
+// 	{
+// 		device_id: "D8fRCvhyRWUNtzfWuhbdb9q5azNkrE4g",
+// 		index_id: "618bce88109f491b98e68b59",
+// 		elementId: "PH1A",
+// 	},
+// 	{
+// 		device_id: "lWwWZ7RHI5HToRocg122mLHgmqKsT7F7",
+// 		index_id: "618bce88109f491b98e68b59",
+// 		elementId: "PH2A",
+// 	},
+// 	{
+// 		device_id: "BngyuCFVukyQakpJyBug4WubAdpnt2g5",
+// 		index_id: "6142a70446514f50ff8ed6a8",
+// 		elementId: "ST1A",
+// 	},
+// 	{
+// 		device_id: "J3c6xgg64gyL8pJ5uCZw69Ec4FJBj97R",
+// 		index_id: "6142a70446514f50ff8ed6a8",
+// 		elementId: "ST2A",
+// 	},
+// 	{
+// 		device_id: "AMJ6RHSdwf4XMv2dhPRh8hxnE92exg7U",
+// 		index_id: "638d8677245a8f9cc00b4bcc",
+// 		elementId: "DHT1",
+// 	},
+// 	{
+// 		device_id: "fPMkkgECQndBCs7eFtha09uy57Qv8Xks",
+// 		index_id: "6129bfebdb963d1d1eaac307",
+// 		elementId: "TDS1A",
+// 	},
+// 	{
+// 		device_id: "wqZeXsBhFSL6CLzfaUjJsnavudV3WvL7",
+// 		index_id: "6129bfebdb963d1d1eaac307",
+// 		elementId: "TDS2A",
+// 	},
+
+    {
+		sensor_name: "SM_C3R1",
 		elementId: "SM_C3R1",
 	},
 	{
-		device_id: "XniD6mBlnKqagRJ8qD9WhR6JGK4yle1d",
-		index_id: "611f7d7f4750382956b468e4",
+		sensor_name: "SM_C2R1",
 		elementId: "SM_C2R1",
 	},
-	{
-		device_id: "ODw83libBAixNsPMGTmqQer2gn2mZrOC",
-		index_id: "611f7d7f4750382956b468e4",
-		elementId: "SM_C1R1",
-	},
+// 	{
+// 		sensor_name: "SM_C1R1",
+// 		elementId: "SM_C1R1",
+// 	},
 
 	{
-		device_id: "Tdr4a4bKp5AzrCe6KGki8bUDF0ynE9l9",
-		index_id: "61305378590b802f53935e9a",
+		sensor_name: "SM_C3R2"
 		elementId: "SM_C3R2",
 	},
 	{
-		device_id: "XniD6mBlnKqagRJ8qD9WhR6JGK4yle1d",
-		index_id: "61305378590b802f53935e9a",
+		sensor_name: "SM_C2R2",
 		elementId: "SM_C2R2",
 	},
 	{
-		device_id: "ODw83libBAixNsPMGTmqQer2gn2mZrOC",
-		index_id: "61305378590b802f53935e9a",
+		sensor_name: "SM_C1R2",
 		elementId: "SM_C1R2",
 	},
 	{
-		device_id: "Tdr4a4bKp5AzrCe6KGki8bUDF0ynE9l9",
-		index_id: "6130523e590b802f53935e99",
+		sensor_name: "SM_C3R3",
 		elementId: "SM_C3R3",
 	},
 	{
-		device_id: "XniD6mBlnKqagRJ8qD9WhR6JGK4yle1d",
-		index_id: "6130523e590b802f53935e99",
+		sensor_name: "SM_C2R3",
 		elementId: "SM_C2R3",
 	},
 	{
-		device_id: "ODw83libBAixNsPMGTmqQer2gn2mZrOC",
-		index_id: "6130523e590b802f53935e99",
+		sensor_name: "SM_C1R3",
 		elementId: "SM_C1R3",
 	},
 	{
-		device_id: "Tdr4a4bKp5AzrCe6KGki8bUDF0ynE9l9",
-		index_id: "618f89476941b53a5d35606f",
+		sensor_name: "SM_C3R4",
 		elementId: "SM_C3R4",
 	},
 	{
-		device_id: "XniD6mBlnKqagRJ8qD9WhR6JGK4yle1d",
-		index_id: "618f89476941b53a5d35606f",
+		sensor_name: "SM_C2R4",
 		elementId: "SM_C2R4",
 	},
 	{
-		device_id: "ODw83libBAixNsPMGTmqQer2gn2mZrOC",
-		index_id: "618f89476941b53a5d35606f",
+		sensor_name: "SM_C1R4",
 		elementId: "SM_C1R4",
 	},
 	{
-		device_id: "Tdr4a4bKp5AzrCe6KGki8bUDF0ynE9l9",
-		index_id: "61910bcfd2cd6b06225ee0ca",
+		sensor_name: "SM_C3R5",
 		elementId: "SM_C3R5",
 	},
 	{
-		device_id: "XniD6mBlnKqagRJ8qD9WhR6JGK4yle1d",
-		index_id: "61910bcfd2cd6b06225ee0ca",
+		sensor_name: "SM_C2R5",
 		elementId: "SM_C2R5",
 	},
 	{
-		device_id: "ODw83libBAixNsPMGTmqQer2gn2mZrOC",
-		index_id: "61910bcfd2cd6b06225ee0ca",
+		sensor_name: "SM_C1R5",
 		elementId: "SM_C1R5",
 	},
 	{
-		device_id: "Tdr4a4bKp5AzrCe6KGki8bUDF0ynE9l9",
-		index_id: "618dc5c2553f46dc235bcfed",
+		sensor_name: "SM_C3R6",
 		elementId: "SM_C3R6",
 	},
 	{
-		device_id: "XniD6mBlnKqagRJ8qD9WhR6JGK4yle1d",
-		index_id: "618dc5c2553f46dc235bcfed",
+		sensor_name: "SM_C2R6",
 		elementId: "SM_C2R6",
 	},
 	{
-		device_id: "ODw83libBAixNsPMGTmqQer2gn2mZrOC",
-		index_id: "618dc5c2553f46dc235bcfed",
+		sensor_name: "SM_C1R6",
 		elementId: "SM_C1R6",
 	},
 
 	//sensor lainnya
 	{
-		device_id: "GDdR9vUe3yXQWcfhP6grCLK74ZV4QZFL",
-		index_id: "6280a8275a0c89673d266100",
+		sensor_name: "NPK1",
 		elementId: "NPK1",
 	},
 	{
-		device_id: "gxaZkwZafNVweTq8HycMKpZMz9MvbTyh",
-		index_id: "6280a8465a0c89673d266101",
+		sensor_name: "NPK2",
 		elementId: "NPK2",
 	},
 	{
-		device_id: "D8fRCvhyRWUNtzfWuhbdb9q5azNkrE4g",
-		index_id: "618bce88109f491b98e68b59",
+		sensor_name: "PH1",
 		elementId: "PH1A",
 	},
 	{
-		device_id: "lWwWZ7RHI5HToRocg122mLHgmqKsT7F7",
-		index_id: "618bce88109f491b98e68b59",
+		sensor_name: "PH2",
 		elementId: "PH2A",
 	},
 	{
-		device_id: "BngyuCFVukyQakpJyBug4WubAdpnt2g5",
-		index_id: "6142a70446514f50ff8ed6a8",
+		sensor_name: "ST1",
 		elementId: "ST1A",
 	},
 	{
-		device_id: "J3c6xgg64gyL8pJ5uCZw69Ec4FJBj97R",
-		index_id: "6142a70446514f50ff8ed6a8",
+		sensor_name: "ST2",
 		elementId: "ST2A",
 	},
 	{
-		device_id: "AMJ6RHSdwf4XMv2dhPRh8hxnE92exg7U",
-		index_id: "638d8677245a8f9cc00b4bcc",
+		sensor_name: "DHT",
 		elementId: "DHT1",
 	},
-	{
-		device_id: "fPMkkgECQndBCs7eFtha09uy57Qv8Xks",
-		index_id: "6129bfebdb963d1d1eaac307",
-		elementId: "TDS1A",
-	},
-	{
-		device_id: "wqZeXsBhFSL6CLzfaUjJsnavudV3WvL7",
-		index_id: "6129bfebdb963d1d1eaac307",
-		elementId: "TDS2A",
-	},
+// 	{
+// 		device_id: "fPMkkgECQndBCs7eFtha09uy57Qv8Xks",
+// 		index_id: "6129bfebdb963d1d1eaac307",
+// 		elementId: "TDS1A",
+// 	},
+// 	{
+// 		device_id: "wqZeXsBhFSL6CLzfaUjJsnavudV3WvL7",
+// 		index_id: "6129bfebdb963d1d1eaac307",
+// 		elementId: "TDS2A",
+// 	},
+    
 ];
 
 function App() {
@@ -454,7 +569,7 @@ function App() {
 	const [dataC, setDataC] = React.useState({
 		SM_C3R1: null,
 		SM_C2R1: null,
-		SM_C1R1: null,
+// 		SM_C1R1: null,
 		SM_C3R2: null,
 		SM_C2R2: null,
 		SM_C1R2: null,
@@ -478,8 +593,8 @@ function App() {
 		ST1A: null,
 		ST2A: null,
 		DHTA: null,
-		TDS1A: null,
-		TDS2A: null,
+// 		TDS1A: null,
+// 		TDS2A: null,
 
 	});
 	
@@ -555,10 +670,11 @@ function App() {
 		datasetsC.forEach((datasetC) => {
 			console.log("datasetC", datasetC);
 			axios
-				.get("https://api.sf2.ctailab.com/dataBanyak", {
+				.get("https://api.sf2.ctailab.com/anomalyDetection", {
 					params: {
-						device_id: datasetC.device_id,
-						index_id: datasetC.index_id,
+				// 		device_id: datasetC.device_id,
+				// 		index_id: datasetC.index_id,
+						sensor_name: datasetC.sensor_name,
 						},
 					})
 				.then((res) => {
@@ -567,7 +683,7 @@ function App() {
 						[datasetC.elementId]: res.data || [],
 						}));
 						
-					if (datasetC.elementId === "SM_C1R1"){
+					if (datasetC.elementId === "SM_C1R2"){
 					    setSM_C1R1Chart(res.data);
 					} else if (datasetC.elementId === "SM_C1R2"){
 					    setSM_C1R2Chart(res.data);
