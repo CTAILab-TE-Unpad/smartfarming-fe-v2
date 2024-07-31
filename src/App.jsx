@@ -1720,18 +1720,21 @@ function App() {
 							                    Anomali Sensor Bedeng Hujan
 							                 </h2>
 							                 <div className="text-teal-500">Nilai 0 berarti normal dan nilai 1 berarti anomali</div>
-							                 <Line data={chartSM_C1R1} options={options} />
-							                 <br />
-							                 <Line data={chartSM_C1R2} options={options} />
-							                 <br />
-							                 <Line data={chartSM_C1R3} options={options} />
-							                 <br />
-							                 <Line data={chartSM_C1R4} options={options} />
-							                 <br />
-							                 <Line data={chartSM_C1R5} options={options} />
-							                 <br />
-							                 <Line data={chartSM_C1R6} options={options} />
-							                 <br />
+							                 <div style={{ width: '400px', height: '300px' }}>
+    							                 <Line data={chartSM_C1R1} options={options} />
+    							                 <br />
+    							                 <Line data={chartSM_C1R2} options={options} />
+    							                 <br />
+    							                 <Line data={chartSM_C1R3} options={options} />
+    							                 <br />
+    							                 <Line data={chartSM_C1R4} options={options} />
+    							                 <br />
+    							                 <Line data={chartSM_C1R5} options={options} />
+    							                 <br />
+    							                 <Line data={chartSM_C1R6} options={options} />
+    							                 <br />
+							                 </div>
+							                 
 							             </div>
 							         </div>
 							     </div>
