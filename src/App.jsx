@@ -1,5 +1,7 @@
 import * as React from "react";
 import axios from "axios";
+import { Line } from "react-chartjs-2";
+import "chart.js/auto";
 
 
 const datasoil = [
@@ -306,6 +308,9 @@ function App() {
 
 	});
 	
+	
+	const [musan1ChartData, setMusan1ChartData] = React.useState([]);
+	
 
 
 	React.useEffect(() => {
@@ -344,16 +349,49 @@ function App() {
 						...prevState,
 						[datasetB.elementId]: res.data || [],
 						}));
+						
+					if (datasetB.elementId === "musan1"){
+					    setMusan1ChartData(res.data)
+					}
 					})
 				.catch((err) => {
 					console.log("error => ", err);
 					});
 			});
 		
-	
-
-
 	}, []);
+	
+	const chartData = {
+	    labels: musan1ChartData.map((item)=>
+	        new Date(item.createdAt).toLocaleString()
+	    ),
+	    datasets: [
+	        lebel: "Musa N1"
+	        labels: musan1ChartData.map((item) => item.value),
+	        fill: false,
+	        backgroundColor: "rgba(75,192,192,1)",
+	        borderColor: "rgba(75,192,192,1)",
+	        ),
+	    ],
+	};
+	
+	const options = {
+	    scales: {
+	        x: {
+	            title: {
+	                display: true,
+	                text: "Time",
+	            },
+	        },
+	        y: {
+	            title:{
+	                display: true,
+	                text: "Value",
+	            },
+	        },
+	    },
+	};
+
 
 	return (
 		<>
@@ -1089,6 +1127,20 @@ function App() {
 									</div>
 								</div>
 							</section>
+							
+							<section className="flex flex-col mt-10 bg-white overflow-y-hidden rounded-[30px] shadow-[0px_10px_60px_rgba(226,236,249,0.5)] w-full">
+							    <div className="flex flex-col w-full p-5">
+							        <div className="flex gap-5 text-sm tracking-normal w-full">
+							            <div className="flex flex-col gap-3 w-full">
+							                <h2 className="text-2xl font-semibold tracking-tight text-black">
+							                    Musa N1 Line Chart
+							                 </h2>
+							                 <div className="text-teal-500">Grafik nilai Musa N1</div>
+							                 <Line data={chartData} options={options} />
+							             </div>
+							         </div>
+							     </div>
+							 </section>
 							
 						</div>
 					</main>
