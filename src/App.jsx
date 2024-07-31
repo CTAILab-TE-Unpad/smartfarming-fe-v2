@@ -629,7 +629,7 @@ function App() {
 	const [PH1Chart, setPH1Chart] = React.useState([]);
 	const [PH2Chart, setPH2Chart] = React.useState([]);
 	const [ST1Chart, setST1Chart] = React.useState([]);
-	const [ST2Chart, ST2Chart] = React.useState([]);
+	const [ST2Chart, setST2Chart] = React.useState([]);
 	const [DHTChart, setDHTChart] = React.useState([]);
 
 
