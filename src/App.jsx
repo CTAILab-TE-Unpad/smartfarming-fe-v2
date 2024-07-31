@@ -1711,6 +1711,7 @@ function App() {
 							                 <div className="text-teal-500">Nilai 0 berarti normal dan nilai 1 berarti anomali</div>
 							                 <div style={{ width: '400px', height: '300px' }}>
     							                 <Line data={chartSM_C1R1} options={options} />
+    							                 <Line data={chartSM_C1R3} options={options} />
 							                 </div>
 							                 <div style={{ width: '400px', height: '300px' }}>
     							                 <Line data={chartSM_C1R2} options={options} />
