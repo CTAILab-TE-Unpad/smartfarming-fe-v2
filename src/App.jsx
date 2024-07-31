@@ -1,52 +1,10 @@
 import * as React from "react";
 import axios from "axios";
 
-// const datasets = [
-// 	{
-// 		device_id: "D8fRCvhyRWUNtzfWuhbdb9q5azNkrE4g",
-// 		index_id: "618bce88109f491b98e68b59",
-// 		elementId: "sensorph1",
-// 		sensor_name: "PH1"
-// 	},
-// 	{
-// 		device_id: "lWwWZ7RHI5HToRocg122mLHgmqKsT7F7",
-// 		index_id: "618bce88109f491b98e68b59",
-// 		elementId: "sensorph2",
-// 		sensor_name: "PH2"
-// 	},
-// 	{
-// 		device_id: "BngyuCFVukyQakpJyBug4WubAdpnt2g5",
-// 		index_id: "6142a70446514f50ff8ed6a8",
-// 		elementId: "sensorst1",
-// 		sensor_name: "ST1"
-// 	},
-// 	{
-// 		device_id: "J3c6xgg64gyL8pJ5uCZw69Ec4FJBj97R",
-// 		index_id: "6142a70446514f50ff8ed6a8",
-// 		elementId: "sensorst2",
-// 		sensor_name: "ST1"
-// 	},
-// 	{
-// 		device_id: "AMJ6RHSdwf4XMv2dhPRh8hxnE92exg7U",
-// 		index_id: "638d8677245a8f9cc00b4bcc",
-// 		elementId: "sensordht",
-// 		sensor_name: "DHT"
-// 	},
-// 	{
-// 		device_id: "fPMkkgECQndBCs7eFtha09uy57Qv8Xks",
-// 		index_id: "6129bfebdb963d1d1eaac307",
-// 		elementId: "sensortds1",
-// 		sensor_name: "tds1"
-// 	},
-// 	{
-// 		device_id: "wqZeXsBhFSL6CLzfaUjJsnavudV3WvL7",
-// 		index_id: "6129bfebdb963d1d1eaac307",
-// 		elementId: "sensortds2",
-// 		sensor_name: "tds2"
-// 	}, 
-// ];
 
 const datasoil = [
+
+	//SM
 	{
 		device_id: "Tdr4a4bKp5AzrCe6KGki8bUDF0ynE9l9",
 		index_id: "611f7d7f4750382956b468e4",
@@ -138,37 +96,8 @@ const datasoil = [
 		index_id: "618dc5c2553f46dc235bcfed",
 		elementId: "manualr6",
 	},
-];
 
-const datasetsB = [
-	{
-		device_id: "gxaZkwZafNVweTq8HycMKpZMz9MvbTyh",
-		index_id: "65792115cc701ed1363c640f",
-		elementId: "khaliwaktu",
-	},
-	{
-		device_id: "XniD6mBlnKqagRJ8qD9WhR6JGK4yle1d",
-		index_id: "65792115cc701ed1363c640f",
-		elementId: "khalipersen",
-	},
-	{
-		device_id: "ODw83libBAixNsPMGTmqQer2gn2mZrOC",
-		index_id: "6280a8465a0c89673d266101",
-		elementId: "musan1",
-	},
-	{
-		device_id: "ODw83libBAixNsPMGTmqQer2gn2mZrOC",
-		index_id: "6280a8275a0c89673d266100",
-		elementId: "musap1",
-	},
-	{
-		device_id: "ODw83libBAixNsPMGTmqQer2gn2mZrOC",
-		index_id: "6280a8505a0c89673d266102",
-		elementId: "musak1",
-	},
-];
-
-const datasetsC = [
+	//sensor lainnya
 	{
 		device_id: "GDdR9vUe3yXQWcfhP6grCLK74ZV4QZFL",
 		index_id: "6280a8275a0c89673d266100",
@@ -241,18 +170,86 @@ const datasetsC = [
 		elementId: "sensortds2",
 		sensor_name: "tds2"
 	},
-]
+];
+
+const datasetsB = [
+	{
+		device_id: "gxaZkwZafNVweTq8HycMKpZMz9MvbTyh",
+		index_id: "65792115cc701ed1363c640f",
+		elementId: "khaliwaktu",
+	},
+	{
+		device_id: "XniD6mBlnKqagRJ8qD9WhR6JGK4yle1d",
+		index_id: "65792115cc701ed1363c640f",
+		elementId: "khalipersen",
+	},
+	{
+		device_id: "ODw83libBAixNsPMGTmqQer2gn2mZrOC",
+		index_id: "6280a8465a0c89673d266101",
+		elementId: "musan1",
+	},
+	{
+		device_id: "ODw83libBAixNsPMGTmqQer2gn2mZrOC",
+		index_id: "6280a8275a0c89673d266100",
+		elementId: "musap1",
+	},
+	{
+		device_id: "ODw83libBAixNsPMGTmqQer2gn2mZrOC",
+		index_id: "6280a8505a0c89673d266102",
+		elementId: "musak1",
+	},
+		{
+		device_id: "XniD6mBlnKqagRJ8qD9WhR6JGK4yle1d",
+		index_id: "6280a8465a0c89673d266101",
+		elementId: "musan2",
+	},
+	{
+		device_id: "XniD6mBlnKqagRJ8qD9WhR6JGK4yle1d",
+		index_id: "6280a8275a0c89673d266100",
+		elementId: "musap2",
+	},
+	{
+		device_id: "XniD6mBlnKqagRJ8qD9WhR6JGK4yle1d",
+		index_id: "6280a8505a0c89673d266102",
+		elementId: "musak2",
+	},
+
+	//iryna
+	{
+		device_id: "ODw83libBAixNsPMGTmqQer2gn2mZrOC",
+		index_id: "6280a8465a0c89673d266101",
+		elementId: "irynan1",
+	},
+	{
+		device_id: "ODw83libBAixNsPMGTmqQer2gn2mZrOC",
+		index_id: "6280a8275a0c89673d266100",
+		elementId: "irynap1",
+	},
+	{
+		device_id: "ODw83libBAixNsPMGTmqQer2gn2mZrOC",
+		index_id: "6280a8505a0c89673d266102",
+		elementId: "irynak1",
+	},
+
+	{
+		device_id: "XniD6mBlnKqagRJ8qD9WhR6JGK4yle1d",
+		index_id: "6280a8465a0c89673d266101",
+		elementId: "irynan2",
+	},
+	{
+		device_id: "XniD6mBlnKqagRJ8qD9WhR6JGK4yle1d",
+		index_id: "6280a8275a0c89673d266100",
+		elementId: "irynap2",
+	},
+	{
+		device_id: "XniD6mBlnKqagRJ8qD9WhR6JGK4yle1d",
+		index_id: "6280a8505a0c89673d266102",
+		elementId: "irynak2",
+	},
+];
+
 
 function App() {
-	// const [data, setData] = React.useState({
-	// 	sensorph1: null,
-	// 	sensorph2: null,
-	// 	sensorst1: null,
-	// 	sensorst2: null,
-	// 	sensordht: null,
-	// 	sensortds1: null,
-	// 	sensortds2: null,
-	// });
 
 	const [soil, setSoil] = React.useState({
 		kemaraur1: null,
@@ -273,17 +270,8 @@ function App() {
 		kemaraur6: null,
 		hujanr6: null,
 		manualr6: null,
-	});
 
-	const [dataB, setDataB] = React.useState({
-	    khaliwaktu: [],
-	    khalipersen: [],
-	    musan1: [],
-	    musap1: [],
-	    musak1: [],
-	});
-	
-	const [dataC, setDataC] = React.useState({
+		//sensor lain
 		sensorn1: null,
 		sensorn2: null,
 		sensorp1: null,
@@ -297,55 +285,34 @@ function App() {
 		sensordht: null,
 		sensortds1: null,
 		sensortds2: null,
+
 	});
 
+	const [dataB, setDataB] = React.useState({
+	    khaliwaktu: [],
+	    khalipersen: [],
+	    musan1: [],
+	    musap1: [],
+	    musak1: [],
+	    musan2: [],
+	    musap2: [],
+	    musak2: [],
+	    irynan1: [],
+	    irynap1: [],
+	    irynak1: [],
+	    irynan2: [],
+	    irynap2: [],
+	    irynak2: [],
+
+	});
+	
 
 
 	React.useEffect(() => {
-		// datasets.forEach((dataset) => {
-		// 	axios
-		// 		.get("https://smartfarming2-be.vercel.app/dataset", {
-		// 			params: {
-		// 				device_id: dataset.device_id,
-		// 				index_id: dataset.index_id,
-		// 			},
-		// 		})
-		// 		.then((res) => {
-		// 			setData((prevState) => ({
-		// 				...prevState,
-		// 				[dataset.elementId]: res?.data[0] || "No data",
-		// 			}));
-		// 		})
-		// 		.catch((err) => {
-		// 			console.log("error => ", err);
-		// 		});
-		// });
-
-		//fetch yang anomali
-		// datasets.forEach((dataset) => {
-		// 	axios
-		// 		.get("https://smartfarming2-be.vercel.app/dataset", {
-		// 			params: {
-		// 				device_id: dataset.device_id,
-		// 				index_id: dataset.index_id,
-		// 				sensor_name: dataset.sensor_name
-		// 			},
-		// 		})
-		// 		.then((res) => {
-		// 			setData((prevState) => ({
-		// 				...prevState,
-		// 				[dataset.elementId]: res?.data[0] || "No data",
-		// 			}));
-		// 		})
-		// 		.catch((err) => {
-		// 			console.log("error => ", err);
-		// 		});
-		// });
-
 		datasoil.forEach((dtsoil) => {
 			console.log("dtsoil", dtsoil);
 			axios
-				.get("https://api.sf2.ctailab.com/datalist", {
+				.get("https://api-sf2.vercel.app/datalist", {
 					params: {
 						device_id: dtsoil.device_id,
 						index_id: dtsoil.index_id,
@@ -366,7 +333,7 @@ function App() {
 		datasetsB.forEach((datasetB) => {
 			console.log("datasetB", datasetB);
 			axios
-				.get("https://api.sf2.ctailab.com/datalist", {
+				.get("https://api-sf2.vercel.app/datalist", {
 					params: {
 						device_id: datasetB.device_id,
 						index_id: datasetB.index_id,
@@ -383,25 +350,7 @@ function App() {
 					});
 			});
 		
-		datasetsC.forEach((datasetC) => {
-			console.log("datasetC", datasetC);
-			axios
-				.get("https://api.sf2.ctailab.com/datalist", {
-					params: {
-						device_id: datasetC.device_id,
-						index_id: datasetC.index_id,
-					},
-				})
-				.then((res) => {
-					setDataC((prevState) => ({
-						...prevState,
-						[datasetC.elementId]: res?.data[0] || "No data",
-					}));
-				})
-				.catch((err) => {
-					console.log("error => ", err);
-				});
-		});
+	
 
 
 	}, []);
@@ -421,53 +370,9 @@ function App() {
 								/>
 								<div className="flex-auto self-start mt-3">SmartFarming</div>
 							</div>
-							<div className="flex flex-col justify-between h-full">
-								<nav className="flex flex-col gap-5 p-3 mt-6 w-full text-sm font-medium tracking-normal text-white bg-green-800 rounded-lg">
-								    <div className="flex gap-3.5">
-								        <img
-								            loading="lazy"
-								            src="https://cdn.builder.io/api/v1/image/assets/TEMP/7a3ccde314faf3075248c175cc423bf1ed4941a06ebc81574783391ced639f90?apiKey=d03d160494014eaf8a1af94dd934f586&"
-								            alt=""
-								            className="shrink-0 w-6 aspect-square"
-								        />
-								        <div className="my-auto">Dashboard</div>
-								    </div>
-{/* 								    <div className="bg-white h-2"></div>
-								    <div className="flex gap-3.5">
-								        <img
-								            loading="lazy"
-								            src="https://cdn.builder.io/api/v1/image/assets/TEMP/7a3ccde314faf3075248c175cc423bf1ed4941a06ebc81574783391ced639f90?apiKey=d03d160494014eaf8a1af94dd934f586&"
-								            alt=""
-								            className="shrink-0 w-6 aspect-square"
-								        />
-								        <div className="my-auto">Analytic</div>
-								    </div> */}
-								</nav>
+					 	</div>
+					 </aside>
 
-								
-								<div className="flex gap-5 justify-between">
-									<div className="flex flex-col">
-										<div className="flex gap-3">
-											<img
-												loading="lazy"
-												src="https://cdn.builder.io/api/v1/image/assets/TEMP/43d1c0acb4bf7511249027250d203281f760c879fdb33a13c138a87b9ee0a5fd?apiKey=d03d160494014eaf8a1af94dd934f586&"
-												alt="Lidia Marserlina"
-												className="shrink-0 rounded-full aspect-square w-[42px]"
-											/>
-											<div className="flex flex-col my-auto">
-												<div className="text-sm font-medium tracking-normal text-black">
-													by
-												</div>
-												<div className="mt-1.5 text-xs tracking-normal text-neutral-500">
-													Lidia Marserlina
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</aside>
 					<main className="flex flex-col max-h-[calc(100vh-10rem)] overflow-y-auto hide-scrollbar ml-5 w-[80%] max-md:ml-0 max-md:w-full">
 						<div className="flex flex-col mt-4 max-md:mt-10 max-md:max-w-full">
 							<h1 className="text-2xl font-medium text-black max-md:max-w-full">
@@ -799,23 +704,13 @@ function App() {
 													Kemarau
 												</div>
 												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
-													{dataC?.sensorph2?.value}
+													{soil?.sensorph2?.value}
 													<br />
 												</div>
 												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
 													
 {/* 													<br /> */}
-{/* 													{data?.sensorph2?.value === 0 ? (
-														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-red-600 bg-red-200 border-red-600 bg-opacity-40 max-md:px-5">
-															{"Anomali"}
-														</div>
-													) : (
-														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-emerald-500 border-emerald-500 border-solid bg-teal-500 bg-opacity-40 max-md:px-5">
-															{"Normal"}
-														</div>
-													)} */}
-
-													{dataC?.sensorph2?.anomaly === 1 ? (
+													{soil?.sensorph2?.value === 0 ? (
 														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-red-600 bg-red-200 border-red-600 bg-opacity-40 max-md:px-5">
 															{"Anomali"}
 														</div>
@@ -824,6 +719,16 @@ function App() {
 															{"Normal"}
 														</div>
 													)}
+
+{/* 													{soil?.sensorph2?.anomaly === 1 ? (
+														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-red-600 bg-red-200 border-red-600 bg-opacity-40 max-md:px-5">
+															{"Anomali"}
+														</div>
+													) : (
+														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-emerald-500 border-emerald-500 border-solid bg-teal-500 bg-opacity-40 max-md:px-5">
+															{"Normal"}
+														</div>
+													)} */}
 												</div>
 											</div>
 											<div className="flex flex-row gap-3 px-2 py-2 justify-between w-full font-medium border-b border-solid border-zinc-100">
@@ -834,10 +739,10 @@ function App() {
 													Hujan
 												</div>
 												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
-													{dataC?.sensorph1?.value}
+													{soil?.sensorph1?.value}
 												</div>
 												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
-													{dataC?.sensorph1?.anomaly === 1 ? (
+													{soil?.sensorph1?.value === 0 ? (
 														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-red-600 bg-red-200 border-red-600 bg-opacity-40 max-md:px-5">
 															{"Anomali"}
 														</div>
@@ -856,10 +761,10 @@ function App() {
 													Kemarau
 												</div>
 												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
-													{dataC?.sensorst2?.value}
+													{soil?.sensorst2?.value}
 												</div>
 												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
-													{dataC?.sensorst2?.anomaly === 1 ? (
+													{soil?.sensorst2?.value === 0 ? (
 														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-red-600 bg-red-200 border-red-600 bg-opacity-40 max-md:px-5">
 															{"Anomali"}
 														</div>
@@ -879,10 +784,10 @@ function App() {
 													Hujan
 												</div>
 												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
-													{dataC?.sensorst1?.value}
+													{soil?.sensorst1?.value}
 												</div>
 												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
-													{dataC?.sensorst1?.anomaly === 1 ? (
+													{soil?.sensorst1?.value === 0 ? (
 														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-red-600 bg-red-200 border-red-600 bg-opacity-40 max-md:px-5">
 															{"Anomali"}
 														</div>
@@ -932,21 +837,21 @@ function App() {
 													Kemarau
 												</div>
 												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
-													{dataC?.sensorn2?.value}
+													{soil?.sensorn2?.value}
 													<br />
 												</div>
 												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
-													{dataC?.sensorp2?.value}
+													{soil?.sensorp2?.value}
 													<br />
 												</div>
 												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
-													{dataC?.sensork2?.value}
+													{soil?.sensork2?.value}
 													<br />
 												</div>
 												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
 													
 {/* 													<br /> */}
-													{dataC?.sensorn2?.value === 0 ? (
+													{soil?.sensorn2?.value === 0 ? (
 														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-red-600 bg-red-200 border-red-600 bg-opacity-40 max-md:px-5">
 															{"Anomali"}
 														</div>
@@ -962,21 +867,21 @@ function App() {
 													Hujan
 												</div>
 												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
-													{dataC?.sensorn1?.value}
+													{soil?.sensorn1?.value}
 													<br />
 												</div>
 												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
-													{dataC?.sensorp1?.value}
+													{soil?.sensorp1?.value}
 													<br />
 												</div>
 												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
-													{dataC?.sensork1?.value}
+													{soil?.sensork1?.value}
 													<br />
 												</div>
 												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
 													
 {/* 													<br /> */}
-													{dataC?.sensorn1?.value === 0 ? (
+													{soil?.sensorn1?.value === 0 ? (
 														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-red-600 bg-red-200 border-red-600 bg-opacity-40 max-md:px-5">
 															{"Anomali"}
 														</div>
@@ -1047,20 +952,29 @@ function App() {
 												Prediksi NPK
 											</h2>
 											<div className="text-teal-500">
-												Nilai prediksi NPK untuh masa kini
+												Nilai prediksi NPK untuh masa kini (Pengganti Sensor NPK)
 											</div>
 											<div className="flex flex-row gap-3 px-2 py-5 justify-between items-center w-full font-medium text-gray-400 border-b border-solid border-zinc-100">
 												<div className="font-medium text-gray-400 w-full text-center justify-center items-center">
 													Waktu Prediksi
 												</div>
 												<div className="font-medium text-gray-400 w-full text-center justify-center items-center">
-													N
+													N Kemarau
 												</div>
 												<div className="font-medium text-gray-400 w-full text-center justify-center items-center">
-													P
+													P Kemarau
 												</div>
 												<div className="font-medium text-gray-400 w-full text-center justify-center items-center">
-													K
+													K Kemarau
+												</div>
+												<div className="font-medium text-gray-400 w-full text-center justify-center items-center">
+													N Hujan
+												</div>
+												<div className="font-medium text-gray-400 w-full text-center justify-center items-center">
+													P Hujan
+												</div>
+												<div className="font-medium text-gray-400 w-full text-center justify-center items-center">
+													K Hujan
 												</div>
 											</div>
 											{dataB.musan1.map((item, index) => (
@@ -1069,6 +983,18 @@ function App() {
 														<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
 															{new Date(item.createdAt).toLocaleDateString()}
 															{new Date(item.createdAt).toLocaleTimeString()}
+															<br />
+														</div>
+														<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
+															{dataB.musan2[index] ? dataB.musan2[index].value : "No data"}
+															<br />
+														</div>
+														<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
+															{dataB.musap2[index] ? dataB.musap2[index].value : "No data"}
+															<br />
+														</div>
+														<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
+															{dataB.musak1[index] ? dataB.musak1[index].value : "No data"}
 															<br />
 														</div>
 														<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
@@ -1096,51 +1022,73 @@ function App() {
 									<div className="flex gap-5 text-sm tracking-normal w-full">
 										<div className="flex flex-col gap-3 w-full">
 											<h2 className="text-2xl font-semibold tracking-tight text-black">
-												Prediksi NPK
+												Prediksi Nutrisi
 											</h2>
 											<div className="text-teal-500">
-												Nilai prediksi NPK untuh masa mendatang
+												Nilai kebutuhan NPK untuh masa mendatang 
 											</div>
 											<div className="flex flex-row gap-3 px-2 py-5 justify-between items-center w-full font-medium text-gray-400 border-b border-solid border-zinc-100">
 												<div className="font-medium text-gray-400 w-full text-center justify-center items-center">
 													Waktu Prediksi
 												</div>
 												<div className="font-medium text-gray-400 w-full text-center justify-center items-center">
-													N
+													N Kemarau
 												</div>
 												<div className="font-medium text-gray-400 w-full text-center justify-center items-center">
-													P
+													P Kemarau
 												</div>
 												<div className="font-medium text-gray-400 w-full text-center justify-center items-center">
-													K
+													K Kemarau
+												</div>
+												<div className="font-medium text-gray-400 w-full text-center justify-center items-center">
+													N Hujan
+												</div>
+												<div className="font-medium text-gray-400 w-full text-center justify-center items-center">
+													P Hujan
+												</div>
+												<div className="font-medium text-gray-400 w-full text-center justify-center items-center">
+													K Hujan
 												</div>
 											</div>
-{/* 											<div className="flex flex-row gap-3 px-2 py-2 justify-between w-full font-medium border-b border-solid border-zinc-100">
-												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
-													{new Date(
-														dataB?.musan1?.createdAt
-													).toLocaleDateString()}{" "}
-													<br />
+											{dataB.irynan1.map((item, index) => (
+												<div className="flex flex-row gap-3 px-2 py-2 justify-between w-full font-medium border-b border-solid border-zinc-100">
+													<div key={index} className="flex flex-row gap-3 px-2 py-2 justify-between w-full font-medium border-b border-solid border-zinc-100">
+														<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
+															{new Date(item.createdAt).toLocaleDateString()}
+															{new Date(item.createdAt).toLocaleTimeString()}
+															<br />
+														</div>
+														<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
+															{dataB.irynan2[index] ? dataB.irynan2[index].value : "No data"}
+															<br />
+														</div>
+														<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
+															{dataB.irynap2[index] ? dataB.irynap2[index].value : "No data"}
+															<br />
+														</div>
+														<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
+															{dataB.irynak1[index] ? dataB.irynak1[index].value : "No data"}
+															<br />
+														</div>
+														<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
+															{item.value}
+															<br />
+														</div>
+														<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
+															{dataB.irynap1[index] ? dataB.irynap1[index].value : "No data"}
+															<br />
+														</div>
+														<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
+															{dataB.irynak1[index] ? dataB.irynak1[index].value : "No data"}
+															<br />
+														</div>
+													</div>												
 												</div>
-												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
-													{dataB?.musan1?.value}
-													<br />
-												</div>
-												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
-													{dataB?.musap1?.value}
-													<br />
-												</div>
-												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
-													{dataB?.musak1?.value}
-													<br />
-												</div>
-												
-											</div> */}
+											))}
 										</div>
 									</div>
 								</div>
 							</section>
-							
 							
 						</div>
 					</main>
