@@ -1677,14 +1677,16 @@ function App() {
 												<div className="font-medium text-gray-400 w-full text-center justify-center items-center">
 													<Line data={chartSM_C1R2} options={options} />
 												</div>
-												<div className="font-medium text-gray-400 w-full text-center justify-center items-center">
-													<Line data={chartSM_C1R3} options={options} />
-												</div>
 											</div>
 											<div className="flex flex-row gap-3 px-2 py-5 justify-between items-center w-full font-medium border-b border-solid border-zinc-100">
 												<div className="font-medium text-gray-400 w-full text-center justify-center items-center">
+													<Line data={chartSM_C1R3} options={options} />
+												</div>
+												<div className="font-medium text-gray-400 w-full text-center justify-center items-center">
 													<Line data={chartSM_C1R4} options={options} />
 												</div>
+											</div>
+											<div className="flex flex-row gap-3 px-2 py-5 justify-between items-center w-full font-medium border-b border-solid border-zinc-100">
 												<div className="font-medium text-gray-400 w-full text-center justify-center items-center">
 													<Line data={chartSM_C1R5} options={options} />
 												</div>
@@ -1693,20 +1695,7 @@ function App() {
 												</div>
 											</div>
 											
-											
-							                 //<Line data={chartSM_C1R1} options={options} />
-							                 //<br />
-							                 //<Line data={chartSM_C1R2} options={options} />
-							                 //<br />
-							                 //<Line data={chartSM_C1R3} options={options} />
-							                 //<br />
-							                 //<Line data={chartSM_C1R4} options={options} />
-							                 //<br />
-							                 //<Line data={chartSM_C1R5} options={options} />
-							                 //<br />
-							                 //<Line data={chartSM_C1R6} options={options} />
-							                 //<br />
-
+							               
 							             </div>
 							         </div>
 							     </div>
@@ -1722,18 +1711,11 @@ function App() {
 							                 <div className="text-teal-500">Nilai 0 berarti normal dan nilai 1 berarti anomali</div>
 							                 <div style={{ width: '400px', height: '300px' }}>
     							                 <Line data={chartSM_C1R1} options={options} />
-    							                 <br />
-    							                 <Line data={chartSM_C1R2} options={options} />
-    							                 <br />
-    							                 <Line data={chartSM_C1R3} options={options} />
-    							                 <br />
-    							                 <Line data={chartSM_C1R4} options={options} />
-    							                 <br />
-    							                 <Line data={chartSM_C1R5} options={options} />
-    							                 <br />
-    							                 <Line data={chartSM_C1R6} options={options} />
-    							                 <br />
 							                 </div>
+							                 <div style={{ width: '400px', height: '300px' }}>
+    							                 <Line data={chartSM_C1R2} options={options} />
+							                 </div>
+							                 
 							                 
 							             </div>
 							         </div>
