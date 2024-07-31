@@ -492,7 +492,7 @@ const datasetsC = [
 	},
 	{
 		sensor_name: "DHT",
-		elementId: "DHT1",
+		elementId: "DHTA",
 	},
 // 	{
 // 		device_id: "fPMkkgECQndBCs7eFtha09uy57Qv8Xks",
@@ -568,7 +568,7 @@ function App() {
 	const [dataC, setDataC] = React.useState({
 		SM_C3R1: null,
 		SM_C2R1: null,
-// 		SM_C1R1: null,
+		SM_C1R1: null,
 		SM_C3R2: null,
 		SM_C2R2: null,
 		SM_C1R2: null,
@@ -824,7 +824,7 @@ function App() {
 	    labels: SM_C1R1Chart.map((item)=> new Date(item.createdAt).toLocaleString()),
 	    datasets: [
 	        {
-	           // label: "R1 Manual",
+	            label: "R1 Manual",
 	            data: SM_C1R1Chart.map((item) => item.anomaly),
 	            fill: false,
 	            backgroundColor: "rgba(75,192,192,1)",
@@ -837,7 +837,7 @@ function App() {
 	    labels: SM_C1R2Chart.map((item)=> new Date(item.createdAt).toLocaleString()),
 	    datasets: [
 	        {
-	           // label: "R2 Manual",
+	            label: "R2 Manual",
 	            data: SM_C1R2Chart.map((item) => item.anomaly),
 	            fill: false,
 	            backgroundColor: "rgba(75,192,192,1)",
@@ -851,7 +851,7 @@ function App() {
 	    labels: SM_C1R3Chart.map((item)=> new Date(item.createdAt).toLocaleString()),
 	    datasets: [
 	        {
-	           // label: "R3 Manual",
+	            label: "R3 Manual",
 	            data: SM_C1R3Chart.map((item) => item.anomaly),
 	            fill: false,
 	            backgroundColor: "rgba(75,192,192,1)",
@@ -865,7 +865,7 @@ function App() {
 	    labels: SM_C1R4Chart.map((item)=> new Date(item.createdAt).toLocaleString()),
 	    datasets: [
 	        {
-	           // label: "R4 Manual",
+	            label: "R4 Manual",
 	            data: SM_C1R4Chart.map((item) => item.anomaly),
 	            fill: false,
 	            backgroundColor: "rgba(75,192,192,1)",
@@ -879,7 +879,7 @@ function App() {
 	    labels: SM_C1R5Chart.map((item)=> new Date(item.createdAt).toLocaleString()),
 	    datasets: [
 	        {
-	           // label: "R5 Manual",
+	            label: "R5 Manual",
 	            data: SM_C1R5Chart.map((item) => item.anomaly),
 	            fill: false,
 	            backgroundColor: "rgba(75,192,192,1)",
@@ -893,7 +893,7 @@ function App() {
 	    labels: SM_C1R6Chart.map((item)=> new Date(item.createdAt).toLocaleString()),
 	    datasets: [
 	        {
-	           // label: "R6 Manual",
+	            label: "R6 Manual",
 	            data: SM_C1R6Chart.map((item) => item.anomaly),
 	            fill: false,
 	            backgroundColor: "rgba(75,192,192,1)",
@@ -909,7 +909,7 @@ function App() {
 	    labels: SM_C2R1Chart.map((item)=> new Date(item.createdAt).toLocaleString()),
 	    datasets: [
 	        {
-	           // label: "R1 Hujan",
+	            label: "R1 Hujan",
 	            data: SM_C2R1Chart.map((item) => item.anomaly),
 	            fill: false,
 	            backgroundColor: "rgba(75,192,192,1)",
@@ -922,7 +922,7 @@ function App() {
 	    labels: SM_C2R2Chart.map((item)=> new Date(item.createdAt).toLocaleString()),
 	    datasets: [
 	        {
-	           // label: "R2 Manual",
+	            label: "R2 Hujan",
 	            data: SM_C2R2Chart.map((item) => item.anomaly),
 	            fill: false,
 	            backgroundColor: "rgba(75,192,192,1)",
@@ -936,7 +936,7 @@ function App() {
 	    labels: SM_C2R3Chart.map((item)=> new Date(item.createdAt).toLocaleString()),
 	    datasets: [
 	        {
-	           // label: "R3 Manual",
+	            label: "R3 Hujan",
 	            data: SM_C2R3Chart.map((item) => item.anomaly),
 	            fill: false,
 	            backgroundColor: "rgba(75,192,192,1)",
@@ -950,7 +950,7 @@ function App() {
 	    labels: SM_C2R4Chart.map((item)=> new Date(item.createdAt).toLocaleString()),
 	    datasets: [
 	        {
-	           // label: "R4 Manual",
+	            label: "R4 Hujan",
 	            data: SM_C2R4Chart.map((item) => item.anomaly),
 	            fill: false,
 	            backgroundColor: "rgba(75,192,192,1)",
@@ -964,7 +964,7 @@ function App() {
 	    labels: SM_C2R5Chart.map((item)=> new Date(item.createdAt).toLocaleString()),
 	    datasets: [
 	        {
-	           // label: "R5 Manual",
+	            label: "R5 Hujan",
 	            data: SM_C2R5Chart.map((item) => item.anomaly),
 	            fill: false,
 	            backgroundColor: "rgba(75,192,192,1)",
@@ -978,7 +978,7 @@ function App() {
 	    labels: SM_C2R6Chart.map((item)=> new Date(item.createdAt).toLocaleString()),
 	    datasets: [
 	        {
-	           // label: "R6 Manual",
+	            label: "R6 Hujan",
 	            data: SM_C2R6Chart.map((item) => item.anomaly),
 	            fill: false,
 	            backgroundColor: "rgba(75,192,192,1)",
@@ -992,7 +992,7 @@ function App() {
 	    labels: PH1Chart.map((item)=> new Date(item.createdAt).toLocaleString()),
 	    datasets: [
 	        {
-	           // label: "R6 Manual",
+	            label: "R6 Hujan",
 	            data: PH1Chart.map((item) => item.anomaly),
 	            fill: false,
 	            backgroundColor: "rgba(75,192,192,1)",
@@ -1006,7 +1006,7 @@ function App() {
 	    labels: ST1Chart.map((item)=> new Date(item.createdAt).toLocaleString()),
 	    datasets: [
 	        {
-	           // label: "R6 Manual",
+	            label: "ST Hujan",
 	            data: ST1Chart.map((item) => item.anomaly),
 	            fill: false,
 	            backgroundColor: "rgba(75,192,192,1)",
@@ -1020,7 +1020,7 @@ function App() {
 	    labels: NPK1Chart.map((item)=> new Date(item.createdAt).toLocaleString()),
 	    datasets: [
 	        {
-	           // label: "R6 Manual",
+	            label: "NPK Hujan",
 	            data: NPK1Chart.map((item) => item.anomaly),
 	            fill: false,
 	            backgroundColor: "rgba(75,192,192,1)",
@@ -1034,7 +1034,7 @@ function App() {
 	    labels: DHTChart.map((item)=> new Date(item.createdAt).toLocaleString()),
 	    datasets: [
 	        {
-	           // label: "R6 Manual",
+	            label: "DHT",
 	            data: DHTChart.map((item) => item.anomaly),
 	            fill: false,
 	            backgroundColor: "rgba(75,192,192,1)",
@@ -1051,7 +1051,7 @@ function App() {
 	    labels: SM_C3R1Chart.map((item)=> new Date(item.createdAt).toLocaleString()),
 	    datasets: [
 	        {
-	           // label: "R1 Hujan",
+	            label: "R1 Kemarau",
 	            data: SM_C3R1Chart.map((item) => item.anomaly),
 	            fill: false,
 	            backgroundColor: "rgba(75,192,192,1)",
@@ -1064,7 +1064,7 @@ function App() {
 	    labels: SM_C3R2Chart.map((item)=> new Date(item.createdAt).toLocaleString()),
 	    datasets: [
 	        {
-	           // label: "R2 Manual",
+	            label: "R2 Kemarau",
 	            data: SM_C3R2Chart.map((item) => item.anomaly),
 	            fill: false,
 	            backgroundColor: "rgba(75,192,192,1)",
@@ -1078,7 +1078,7 @@ function App() {
 	    labels: SM_C3R3Chart.map((item)=> new Date(item.createdAt).toLocaleString()),
 	    datasets: [
 	        {
-	           // label: "R3 Manual",
+	            label: "R3 Kemarau",
 	            data: SM_C3R3Chart.map((item) => item.anomaly),
 	            fill: false,
 	            backgroundColor: "rgba(75,192,192,1)",
@@ -1092,7 +1092,7 @@ function App() {
 	    labels: SM_C3R4Chart.map((item)=> new Date(item.createdAt).toLocaleString()),
 	    datasets: [
 	        {
-	           // label: "R4 Manual",
+	            label: "R4 Kemarau",
 	            data: SM_C3R4Chart.map((item) => item.anomaly),
 	            fill: false,
 	            backgroundColor: "rgba(75,192,192,1)",
@@ -1106,7 +1106,7 @@ function App() {
 	    labels: SM_C3R5Chart.map((item)=> new Date(item.createdAt).toLocaleString()),
 	    datasets: [
 	        {
-	           // label: "R5 Manual",
+	            label: "R5 Kemarau",
 	            data: SM_C3R5Chart.map((item) => item.anomaly),
 	            fill: false,
 	            backgroundColor: "rgba(75,192,192,1)",
@@ -1120,7 +1120,7 @@ function App() {
 	    labels: SM_C3R6Chart.map((item)=> new Date(item.createdAt).toLocaleString()),
 	    datasets: [
 	        {
-	           // label: "R6 Manual",
+	            label: "R6 Kemarau",
 	            data: SM_C3R6Chart.map((item) => item.anomaly),
 	            fill: false,
 	            backgroundColor: "rgba(75,192,192,1)",
@@ -1134,7 +1134,7 @@ function App() {
 	    labels: PH2Chart.map((item)=> new Date(item.createdAt).toLocaleString()),
 	    datasets: [
 	        {
-	           // label: "R6 Manual",
+	            label: "PH Kemarau",
 	            data: PH2Chart.map((item) => item.anomaly),
 	            fill: false,
 	            backgroundColor: "rgba(75,192,192,1)",
@@ -1148,7 +1148,7 @@ function App() {
 	    labels: ST2Chart.map((item)=> new Date(item.createdAt).toLocaleString()),
 	    datasets: [
 	        {
-	           // label: "R6 Manual",
+	            label: "ST Kemarau",
 	            data: ST2Chart.map((item) => item.anomaly),
 	            fill: false,
 	            backgroundColor: "rgba(75,192,192,1)",
@@ -1162,7 +1162,7 @@ function App() {
 	    labels: NPK2Chart.map((item)=> new Date(item.createdAt).toLocaleString()),
 	    datasets: [
 	        {
-	           // label: "R6 Manual",
+	            label: "NPK Kemarau",
 	            data: NPK2Chart.map((item) => item.anomaly),
 	            fill: false,
 	            backgroundColor: "rgba(75,192,192,1)",
