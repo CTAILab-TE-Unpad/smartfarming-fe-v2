@@ -310,6 +310,8 @@ function App() {
 	
 	
 	const [musan1ChartData, setMusan1ChartData] = React.useState([]);
+	const [musap1ChartData, setMusap1ChartData] = React.useState([]);
+	const [musak1ChartData, setMusak1ChartData] = React.useState([]);
 	
 
 
@@ -351,8 +353,13 @@ function App() {
 						}));
 						
 					if (datasetB.elementId === "musan1"){
-					    setMusan1ChartData(res.data)
+					    setMusan1ChartData(res.data);
+					} else if (datasetB.elementId === "musap1"){
+					    setMusap1ChartData(res.data)
+					} else if (datasetB.elementId === "musak1"){
+					    setMusak1ChartData(res.data)
 					}
+					
 					})
 				.catch((err) => {
 					console.log("error => ", err);
@@ -370,6 +377,22 @@ function App() {
 	            fill: false,
 	            backgroundColor: "rgba(75,192,192,1)",
 	            borderColor: "rgba(75,192,192,1)",
+	            
+	        },
+	        {
+	            lebel: "Musa P1",
+	            data: musap1ChartData.map((item) => item.value),
+	            fill: false,
+	            backgroundColor: "rgba(255,99,132,1)",
+	            borderColor: "rgba(255,99,132,1)",
+	            
+	        },
+	        {
+	            lebel: "Musa K1",
+	            data: musak1ChartData.map((item) => item.value),
+	            fill: false,
+	            backgroundColor: "rgba(54,162,235,1)",
+	            borderColor: "rgba(54,162,235,1)",
 	            
 	        },
 	    ],
