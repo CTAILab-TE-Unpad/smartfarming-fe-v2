@@ -626,16 +626,16 @@ function App() {
 	            
 	        },
 	        {
-	            label: "R4 Manual",
-	            data: SM_C1R4Chart.map((item) => item.value),
+	            label: "R5 Manual",
+	            data: SM_C1R5Chart.map((item) => item.value),
 	            fill: false,
 	            backgroundColor: "rgba(153, 102, 255, 1)",
 	            borderColor: "rgba(153, 102, 255, 1)",
 	            
 	        },
 	        {
-	            label: "R4 Manual",
-	            data: SM_C1R4Chart.map((item) => item.value),
+	            label: "R6 Manual",
+	            data: SM_C1R6Chart.map((item) => item.value),
 	            fill: false,
 	            backgroundColor: "rgba(255, 159, 64, 1)",
 	            borderColor: "rgba(255, 159, 64, 1)",
