@@ -38,3 +38,10 @@ html, body, #root {
 .hide-scrollbar {
   scrollbar-width: none; /* Firefox */
 }
+
+@media only screen and (max-width: 1024px) {
+    body {
+        width: 1024px;
+        overflow-x: scroll;
+    }
+}
