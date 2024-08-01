@@ -631,6 +631,9 @@ function App() {
 	const [ST1Chart, setST1Chart] = React.useState([]);
 	const [ST2Chart, setST2Chart] = React.useState([]);
 	const [DHTChart, setDHTChart] = React.useState([]);
+	
+	
+	const [analysis, setAnalysis] = React.useState("Pemberian air dan nutrisi pada hari ini sudah sesuai");
 
 
 	React.useEffect(() => {
@@ -704,7 +707,7 @@ function App() {
 						[datasetC.elementId]: res.data || [],
 						}));
 						
-					if (datasetC.elementId === "SM_C1R2"){
+					if (datasetC.elementId === "SM_C1R1"){
 					    setSM_C1R1Chart(res.data);
 					} else if (datasetC.elementId === "SM_C1R2"){
 					    setSM_C1R2Chart(res.data);
@@ -762,6 +765,49 @@ function App() {
 			});
 		
 	}, []);
+	
+	
+	React.useEffect(() => {
+		if (dataB.irynan1.length && dataB.musan1.length) {
+			let analysisText = "Pemberian air dan nutrisi pada hari ini sudah sesuai";
+			let issues = [];
+
+			const irynan1 = dataB.irynan2[0]?.value || 0;
+			const musan1 = dataB.musan1[0]?.value || 0;
+			const irynap1 = dataB.irynap2[0]?.value || 0;
+			const musap1 = dataB.musap1[0]?.value || 0;
+			const irynak1 = dataB.irynak1[0]?.value || 0;
+			const musak1 = dataB.musak1[0]?.value || 0;
+
+			if (irynan1 !== musan1) {
+				if (irynan1 < musan1) {
+					issues.push(`kekurangan N sebanyak ${musan1 - irynan1}`);
+				} else {
+					issues.push(`kelebihan N sebanyak ${irynan1 - musan1}`);
+				}
+			}
+			if (irynap1 !== musap1) {
+				if (irynap1 < musap1) {
+					issues.push(`kekurangan P sebanyak ${musap1 - irynap1}`);
+				} else {
+					issues.push(`kelebihan P sebanyak ${irynap1 - musap1}`);
+				}
+			}
+			if (irynak1 !== musak1) {
+				if (irynak1 < musak1) {
+					issues.push(`kekurangan K sebanyak ${musak1 - irynak1}`);
+				} else {
+					issues.push(`kelebihan K sebanyak ${irynak1 - musak1}`);
+				}
+			}
+
+			if (issues.length) {
+				analysisText = `Pemberian nutrisi ${issues.join(', ')}`;
+			}
+
+			setAnalysis(analysisText);
+		}
+	}, [dataB]);
 	
 	
 	
@@ -1204,25 +1250,45 @@ function App() {
 		<>
 			<div className="py-10 pr-20 pl-6 h-screen bg-slate-50 max-md:px-5">
 				<div className="flex gap-5 max-md:flex-col max-md:gap-0">
-					<aside className="flex flex-col w-[20%]">
-						<div className="flex flex-col grow max-md:mt-10">
-							<div className="flex gap-2.5 text-2xl font-semibold tracking-wide text-black whitespace-nowrap">
-								<img
-									loading="lazy"
-									src="https://cdn.builder.io/api/v1/image/assets/TEMP/d598265a0d3ee4cf75971a42cdb5110d29abf4741753f518235fc1b5745025f5?apiKey=d03d160494014eaf8a1af94dd934f586&"
-									alt=""
-									className="shrink-0 shadow-2xl aspect-[0.88] w-[38px]"
-								/>
-								<div className="flex-auto self-start mt-3">SmartFarming</div>
-							</div>
-					 	</div>
-					 </aside>
+					
 
 					<main className="flex flex-col max-h-[calc(100vh-10rem)] overflow-y-auto hide-scrollbar ml-5 w-[80%] max-md:ml-0 max-md:w-full">
 						<div className="flex flex-col mt-4 max-md:mt-10 max-md:max-w-full">
+						    
+						    <div className="flex flex-col grow max-md:mt-10">
+								<div className="flex gap-2.5 text-2xl font-semibold tracking-wide text-black whitespace-nowrap">
+									<img
+										loading="lazy"
+										src="https://cdn.builder.io/api/v1/image/assets/TEMP/d598265a0d3ee4cf75971a42cdb5110d29abf4741753f518235fc1b5745025f5?apiKey=d03d160494014eaf8a1af94dd934f586&"
+										alt=""
+										className="shrink-0 shadow-2xl aspect-[0.88] w-[38px]"
+									/>
+									<div className="flex-auto self-start mt-3">SmartFarming </div>
+								</div>
+					 		</div>
+					 		
+					 		<br />
+							<br />
+						    
 							<h1 className="text-2xl font-medium text-black max-md:max-w-full">
 								Home
 							</h1>
+							
+							<section className="flex flex-col mt-10 bg-white overflow-y-hidden rounded-[30px] shadow-[0px_10px_60px_rgba(226,236,249,0.5)] w-full">
+								<div className="flex flex-col w-full p-5">
+									<div className="flex gap-5 text-sm tracking-normal w-full">
+										<div className="flex flex-col gap-3 w-full">
+											<h2 className="text-2xl font-semibold tracking-tight text-black">
+												Analisis Pemberian Air dan Nutrisi
+											</h2>
+											<div className="text-teal-500">
+												{analysis}
+											</div>
+										</div>
+									</div>
+								</div>
+							</section>
+							
 							<section className="flex flex-col mt-10 bg-white overflow-y-hidden rounded-[30px] shadow-[0px_10px_60px_rgba(226,236,249,0.5)] w-full">
 								<div className="flex flex-col w-full p-5">
 									<div className="flex gap-5 text-sm tracking-normal w-full">
@@ -1231,7 +1297,7 @@ function App() {
 												Soil Moisture
 											</h2>
 											<div className="text-teal-500">
-												sensor kelembaban tanah
+												sensor kelembaban tanah (nilai dalam analog)
 											</div>
 											<div className="flex flex-row gap-3 px-2 py-5 justify-between items-center w-full font-medium text-gray-400 border-b border-solid border-zinc-100">
 												<div className="font-medium text-gray-400 w-full text-center justify-center items-center">
@@ -1549,7 +1615,7 @@ function App() {
 													Kemarau
 												</div>
 												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
-													{soil?.sensorph2?.value}
+													{(soil?.sensorph2?.value*10)}
 													<br />
 												</div>
 												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
@@ -1564,16 +1630,7 @@ function App() {
 															{"Normal"}
 														</div>
 													)}
-
-{/* 													{soil?.sensorph2?.anomaly === 1 ? (
-														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-red-600 bg-red-200 border-red-600 bg-opacity-40 max-md:px-5">
-															{"Anomali"}
-														</div>
-													) : (
-														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-emerald-500 border-emerald-500 border-solid bg-teal-500 bg-opacity-40 max-md:px-5">
-															{"Normal"}
-														</div>
-													)} */}
+													
 												</div>
 											</div>
 											<div className="flex flex-row gap-3 px-2 py-2 justify-between w-full font-medium border-b border-solid border-zinc-100">
@@ -1584,7 +1641,7 @@ function App() {
 													Hujan
 												</div>
 												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
-													{soil?.sensorph1?.value}
+													{(soil?.sensorph1?.value*10)}
 												</div>
 												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
 													{soil?.sensorph1?.value === 0 ? (
@@ -1766,7 +1823,9 @@ function App() {
 													Bukaan (0-225)
 												</div>
 											</div>
-											{dataB.khaliwaktu.map((item, index) => (
+											{dataB.khalipersen
+												.filter(item => item.value !==0)
+												.map((item, index) => (
 												<div className="flex flex-row gap-3 px-2 py-2 justify-between w-full font-medium border-b border-solid border-zinc-100">
 													<div key={index} className="flex flex-row gap-3 px-2 py-2 justify-between w-full font-medium border-b border-solid border-zinc-100">
 														<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
@@ -1775,11 +1834,13 @@ function App() {
 															<br />
 														</div>
 														<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
-															{item.value}
+															{dataB.khaliwaktu[index] ? dataB.khaliwaktu[index].value : "No data"}
+{/* 															{item.value} */}
 															<br />
 														</div>
 														<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
-															{dataB.khalipersen[index] ? dataB.khalipersen[index].value : "No data"}
+{/* 															{dataB.khalipersen[index] ? dataB.khalipersen[index].value : "No data"} */}
+															{(item.value / 225 * 100).toFixed(2)}%
 															<br />
 														</div>
 													</div>												
