@@ -1312,7 +1312,7 @@ function App() {
 													R1
 												</div>
 												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
-													{soil?.kemaraur1?.value}
+													{soil?.kemaraur1?.value !== undefined ? ((720 - soil.kemaraur1.value) / (720 - 250) * 100).toFixed(2) "%" : "No data"}
 													<br />
 													{soilA?.SM_C3R1_1?.anomaly === 1 ? (
 														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-red-600 bg-red-200 border-red-600 bg-opacity-40 max-md:px-5">
