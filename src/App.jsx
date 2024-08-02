@@ -1951,7 +1951,7 @@ function App() {
 												<div className="flex flex-row gap-3 px-2 py-2 justify-between w-full font-medium border-b border-solid border-zinc-100">
 													<div key={index} className="flex flex-row gap-3 px-2 py-2 justify-between w-full font-medium border-b border-solid border-zinc-100">
 														<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
-															{new Date(item.createdAt).toLocaleDateString()},
+															{new Date(item.createdAt).toLocaleDateString()}, <br />
 															{new Date(item.createdAt).toLocaleTimeString()}
 															<br />
 														</div>
