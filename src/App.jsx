@@ -1715,6 +1715,7 @@ function App() {
 								</div>
 							</section>
 
+{/*
 							<section className="flex flex-col mt-10 bg-white overflow-y-hidden rounded-[30px] shadow-[0px_10px_60px_rgba(226,236,249,0.5)] w-full">
 								<div className="flex flex-col w-full p-5">
 									<div className="flex gap-5 text-sm tracking-normal w-full">
@@ -1759,8 +1760,7 @@ function App() {
 													<br />
 												</div>
 												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
-													
-{/* 													<br /> */}
+												
 													{soilA?.NPK1_1?.anomaly === 1 ? (
 														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-red-600 bg-red-200 border-red-600 bg-opacity-40 max-md:px-5">
 															{"Anomali"}
@@ -1790,7 +1790,7 @@ function App() {
 												</div>
 												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
 													
-{/* 													<br /> */}
+
 													{soilA?.NPK2_1?.anomaly === 1 ? (
 														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-red-600 bg-red-200 border-red-600 bg-opacity-40 max-md:px-5">
 															{"Anomali"}
@@ -1808,56 +1808,8 @@ function App() {
 									</div>
 								</div>
 							</section>
+ */}
 
-
-							<section className="flex flex-col mt-10 bg-white overflow-y-hidden rounded-[30px] shadow-[0px_10px_60px_rgba(226,236,249,0.5)] w-full">
-								<div className="flex flex-col w-full p-5">
-									<div className="flex gap-5 text-sm tracking-normal w-full">
-										<div className="flex flex-col gap-3 w-full">
-											<h2 className="text-2xl font-semibold tracking-tight text-black">
-												Log Control Valve 1
-											</h2>
-											<div className="text-teal-500">
-												Status pemberian irigasi bedeng hujan
-											</div>
-											<div className="flex flex-row gap-3 px-2 py-5 justify-between items-center w-full font-medium text-gray-400 border-b border-solid border-zinc-100">
-												<div className="font-medium text-gray-400 w-full text-center justify-center items-center">
-													Waktu
-												</div>
-												<div className="font-medium text-gray-400 w-full text-center justify-center items-center">
-													Durasi (detik)
-												</div>
-												<div className="font-medium text-gray-400 w-full text-center justify-center items-center">
-													Bukaan (0-225)
-												</div>
-											</div>
-											{dataB.khalipersen
-												.filter(item => item.value !==0)
-												.map((item, index) => (
-												<div className="flex flex-row gap-3 px-2 py-2 justify-between w-full font-medium border-b border-solid border-zinc-100">
-													<div key={index} className="flex flex-row gap-3 px-2 py-2 justify-between w-full font-medium border-b border-solid border-zinc-100">
-														<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
-															{new Date(item.createdAt).toLocaleDateString()}, <br />
-															{new Date(item.createdAt).toLocaleTimeString()}
-															<br />
-														</div>
-														<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
-															{dataB.khaliwaktu[index] ? dataB.khaliwaktu[index].value : "No data"}
-{/* 															{item.value} */}
-															<br />
-														</div>
-														<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
-{/* 															{dataB.khalipersen[index] ? dataB.khalipersen[index].value : "No data"} */}
-															{(item.value / 225 * 100).toFixed(2)}%
-															<br />
-														</div>
-													</div>												
-												</div>
-											))}
-										</div>
-									</div>
-								</div>
-							</section>
 							<section className="flex flex-col mt-10 bg-white overflow-y-hidden rounded-[30px] shadow-[0px_10px_60px_rgba(226,236,249,0.5)] w-full">
 								<div className="flex flex-col w-full p-5">
 									<div className="flex gap-5 text-sm tracking-normal w-full">
@@ -1866,7 +1818,7 @@ function App() {
 												Prediksi NPK
 											</h2>
 											<div className="text-teal-500">
-												Nilai prediksi NPK untuh masa kini (Pengganti Sensor NPK)
+												Nilai prediksi Sensor NPK
 											</div>
 											<div className="flex flex-row gap-3 px-2 py-5 justify-between items-center w-full font-medium text-gray-400 border-b border-solid border-zinc-100">
 												<div className="font-medium text-gray-400 w-full text-center justify-center items-center">
@@ -1930,6 +1882,56 @@ function App() {
 									</div>
 								</div>
 							</section>
+							
+							<section className="flex flex-col mt-10 bg-white overflow-y-hidden rounded-[30px] shadow-[0px_10px_60px_rgba(226,236,249,0.5)] w-full">
+								<div className="flex flex-col w-full p-5">
+									<div className="flex gap-5 text-sm tracking-normal w-full">
+										<div className="flex flex-col gap-3 w-full">
+											<h2 className="text-2xl font-semibold tracking-tight text-black">
+												Log Control Valve 1
+											</h2>
+											<div className="text-teal-500">
+												Status pemberian irigasi bedeng hujan
+											</div>
+											<div className="flex flex-row gap-3 px-2 py-5 justify-between items-center w-full font-medium text-gray-400 border-b border-solid border-zinc-100">
+												<div className="font-medium text-gray-400 w-full text-center justify-center items-center">
+													Waktu
+												</div>
+												<div className="font-medium text-gray-400 w-full text-center justify-center items-center">
+													Durasi (detik)
+												</div>
+												<div className="font-medium text-gray-400 w-full text-center justify-center items-center">
+													Bukaan (0-225)
+												</div>
+											</div>
+											{dataB.khalipersen
+												.filter(item => item.value !==0)
+												.map((item, index) => (
+												<div className="flex flex-row gap-3 px-2 py-2 justify-between w-full font-medium border-b border-solid border-zinc-100">
+													<div key={index} className="flex flex-row gap-3 px-2 py-2 justify-between w-full font-medium border-b border-solid border-zinc-100">
+														<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
+															{new Date(item.createdAt).toLocaleDateString()}, <br />
+															{new Date(item.createdAt).toLocaleTimeString()}
+															<br />
+														</div>
+														<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
+															{dataB.khaliwaktu[index] ? dataB.khaliwaktu[index].value : "No data"}
+{/* 															{item.value} */}
+															<br />
+														</div>
+														<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
+{/* 															{dataB.khalipersen[index] ? dataB.khalipersen[index].value : "No data"} */}
+															{(item.value / 225 * 100).toFixed(2)}%
+															<br />
+														</div>
+													</div>												
+												</div>
+											))}
+										</div>
+									</div>
+								</div>
+							</section>
+							
 
 							<section className="flex flex-col mt-10 bg-white overflow-y-hidden rounded-[30px] shadow-[0px_10px_60px_rgba(226,236,249,0.5)] w-full">
 								<div className="flex flex-col w-full p-5">
@@ -1939,7 +1941,7 @@ function App() {
 												Prediksi Nutrisi
 											</h2>
 											<div className="text-teal-500">
-												Nilai kebutuhan NPK untuh masa mendatang 
+												Nilai kebutuhan NPK untuk masa mendatang 
 											</div>
 											<div className="flex flex-row gap-3 px-2 py-5 justify-between items-center w-full font-medium text-gray-400 border-b border-solid border-zinc-100">
 												<div className="font-medium text-gray-400 w-full text-center justify-center items-center">
