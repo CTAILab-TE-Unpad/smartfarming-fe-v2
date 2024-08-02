@@ -1312,7 +1312,7 @@ function App() {
 													R1
 												</div>
 												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
-													{soil?.kemaraur1?.value !== undefined ? ((720 - soil.kemaraur1.value) / (720 - 250) * 100).toFixed(2) : "Data bernilai 0"} %
+													{soil?.kemaraur1?.value !== undefined ? ((632 - soil.kemaraur1.value) / (632 - 230) * 100).toFixed(2) : "Data bernilai 0"} %
 													<br />
 													{soilA?.SM_C3R1_1?.anomaly === 1 ? (
 														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-red-600 bg-red-200 border-red-600 bg-opacity-40 max-md:px-5">
@@ -1339,7 +1339,7 @@ function App() {
 												</div>
 												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
 												
-													{soil?.manualr1?.value !== undefined ? ((336 - soil.manualr1.value) / (336 - 150) * 100).toFixed(2) : "Data bernilai 0"} %
+													{soil?.manualr1?.value !== undefined ? ((362 - soil.manualr1.value) / (362 - 112) * 100).toFixed(2) : "Data bernilai 0"} %
 													<br />
 													{soilA?.SM_C2R1_1?.anomaly === 1 ? (
 														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-red-600 bg-red-200 border-red-600 bg-opacity-40 max-md:px-5">
@@ -1358,7 +1358,7 @@ function App() {
 												</div>
 												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
 												
-													{soil?.kemaraur2?.value !== undefined ? ((290 - soil.kemaraur2.value) / (290 - 80) * 100).toFixed(2) : "Data bernilai 0"} %
+													{soil?.kemaraur2?.value !== undefined ? ((254 - soil.kemaraur2.value) / (254 - 40) * 100).toFixed(2) : "Data bernilai 0"} %
 													<br />
 													{soilA?.SM_C3R2_1?.anomaly === 1 ? (
 														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-red-600 bg-red-200 border-red-600 bg-opacity-40 max-md:px-5">
@@ -1386,7 +1386,7 @@ function App() {
 												</div>
 												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
 												
-													{soil?.manualr2?.value !== undefined ? ((300 - soil.manualr2.value) / (300 - 141) * 100).toFixed(2) : "Data bernilai 0"} %
+													{soil?.manualr2?.value !== undefined ? ((340 - soil.manualr2.value) / (340 - 115) * 100).toFixed(2) : "Data bernilai 0"} %
 													<br />
 													{soilA?.SM_C1R2_1?.anomaly === 1 ? (
 														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-red-600 bg-red-200 border-red-600 bg-opacity-40 max-md:px-5">
@@ -1405,7 +1405,7 @@ function App() {
 												</div>
 												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
 													
-													{soil?.kemaraur3?.value !== undefined ? ((351 - soil.kemaraur3.value) / (351 - 70) * 100).toFixed(2) : "Data bernilai 0"} %
+													{soil?.kemaraur3?.value !== undefined ? ((254 - soil.kemaraur3.value) / (254 - 40) * 100).toFixed(2) : "Data bernilai 0"} %
 													<br />
 													{soilA?.SM_C3R3_1?.anomaly === 1 ? (
 														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-red-600 bg-red-200 border-red-600 bg-opacity-40 max-md:px-5">
@@ -1419,7 +1419,7 @@ function App() {
 												</div>
 												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
 													
-													{soil?.hujanr3?.value !== undefined ? ((351 - soil.hujanr3.value) / (351 - 85) * 100).toFixed(2) : "Data bernilai 0"} %
+													{soil?.hujanr3?.value !== undefined ? ((351 - soil.hujanr3.value) / (351 - 60) * 100).toFixed(2) : "Data bernilai 0"} %
 													<br />
 													{soilA?.SM_C2R3_1?.anomaly === 1 ? (
 														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-red-600 bg-red-200 border-red-600 bg-opacity-40 max-md:px-5">
@@ -1433,7 +1433,7 @@ function App() {
 												</div>
 												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
 													
-													{soil?.manualr3?.value !== undefined ? ((395 - soil.manualr3.value) / (395 - 131) * 100).toFixed(2) : "Data bernilai 0"} %
+													{soil?.manualr3?.value !== undefined ? ((375 - soil.manualr3.value) / (375 - 221) * 100).toFixed(2) : "Data bernilai 0"} %
 													<br />
 													{soilA?.SM_C1R3_1?.anomaly === 1 ? (
 														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-red-600 bg-red-200 border-red-600 bg-opacity-40 max-md:px-5">
@@ -1452,7 +1452,7 @@ function App() {
 												</div>
 												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
 													
-													{soil?.kemaraur4?.value !== undefined ? ((290 - soil.kemaraur4.value) / (290 - 100) * 100).toFixed(2) : "Data bernilai 0"} %
+													{soil?.kemaraur4?.value !== undefined ? ((309 - soil.kemaraur4.value) / (309 - 89) * 100).toFixed(2) : "Data bernilai 0"} %
 													<br />
 													{soilA?.SM_C3R4_1?.anomaly === 1 ? (
 														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-red-600 bg-red-200 border-red-600 bg-opacity-40 max-md:px-5">
@@ -1479,7 +1479,7 @@ function App() {
 												</div>
 												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
 													
-													{soil?.manualr4?.value !== undefined ? ((320 - soil.manualr4.value) / (320 - 90) * 100).toFixed(2) : "Data bernilai 0"} %
+													{soil?.manualr4?.value !== undefined ? ((404 - soil.manualr4.value) / (404 - 66) * 100).toFixed(2) : "Data bernilai 0"} %
 													<br />
 													{soilA?.SM_C1R4_1?.anomaly === 1 ? (
 														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-red-600 bg-red-200 border-red-600 bg-opacity-40 max-md:px-5">
@@ -1498,7 +1498,7 @@ function App() {
 												</div>
 												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
 													
-													{soil?.kemaraur5?.value !== undefined ? ((332 - soil.kemaraur5.value) / (332 - 155) * 100).toFixed(2) : "Data bernilai 0"} %
+													{soil?.kemaraur5?.value !== undefined ? ((632 - soil.kemaraur5.value) / (632 - 230) * 100).toFixed(2) : "Data bernilai 0"} %
 													<br />
 													{soilA?.SM_C3R5_1?.anomaly === 1 ? (
 														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-red-600 bg-red-200 border-red-600 bg-opacity-40 max-md:px-5">
