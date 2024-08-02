@@ -552,7 +552,7 @@ function App() {
 	});
 	
 		//ini nanti buat anomaly tiap tabel
-	const [dsoilA, setSoilA] = React.useState({
+	const [soilA, setSoilA] = React.useState({
 		SM_C3R1_1: null,
 		SM_C2R1_1: null,
 		SM_C1R1_1: null,
