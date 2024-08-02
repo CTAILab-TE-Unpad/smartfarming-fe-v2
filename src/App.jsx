@@ -804,36 +804,36 @@ function App() {
 	
 	
 	React.useEffect(() => {
-		if (dataB.irynan1.length && dataB.musan1.length) {
+		if (dataB.irynan2.length && dataB.musan2.length) {
 			let analysisText = "Pemberian air dan nutrisi pada bedeng hujan hari ini sudah sesuai";
 			let issues = [];
 
-			const irynan1 = dataB.irynan2[0]?.value || 0;
-			const musan1 = dataB.musan1[0]?.value || 0;
-			const irynap1 = dataB.irynap2[0]?.value || 0;
-			const musap1 = dataB.musap1[0]?.value || 0;
-			const irynak1 = dataB.irynak1[0]?.value || 0;
-			const musak1 = dataB.musak1[0]?.value || 0;
+			const irynan2 = dataB.irynan2[0]?.value || 0;
+			const musan2 = dataB.musan2[0]?.value || 0;
+			const irynap2 = dataB.irynap2[0]?.value || 0;
+			const musap2 = dataB.musap2[0]?.value || 0;
+			const irynak2 = dataB.irynak2[0]?.value || 0;
+			const musak2 = dataB.musak2[0]?.value || 0;
 
-			if (irynan1 !== musan1) {
-				if (irynan1 < musan1) {
-					issues.push(`kekurangan N sebanyak ${musan1 - irynan1}`);
+			if (irynan2 !== musan2) {
+				if (irynan2 < musan2) {
+					issues.push(`kekurangan N sebanyak ${musan2 - irynan2}`);
 				} else {
-					issues.push(`kelebihan N sebanyak ${irynan1 - musan1}`);
+					issues.push(`kelebihan N sebanyak ${irynan2 - musan2}`);
 				}
 			}
-			if (irynap1 !== musap1) {
-				if (irynap1 < musap1) {
-					issues.push(`kekurangan P sebanyak ${musap1 - irynap1}`);
+			if (irynap2 !== musap2) {
+				if (irynap2 < musap2) {
+					issues.push(`kekurangan P sebanyak ${musap2 - irynap2}`);
 				} else {
-					issues.push(`kelebihan P sebanyak ${irynap1 - musap1}`);
+					issues.push(`kelebihan P sebanyak ${irynap2 - musap2}`);
 				}
 			}
-			if (irynak1 !== musak1) {
-				if (irynak1 < musak1) {
-					issues.push(`kekurangan K sebanyak ${musak1 - irynak1}`);
+			if (irynak2 !== musak2) {
+				if (irynak2 < musak2) {
+					issues.push(`kekurangan K sebanyak ${musak2 - irynak2}`);
 				} else {
-					issues.push(`kelebihan K sebanyak ${irynak1 - musak1}`);
+					issues.push(`kelebihan K sebanyak ${irynak2 - musak2}`);
 				}
 			}
 
@@ -1304,16 +1304,7 @@ function App() {
 									<div className="flex-auto self-start mt-3">SmartFarming </div>
 								</div>
 					 		</div>
-					 		
-					 		<br />
-							<br />
-						    
-							<h1 className="text-2xl font-medium text-black max-md:max-w-full">
-								Home
-							</h1>
-							
-				
-							
+					 	
 							
 							<section className="grid grid-cols-2 gap-4 mt-12">
 								<div className="flex flex-col p-9 gap-4 bg-white rounded-[30px] shadow-[0px_10px_60px_rgba(226,236,249,0.5)]">
