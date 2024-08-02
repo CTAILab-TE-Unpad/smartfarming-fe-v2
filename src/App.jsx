@@ -805,7 +805,7 @@ function App() {
 	
 	React.useEffect(() => {
 		if (dataB.irynan2.length && dataB.musan2.length) {
-			let analysisText = "Pemberian air dan nutrisi pada bedeng hujan hari ini sudah sesuai";
+			let analysisText = "Pemberian air dan nutrisi pada bedeng kemarau hari ini sudah sesuai";
 			let issues = [];
 
 			const irynan2 = dataB.irynan2[0]?.value || 0;
@@ -838,7 +838,7 @@ function App() {
 			}
 
 			if (issues.length) {
-				analysisText = `Pemberian nutrisi pada bedeng hujan  ${issues.join(', ')}`;
+				analysisText = `Pemberian nutrisi pada bedeng kemarau  ${issues.join(', ')}`;
 			}
 
 			setAnalysisA(analysisText);
