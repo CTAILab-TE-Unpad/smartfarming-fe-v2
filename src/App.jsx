@@ -251,147 +251,8 @@ const datasetsB = [
 ];
 
 
-//nanti ini buat menampillkan anomaly detection
+//nanti ini buat menampillkan anomaly detection di chart
 const datasetsC = [
-// 	{
-// 		device_id: "Tdr4a4bKp5AzrCe6KGki8bUDF0ynE9l9",
-// 		index_id: "611f7d7f4750382956b468e4",
-// 		elementId: "SM_C3R1",
-// 	},
-// 	{
-// 		device_id: "XniD6mBlnKqagRJ8qD9WhR6JGK4yle1d",
-// 		index_id: "611f7d7f4750382956b468e4",
-// 		elementId: "SM_C2R1",
-// 	},
-// 	{
-// 		device_id: "ODw83libBAixNsPMGTmqQer2gn2mZrOC",
-// 		index_id: "611f7d7f4750382956b468e4",
-// 		elementId: "SM_C1R1",
-// 	},
-
-// 	{
-// 		device_id: "Tdr4a4bKp5AzrCe6KGki8bUDF0ynE9l9",
-// 		index_id: "61305378590b802f53935e9a",
-// 		elementId: "SM_C3R2",
-// 	},
-// 	{
-// 		device_id: "XniD6mBlnKqagRJ8qD9WhR6JGK4yle1d",
-// 		index_id: "61305378590b802f53935e9a",
-// 		elementId: "SM_C2R2",
-// 	},
-// 	{
-// 		device_id: "ODw83libBAixNsPMGTmqQer2gn2mZrOC",
-// 		index_id: "61305378590b802f53935e9a",
-// 		elementId: "SM_C1R2",
-// 	},
-// 	{
-// 		device_id: "Tdr4a4bKp5AzrCe6KGki8bUDF0ynE9l9",
-// 		index_id: "6130523e590b802f53935e99",
-// 		elementId: "SM_C3R3",
-// 	},
-// 	{
-// 		device_id: "XniD6mBlnKqagRJ8qD9WhR6JGK4yle1d",
-// 		index_id: "6130523e590b802f53935e99",
-// 		elementId: "SM_C2R3",
-// 	},
-// 	{
-// 		device_id: "ODw83libBAixNsPMGTmqQer2gn2mZrOC",
-// 		index_id: "6130523e590b802f53935e99",
-// 		elementId: "SM_C1R3",
-// 	},
-// 	{
-// 		device_id: "Tdr4a4bKp5AzrCe6KGki8bUDF0ynE9l9",
-// 		index_id: "618f89476941b53a5d35606f",
-// 		elementId: "SM_C3R4",
-// 	},
-// 	{
-// 		device_id: "XniD6mBlnKqagRJ8qD9WhR6JGK4yle1d",
-// 		index_id: "618f89476941b53a5d35606f",
-// 		elementId: "SM_C2R4",
-// 	},
-// 	{
-// 		device_id: "ODw83libBAixNsPMGTmqQer2gn2mZrOC",
-// 		index_id: "618f89476941b53a5d35606f",
-// 		elementId: "SM_C1R4",
-// 	},
-// 	{
-// 		device_id: "Tdr4a4bKp5AzrCe6KGki8bUDF0ynE9l9",
-// 		index_id: "61910bcfd2cd6b06225ee0ca",
-// 		elementId: "SM_C3R5",
-// 	},
-// 	{
-// 		device_id: "XniD6mBlnKqagRJ8qD9WhR6JGK4yle1d",
-// 		index_id: "61910bcfd2cd6b06225ee0ca",
-// 		elementId: "SM_C2R5",
-// 	},
-// 	{
-// 		device_id: "ODw83libBAixNsPMGTmqQer2gn2mZrOC",
-// 		index_id: "61910bcfd2cd6b06225ee0ca",
-// 		elementId: "SM_C1R5",
-// 	},
-// 	{
-// 		device_id: "Tdr4a4bKp5AzrCe6KGki8bUDF0ynE9l9",
-// 		index_id: "618dc5c2553f46dc235bcfed",
-// 		elementId: "SM_C3R6",
-// 	},
-// 	{
-// 		device_id: "XniD6mBlnKqagRJ8qD9WhR6JGK4yle1d",
-// 		index_id: "618dc5c2553f46dc235bcfed",
-// 		elementId: "SM_C2R6",
-// 	},
-// 	{
-// 		device_id: "ODw83libBAixNsPMGTmqQer2gn2mZrOC",
-// 		index_id: "618dc5c2553f46dc235bcfed",
-// 		elementId: "SM_C1R6",
-// 	},
-
-// 	//sensor lainnya
-// 	{
-// 		device_id: "GDdR9vUe3yXQWcfhP6grCLK74ZV4QZFL",
-// 		index_id: "6280a8275a0c89673d266100",
-// 		elementId: "NPK1",
-// 	},
-// 	{
-// 		device_id: "gxaZkwZafNVweTq8HycMKpZMz9MvbTyh",
-// 		index_id: "6280a8465a0c89673d266101",
-// 		elementId: "NPK2",
-// 	},
-// 	{
-// 		device_id: "D8fRCvhyRWUNtzfWuhbdb9q5azNkrE4g",
-// 		index_id: "618bce88109f491b98e68b59",
-// 		elementId: "PH1A",
-// 	},
-// 	{
-// 		device_id: "lWwWZ7RHI5HToRocg122mLHgmqKsT7F7",
-// 		index_id: "618bce88109f491b98e68b59",
-// 		elementId: "PH2A",
-// 	},
-// 	{
-// 		device_id: "BngyuCFVukyQakpJyBug4WubAdpnt2g5",
-// 		index_id: "6142a70446514f50ff8ed6a8",
-// 		elementId: "ST1A",
-// 	},
-// 	{
-// 		device_id: "J3c6xgg64gyL8pJ5uCZw69Ec4FJBj97R",
-// 		index_id: "6142a70446514f50ff8ed6a8",
-// 		elementId: "ST2A",
-// 	},
-// 	{
-// 		device_id: "AMJ6RHSdwf4XMv2dhPRh8hxnE92exg7U",
-// 		index_id: "638d8677245a8f9cc00b4bcc",
-// 		elementId: "DHT1",
-// 	},
-// 	{
-// 		device_id: "fPMkkgECQndBCs7eFtha09uy57Qv8Xks",
-// 		index_id: "6129bfebdb963d1d1eaac307",
-// 		elementId: "TDS1A",
-// 	},
-// 	{
-// 		device_id: "wqZeXsBhFSL6CLzfaUjJsnavudV3WvL7",
-// 		index_id: "6129bfebdb963d1d1eaac307",
-// 		elementId: "TDS2A",
-// 	},
-
     {
 		sensor_name: "SM_C3R1",
 		elementId: "SM_C3R1",
@@ -494,17 +355,113 @@ const datasetsC = [
 		sensor_name: "DHT",
 		elementId: "DHTA",
 	},
-// 	{
-// 		device_id: "fPMkkgECQndBCs7eFtha09uy57Qv8Xks",
-// 		index_id: "6129bfebdb963d1d1eaac307",
-// 		elementId: "TDS1A",
-// 	},
-// 	{
-// 		device_id: "wqZeXsBhFSL6CLzfaUjJsnavudV3WvL7",
-// 		index_id: "6129bfebdb963d1d1eaac307",
-// 		elementId: "TDS2A",
-// 	},
-    
+];
+
+
+//ini buat nampilin anomali di setiap tabel
+const datasoilA = [
+    {
+		sensor_name: "SM_C3R1",
+		elementId: "SM_C3R1_1",
+	},
+	{
+		sensor_name: "SM_C2R1",
+		elementId: "SM_C2R1_1",
+	},
+	{
+		sensor_name: "SM_C1R2",
+		elementId: "SM_C1R1_1",
+	},
+	{
+		sensor_name: "SM_C3R2",
+		elementId: "SM_C3R2_1",
+	},
+	{
+		sensor_name: "SM_C2R2",
+		elementId: "SM_C2R2_1",
+	},
+	{
+		sensor_name: "SM_C1R2",
+		elementId: "SM_C1R2_1",
+	},
+	{
+		sensor_name: "SM_C3R3",
+		elementId: "SM_C3R3_1",
+	},
+	{
+		sensor_name: "SM_C2R3",
+		elementId: "SM_C2R3_1",
+	},
+	{
+		sensor_name: "SM_C1R3",
+		elementId: "SM_C1R3_1",
+	},
+	{
+		sensor_name: "SM_C3R4",
+		elementId: "SM_C3R4_1",
+	},
+	{
+		sensor_name: "SM_C2R4",
+		elementId: "SM_C2R4_1",
+	},
+	{
+		sensor_name: "SM_C1R4",
+		elementId: "SM_C1R4_1",
+	},
+	{
+		sensor_name: "SM_C3R5",
+		elementId: "SM_C3R5_1",
+	},
+	{
+		sensor_name: "SM_C2R5",
+		elementId: "SM_C2R5_1",
+	},
+	{
+		sensor_name: "SM_C1R5",
+		elementId: "SM_C1R5_1",
+	},
+	{
+		sensor_name: "SM_C3R6",
+		elementId: "SM_C3R6_1",
+	},
+	{
+		sensor_name: "SM_C2R6",
+		elementId: "SM_C2R6_1",
+	},
+	{
+		sensor_name: "SM_C1R6",
+		elementId: "SM_C1R6_1",
+	},
+
+	//sensor lainnya
+	{
+		sensor_name: "NPK1",
+		elementId: "NPK1_1",
+	},
+	{
+		sensor_name: "NPK2",
+		elementId: "NPK2_1",
+	},
+	{
+		sensor_name: "PH1",
+		elementId: "PH1A_1",
+	},
+	{
+		sensor_name: "PH2",
+		elementId: "PH2A_1",
+	},
+	{
+		sensor_name: "ST1",
+		elementId: "ST1A_1",
+	},
+	{
+		sensor_name: "ST2",
+		elementId: "ST2A_1",
+	},
+	{
+		sensor_name: "DHT",
+		elementId: "DHTA_1",
+	},
 ];
 
 function App() {
@@ -592,9 +549,36 @@ function App() {
 		ST1A: null,
 		ST2A: null,
 		DHTA: null,
-// 		TDS1A: null,
-// 		TDS2A: null,
-
+	});
+	
+		//ini nanti buat anomaly tiap tabel
+	const [dsoilA, setSoilA] = React.useState({
+		SM_C3R1_1: null,
+		SM_C2R1_1: null,
+		SM_C1R1_1: null,
+		SM_C3R2_1: null,
+		SM_C2R2_1: null,
+		SM_C1R2_1: null,
+		SM_C3R3_1: null,
+		SM_C2R3_1: null,
+		SM_C1R3_1: null,
+		SM_C3R4_1: null,
+		SM_C2R4_1: null,
+		SM_C1R4_1: null,
+		SM_C3R5_1: null,
+		SM_C2R5_1: null,
+		SM_C1R5_1: null,
+		SM_C3R6_1: null,
+		SM_C2R6_1: null,
+		SM_C1R6_1: null,
+		//sensor lain
+		NPK1_1: null,
+		NPK2_1: null,
+		PH1A_1: null,
+		PH2A_1: null,
+		ST1A_1: null,
+		ST2A_1: null,
+		DHTA_1: null,
 	});
 	
 	
@@ -678,11 +662,7 @@ function App() {
 					console.log("error => ", err);
 				});
 		});
-		
-// 	}, []);
-	
-	
-	
+
 		datasetsC.forEach((datasetC) => {
 			console.log("datasetC", datasetC);
 			axios
@@ -754,6 +734,27 @@ function App() {
 					console.log("error => ", err);
 					});
 			});
+			
+		datasoilA.forEach((dtsoilA) => {
+			console.log("dtsoilA", dtsoilA);
+			axios
+				.get("https://api.sf2.ctailab.com/anomalyDetection", {
+					params: {
+						sensor_name: dtsoilA.sensor_name,
+					},
+				})
+				.then((res) => {
+					console.log("res soil", res.data[0]);
+					setSoilA((prevState) => ({
+						...prevState,
+						[dtsoilA.elementId]: res?.data[0] || "No data",
+					}));
+				})
+				.catch((err) => {
+					console.log("error => ", err);
+				});
+		});
+			
 		
 	}, []);
 	
@@ -1029,7 +1030,7 @@ function App() {
 	    labels: PH1Chart.map((item)=> new Date(item.createdAt).toLocaleString()),
 	    datasets: [
 	        {
-	            label: "R6 Hujan",
+	            label: "PH Hujan",
 	            data: PH1Chart.map((item) => item.anomaly),
 	            fill: false,
 	            backgroundColor: "rgba(75,192,192,1)",
@@ -1313,7 +1314,7 @@ function App() {
 												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
 													{soil?.kemaraur1?.value}
 													<br />
-													{soil?.kemaraur1?.value === 0 ? (
+													{soilA?.SM_C3R1_1?.anomaly === 1 ? (
 														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-red-600 bg-red-200 border-red-600 bg-opacity-40 max-md:px-5">
 															{"Anomali"}
 														</div>
@@ -1326,7 +1327,7 @@ function App() {
 												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
 													{soil?.hujanr1?.value}
 													<br />
-													{soil?.hujanr1?.value === 0 ? (
+													{soilA?.SM_C2R1_1?.anomaly === 1 ? (
 														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-red-600 bg-red-200 border-red-600 bg-opacity-40 max-md:px-5">
 															{"Anomali"}
 														</div>
@@ -1339,7 +1340,7 @@ function App() {
 												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
 													{soil?.manualr1?.value}
 													<br />
-													{soil?.manualr1?.value === 0 ? (
+													{soilA?.SM_C2R1_1?.anomaly === 1 ? (
 														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-red-600 bg-red-200 border-red-600 bg-opacity-40 max-md:px-5">
 															{"Anomali"}
 														</div>
@@ -1357,7 +1358,7 @@ function App() {
 												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
 													{soil?.kemaraur2?.value}
 													<br />
-													{soil?.kemaraur2?.value === 0 ? (
+													{soilA?.SM_C3R2_1?.anomaly === 1 ? (
 														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-red-600 bg-red-200 border-red-600 bg-opacity-40 max-md:px-5">
 															{"Anomali"}
 														</div>
@@ -1370,7 +1371,7 @@ function App() {
 												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
 													{soil?.hujanr2?.value}
 													<br />
-													{soil?.hujanr2?.value === 0 ? (
+													{soilA?.SM_C2R2_1?.anomaly === 1 ? (
 														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-red-600 bg-red-200 border-red-600 bg-opacity-40 max-md:px-5">
 															{"Anomali"}
 														</div>
@@ -1383,7 +1384,7 @@ function App() {
 												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
 													{soil?.manualr2?.value}
 													<br />
-													{soil?.manualr2?.value === 0 ? (
+													{soilA?.SM_C1R2_1?.anomaly === 1 ? (
 														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-red-600 bg-red-200 border-red-600 bg-opacity-40 max-md:px-5">
 															{"Anomali"}
 														</div>
@@ -1401,7 +1402,7 @@ function App() {
 												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
 													{soil?.kemaraur3?.value}
 													<br />
-													{soil?.kemaraur3?.value === 0 ? (
+													{soilA?.SM_C3R3_1?.anomaly === 1 ? (
 														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-red-600 bg-red-200 border-red-600 bg-opacity-40 max-md:px-5">
 															{"Anomali"}
 														</div>
@@ -1414,7 +1415,7 @@ function App() {
 												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
 													{soil?.hujanr3?.value}
 													<br />
-													{soil?.hujanr3?.value === 0 ? (
+													{soilA?.SM_C2R3_1?.anomaly === 1 ? (
 														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-red-600 bg-red-200 border-red-600 bg-opacity-40 max-md:px-5">
 															{"Anomali"}
 														</div>
@@ -1427,7 +1428,7 @@ function App() {
 												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
 													{soil?.manualr3?.value}
 													<br />
-													{soil?.manualr3?.value === 0 ? (
+													{soilA?.SM_C1R3_1?.anomaly === 1 ? (
 														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-red-600 bg-red-200 border-red-600 bg-opacity-40 max-md:px-5">
 															{"Anomali"}
 														</div>
@@ -1445,7 +1446,7 @@ function App() {
 												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
 													{soil?.kemaraur4?.value}
 													<br />
-													{soil?.kemaraur4?.value === 0 ? (
+													{soilA?.SM_C3R4_1?.anomaly === 1 ? (
 														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-red-600 bg-red-200 border-red-600 bg-opacity-40 max-md:px-5">
 															{"Anomali"}
 														</div>
@@ -1458,7 +1459,7 @@ function App() {
 												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
 													{soil?.hujanr4?.value}
 													<br />
-													{soil?.hujanr4?.value === 0 ? (
+													{soilA?.SM_C2R4_1?.anomaly === 1 ? (
 														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-red-600 bg-red-200 border-red-600 bg-opacity-40 max-md:px-5">
 															{"Anomali"}
 														</div>
@@ -1471,7 +1472,7 @@ function App() {
 												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
 													{soil?.manualr4?.value}
 													<br />
-													{soil?.manualr4?.value === 0 ? (
+													{soilA?.SM_C1R4_1?.anomaly === 1 ? (
 														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-red-600 bg-red-200 border-red-600 bg-opacity-40 max-md:px-5">
 															{"Anomali"}
 														</div>
@@ -1489,7 +1490,7 @@ function App() {
 												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
 													{soil?.kemaraur5?.value}
 													<br />
-													{soil?.kemaraur5?.value === 0 ? (
+													{soilA?.SM_C3R5_1?.anomaly === 1 ? (
 														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-red-600 bg-red-200 border-red-600 bg-opacity-40 max-md:px-5">
 															{"Anomali"}
 														</div>
@@ -1502,7 +1503,7 @@ function App() {
 												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
 													{soil?.hujanr5?.value}
 													<br />
-													{soil?.hujanr5?.value === 0 ? (
+													{soilA?.SM_C2R5_1?.anomaly === 1 ? (
 														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-red-600 bg-red-200 border-red-600 bg-opacity-40 max-md:px-5">
 															{"Anomali"}
 														</div>
@@ -1515,7 +1516,7 @@ function App() {
 												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
 													{soil?.manualr5?.value}
 													<br />
-													{soil?.manualr5?.value === 0 ? (
+													{soilA?.SM_C1R5_1?.anomaly === 1 ? (
 														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-red-600 bg-red-200 border-red-600 bg-opacity-40 max-md:px-5">
 															{"Anomali"}
 														</div>
@@ -1533,7 +1534,7 @@ function App() {
 												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
 													{soil?.kemaraur6?.value}
 													<br />
-													{soil?.kemaraur6?.value === 0 ? (
+													{soilA?.SM_C3R6_1?.anomaly === 1 ? (
 														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-red-600 bg-red-200 border-red-600 bg-opacity-40 max-md:px-5">
 															{"Anomali"}
 														</div>
@@ -1546,7 +1547,7 @@ function App() {
 												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
 													{soil?.hujanr6?.value}
 													<br />
-													{soil?.hujanr6?.value === 0 ? (
+													{soilA?.SM_C2R6_1?.anomaly === 1 ? (
 														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-red-600 bg-red-200 border-red-600 bg-opacity-40 max-md:px-5">
 															{"Anomali"}
 														</div>
@@ -1559,7 +1560,7 @@ function App() {
 												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
 													{soil?.manualr6?.value}
 													<br />
-													{soil?.manualr6?.value === 0 ? (
+													{soilA?.SM_C1R6_1?.anomaly === 1 ? (
 														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-red-600 bg-red-200 border-red-600 bg-opacity-40 max-md:px-5">
 															{"Anomali"}
 														</div>
@@ -1614,7 +1615,8 @@ function App() {
 												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
 													
 {/* 													<br /> */}
-													{soil?.sensorph2?.value === 0 ? (
+													
+													{soilA?.PH2A_1?.anomaly === 1 ? (
 														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-red-600 bg-red-200 border-red-600 bg-opacity-40 max-md:px-5">
 															{"Anomali"}
 														</div>
@@ -1637,7 +1639,7 @@ function App() {
 													{(soil?.sensorph1?.value*10)}
 												</div>
 												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
-													{soil?.sensorph1?.value === 0 ? (
+													{soilA?.PH1A_1?.anomaly === 1 ? (
 														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-red-600 bg-red-200 border-red-600 bg-opacity-40 max-md:px-5">
 															{"Anomali"}
 														</div>
@@ -1659,7 +1661,7 @@ function App() {
 													{soil?.sensorst2?.value}
 												</div>
 												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
-													{soil?.sensorst2?.value === 0 ? (
+													{soilA?.ST2A_1?.anomaly === 1 ? (
 														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-red-600 bg-red-200 border-red-600 bg-opacity-40 max-md:px-5">
 															{"Anomali"}
 														</div>
@@ -1682,7 +1684,7 @@ function App() {
 													{soil?.sensorst1?.value}
 												</div>
 												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
-													{soil?.sensorst1?.value === 0 ? (
+													{soilA?.ST1A_1?.anomaly === 1 ? (
 														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-red-600 bg-red-200 border-red-600 bg-opacity-40 max-md:px-5">
 															{"Anomali"}
 														</div>
@@ -1746,7 +1748,7 @@ function App() {
 												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
 													
 {/* 													<br /> */}
-													{soil?.sensorn2?.value === 0 ? (
+													{soilA?.NPK1_1?.anomaly === 1 ? (
 														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-red-600 bg-red-200 border-red-600 bg-opacity-40 max-md:px-5">
 															{"Anomali"}
 														</div>
@@ -1776,7 +1778,7 @@ function App() {
 												<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
 													
 {/* 													<br /> */}
-													{soil?.sensorn1?.value === 0 ? (
+													{soilA?.NPK2_1?.anomaly === 1 ? (
 														<div className="justify-center px-3 py-1 w-24 text-center rounded border text-red-600 bg-red-200 border-red-600 bg-opacity-40 max-md:px-5">
 															{"Anomali"}
 														</div>
