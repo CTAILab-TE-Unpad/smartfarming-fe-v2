@@ -673,14 +673,6 @@ function App() {
 						[datasetB.elementId]: res.data || [],
 						}));
 						
-				// 	if (datasetB.elementId === "musan1"){
-				// 	    setMusan1ChartData(res.data);
-				// 	} else if (datasetB.elementId === "musap1"){
-				// 	    setMusap1ChartData(res.data)
-				// 	} else if (datasetB.elementId === "musak1"){
-				// 	    setMusak1ChartData(res.data)
-				// 	}
-					
 					})
 				.catch((err) => {
 					console.log("error => ", err);
@@ -696,67 +688,66 @@ function App() {
 			axios
 				.get("https://api.sf2.ctailab.com/anomalyDetection", {
 					params: {
-				// 		device_id: datasetC.device_id,
-				// 		index_id: datasetC.index_id,
 						sensor_name: datasetC.sensor_name,
 						},
 					})
 				.then((res) => {
+				    const reversedData = res.data.reverse();
 					setDataC((prevState) => ({
 						...prevState,
-						[datasetC.elementId]: res.data || [],
+						[datasetC.elementId]: reversedData || [],
 						}));
 						
 					if (datasetC.elementId === "SM_C1R1"){
-					    setSM_C1R1Chart(res.data);
+					    setSM_C1R1Chart(reversedData);
 					} else if (datasetC.elementId === "SM_C1R2"){
-					    setSM_C1R2Chart(res.data);
+					    setSM_C1R2Chart(reversedData);
 					} else if (datasetC.elementId === "SM_C1R3"){
-					    setSM_C1R3Chart(res.data);
+					    setSM_C1R3Chart(reversedData);
 					} else if (datasetC.elementId === "SM_C1R4"){
-					    setSM_C1R4Chart(res.data);
+					    setSM_C1R4Chart(reversedData);
 					} else if (datasetC.elementId === "SM_C1R5"){
-					    setSM_C1R5Chart(res.data);
+					    setSM_C1R5Chart(reversedData);
 					} else if (datasetC.elementId === "SM_C1R6"){
-					    setSM_C1R6Chart(res.data);
+					    setSM_C1R6Chart(reversedData);
 					} else if (datasetC.elementId === "SM_C2R1"){
-					    setSM_C2R1Chart(res.data);
+					    setSM_C2R1Chart(reversedData);
 					} else if (datasetC.elementId === "SM_C2R2"){
-					    setSM_C2R2Chart(res.data);
+					    setSM_C2R2Chart(reversedData);
 					} else if (datasetC.elementId === "SM_C2R3"){
-					    setSM_C2R3Chart(res.data);
+					    setSM_C2R3Chart(reversedData);
 					} else if (datasetC.elementId === "SM_C2R4"){
-					    setSM_C2R4Chart(res.data);
+					    setSM_C2R4Chart(reversedData);
 					} else if (datasetC.elementId === "SM_C2R5"){
-					    setSM_C2R5Chart(res.data);
+					    setSM_C2R5Chart(reversedData);
 					} else if (datasetC.elementId === "SM_C2R6"){
-					    setSM_C2R6Chart(res.data);
+					    setSM_C2R6Chart(reversedData);
 					} else if (datasetC.elementId === "SM_C3R1"){
-					    setSM_C3R1Chart(res.data);
+					    setSM_C3R1Chart(reversedData);
 					} else if (datasetC.elementId === "SM_C3R2"){
-					    setSM_C3R2Chart(res.data);
+					    setSM_C3R2Chart(reversedData);
 					} else if (datasetC.elementId === "SM_C3R3"){
-					    setSM_C3R3Chart(res.data);
+					    setSM_C3R3Chart(reversedData);
 					} else if (datasetC.elementId === "SM_C3R4"){
-					    setSM_C3R4Chart(res.data);
+					    setSM_C3R4Chart(reversedData);
 					} else if (datasetC.elementId === "SM_C3R5"){
-					    setSM_C3R5Chart(res.data);
+					    setSM_C3R5Chart(reversedData);
 					} else if (datasetC.elementId === "SM_C3R6"){
-					    setSM_C3R6Chart(res.data);
+					    setSM_C3R6Chart(reversedData);
 					} else if (datasetC.elementId === "NPK1"){
-					    setNPK1Chart(res.data);
+					    setNPK1Chart(reversedData);
 					} else if (datasetC.elementId === "NPK2"){
-					    setNPK2Chart(res.data);
+					    setNPK2Chart(reversedData);
 					} else if (datasetC.elementId === "PH1A"){
-					    setPH1Chart(res.data);
+					    setPH1Chart(reversedData);
 					} else if (datasetC.elementId === "PH2A"){
-					    setPH2Chart(res.data);
+					    setPH2Chart(reversedData);
 					} else if (datasetC.elementId === "DHTA"){
-					    setDHTChart(res.data);
+					    setDHTChart(reversedData);
 					} else if (datasetC.elementId === "ST1A"){
-					    setST1Chart(res.data);
+					    setST1Chart(reversedData);
 					} else if (datasetC.elementId === "ST2A"){
-					    setST2Chart(res.data);
+					    setST2Chart(reversedData);
 					} 
 					})
 				.catch((err) => {
