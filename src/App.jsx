@@ -1335,32 +1335,25 @@ function App() {
 							<section className="grid grid-cols-3 gap-4 mt-12">
 								<div className="flex flex-col p-9 gap-4 bg-white rounded-[30px] shadow-[0px_10px_60px_rgba(226,236,249,0.5)]">
 									<div className="text-3xl font-semibold tracking-tight text-black text-center">
-										Sensor NPK
+										Bedeng Kemarau
 									</div>
 									<div className="flex flex-row justify-between gap-4">
 										<div className="flex flex-col gap-4 mt-3 items-center justify-center w-full">
 											<span className="text-teal-500 text-center">
-												Sensor NPK 1 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+												{analysisA}
 											</span>
-											<div className="font-bold text-center text-5xl">
-												xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-											</div>
 										</div>
 									</div>
 								</div>
 								<div className="flex flex-col p-9 gap-4 bg-white rounded-[30px] shadow-[0px_10px_60px_rgba(226,236,249,0.5)]">
 									<div className="text-3xl font-semibold tracking-tight text-black text-center">
-										Sensor PH
+										Bedeng Hujan
 									</div>
 									<div className="flex flex-row justify-between gap-4">
 										<div className="flex flex-col gap-4 mt-3 items-center justify-center w-full">
 											<span className="text-teal-500 text-center">
-												Sensor PH 1 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+												{analysis}
 											</span>
-											<div className="font-bold text-center text-5xl">
-												xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-											</div>
-											
 										</div>
 									</div>
 								</div>
