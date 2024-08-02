@@ -617,7 +617,8 @@ function App() {
 	const [DHTChart, setDHTChart] = React.useState([]);
 	
 	
-	const [analysis, setAnalysis] = React.useState("Pemberian air dan nutrisi pada hari ini sudah sesuai");
+	const [analysis, setAnalysis] = React.useState("Pemberian air dan nutrisi pada bedeng hujan hari ini sudah sesuai");
+	const [analysisA, setAnalysisA] = React.useState("Pemberian air dan nutrisi pada bedeng kemarau hari ini sudah sesuai");
 
 
 	React.useEffect(() => {
@@ -761,7 +762,7 @@ function App() {
 	
 	React.useEffect(() => {
 		if (dataB.irynan1.length && dataB.musan1.length) {
-			let analysisText = "Pemberian air dan nutrisi pada hari ini sudah sesuai";
+			let analysisText = "Pemberian air dan nutrisi pada bedeng hujan hari ini sudah sesuai";
 			let issues = [];
 
 			const irynan1 = dataB.irynan2[0]?.value || 0;
@@ -794,10 +795,53 @@ function App() {
 			}
 
 			if (issues.length) {
-				analysisText = `Pemberian nutrisi ${issues.join(', ')}`;
+				analysisText = `Pemberian nutrisi pada bedeng hujan  ${issues.join(', ')}`;
 			}
 
 			setAnalysis(analysisText);
+		}
+	}, [dataB]);
+	
+	
+	React.useEffect(() => {
+		if (dataB.irynan1.length && dataB.musan1.length) {
+			let analysisText = "Pemberian air dan nutrisi pada bedeng hujan hari ini sudah sesuai";
+			let issues = [];
+
+			const irynan1 = dataB.irynan2[0]?.value || 0;
+			const musan1 = dataB.musan1[0]?.value || 0;
+			const irynap1 = dataB.irynap2[0]?.value || 0;
+			const musap1 = dataB.musap1[0]?.value || 0;
+			const irynak1 = dataB.irynak1[0]?.value || 0;
+			const musak1 = dataB.musak1[0]?.value || 0;
+
+			if (irynan1 !== musan1) {
+				if (irynan1 < musan1) {
+					issues.push(`kekurangan N sebanyak ${musan1 - irynan1}`);
+				} else {
+					issues.push(`kelebihan N sebanyak ${irynan1 - musan1}`);
+				}
+			}
+			if (irynap1 !== musap1) {
+				if (irynap1 < musap1) {
+					issues.push(`kekurangan P sebanyak ${musap1 - irynap1}`);
+				} else {
+					issues.push(`kelebihan P sebanyak ${irynap1 - musap1}`);
+				}
+			}
+			if (irynak1 !== musak1) {
+				if (irynak1 < musak1) {
+					issues.push(`kekurangan K sebanyak ${musak1 - irynak1}`);
+				} else {
+					issues.push(`kelebihan K sebanyak ${irynak1 - musak1}`);
+				}
+			}
+
+			if (issues.length) {
+				analysisText = `Pemberian nutrisi pada bedeng hujan  ${issues.join(', ')}`;
+			}
+
+			setAnalysisA(analysisText);
 		}
 	}, [dataB]);
 	
@@ -1275,6 +1319,9 @@ function App() {
 											<h2 className="text-2xl font-semibold tracking-tight text-black">
 												Analisis Pemberian Air dan Nutrisi
 											</h2>
+											<div className="text-teal-500">
+												{analysisA}
+											</div>
 											<div className="text-teal-500">
 												{analysis}
 											</div>
