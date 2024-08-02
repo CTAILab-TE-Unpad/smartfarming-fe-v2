@@ -2085,14 +2085,7 @@ function App() {
 													<Line data={chartPH1} options={options} />
 												</div>
 											</div>
-											<div className="flex flex-row gap-3 px-2 py-5 justify-between items-center w-full font-medium border-b border-solid border-zinc-100">
-												<div className="font-medium text-gray-400 w-full text-center justify-center items-center">
-													<Line data={chartNPK1} options={options} />
-												</div>
-												<div className="font-medium text-gray-400 w-full text-center justify-center items-center">
-													<Line data={chartDHT} options={options} />
-												</div>
-											</div>
+										
 							             </div>
 							         </div>
 							     </div>
@@ -2139,14 +2132,7 @@ function App() {
 													<Line data={chartPH2} options={options} />
 												</div>
 											</div>
-											<div className="flex flex-row gap-3 px-2 py-5 justify-between items-center w-full font-medium border-b border-solid border-zinc-100">
-												<div className="font-medium text-gray-400 w-full text-center justify-center items-center">
-													<Line data={chartNPK2} options={options} />
-												</div>
-												<div className="font-medium text-gray-400 w-full text-center justify-center items-center">
-													<Line data={chartDHT} options={options} />
-												</div>
-											</div>
+								
 							             </div>
 							         </div>
 							     </div>
