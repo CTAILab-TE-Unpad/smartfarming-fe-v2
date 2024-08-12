@@ -254,7 +254,7 @@ export default function Anomaly(props) {
         labels: SM_C1R1Chart.map((item) => new Date(item.createdAt).toLocaleString()),
         datasets: [
             {
-                label: "R1 Manual",
+                label: "R1 Kolom A",
                 data: SM_C1R1Chart.map((item) => item.anomaly),
                 fill: false,
                 backgroundColor: "rgba(75,192,192,1)",
@@ -267,7 +267,7 @@ export default function Anomaly(props) {
         labels: SM_C1R2Chart.map((item) => new Date(item.createdAt).toLocaleString()),
         datasets: [
             {
-                label: "R2 Manual",
+                label: "R2 Kolom A",
                 data: SM_C1R2Chart.map((item) => item.anomaly),
                 fill: false,
                 backgroundColor: "rgba(75,192,192,1)",
@@ -281,7 +281,7 @@ export default function Anomaly(props) {
         labels: SM_C1R3Chart.map((item) => new Date(item.createdAt).toLocaleString()),
         datasets: [
             {
-                label: "R3 Manual",
+                label: "R3 Kolom A",
                 data: SM_C1R3Chart.map((item) => item.anomaly),
                 fill: false,
                 backgroundColor: "rgba(75,192,192,1)",
@@ -295,7 +295,7 @@ export default function Anomaly(props) {
         labels: SM_C1R4Chart.map((item) => new Date(item.createdAt).toLocaleString()),
         datasets: [
             {
-                label: "R4 Manual",
+                label: "R4 Kolom A",
                 data: SM_C1R4Chart.map((item) => item.anomaly),
                 fill: false,
                 backgroundColor: "rgba(75,192,192,1)",
@@ -309,7 +309,7 @@ export default function Anomaly(props) {
         labels: SM_C1R5Chart.map((item) => new Date(item.createdAt).toLocaleString()),
         datasets: [
             {
-                label: "R5 Manual",
+                label: "R5 Kolom A",
                 data: SM_C1R5Chart.map((item) => item.anomaly),
                 fill: false,
                 backgroundColor: "rgba(75,192,192,1)",
@@ -323,7 +323,7 @@ export default function Anomaly(props) {
         labels: SM_C1R6Chart.map((item) => new Date(item.createdAt).toLocaleString()),
         datasets: [
             {
-                label: "R6 Manual",
+                label: "R6 Kolom A",
                 data: SM_C1R6Chart.map((item) => item.anomaly),
                 fill: false,
                 backgroundColor: "rgba(75,192,192,1)",
@@ -334,12 +334,12 @@ export default function Anomaly(props) {
     };
 
 
-    //bedeng hujan
+    //bedeng Kolom B
     const chartSM_C2R1 = {
         labels: SM_C2R1Chart.map((item) => new Date(item.createdAt).toLocaleString()),
         datasets: [
             {
-                label: "R1 Hujan",
+                label: "R1 Kolom B",
                 data: SM_C2R1Chart.map((item) => item.anomaly),
                 fill: false,
                 backgroundColor: "rgba(75,192,192,1)",
@@ -352,7 +352,7 @@ export default function Anomaly(props) {
         labels: SM_C2R2Chart.map((item) => new Date(item.createdAt).toLocaleString()),
         datasets: [
             {
-                label: "R2 Hujan",
+                label: "R2 Kolom B",
                 data: SM_C2R2Chart.map((item) => item.anomaly),
                 fill: false,
                 backgroundColor: "rgba(75,192,192,1)",
@@ -366,7 +366,7 @@ export default function Anomaly(props) {
         labels: SM_C2R3Chart.map((item) => new Date(item.createdAt).toLocaleString()),
         datasets: [
             {
-                label: "R3 Hujan",
+                label: "R3 Kolom B",
                 data: SM_C2R3Chart.map((item) => item.anomaly),
                 fill: false,
                 backgroundColor: "rgba(75,192,192,1)",
@@ -380,7 +380,7 @@ export default function Anomaly(props) {
         labels: SM_C2R4Chart.map((item) => new Date(item.createdAt).toLocaleString()),
         datasets: [
             {
-                label: "R4 Hujan",
+                label: "R4 Kolom B",
                 data: SM_C2R4Chart.map((item) => item.anomaly),
                 fill: false,
                 backgroundColor: "rgba(75,192,192,1)",
@@ -394,7 +394,7 @@ export default function Anomaly(props) {
         labels: SM_C2R5Chart.map((item) => new Date(item.createdAt).toLocaleString()),
         datasets: [
             {
-                label: "R5 Hujan",
+                label: "R5 Kolom B",
                 data: SM_C2R5Chart.map((item) => item.anomaly),
                 fill: false,
                 backgroundColor: "rgba(75,192,192,1)",
@@ -408,7 +408,7 @@ export default function Anomaly(props) {
         labels: SM_C2R6Chart.map((item) => new Date(item.createdAt).toLocaleString()),
         datasets: [
             {
-                label: "R6 Hujan",
+                label: "R6 Kolom B",
                 data: SM_C2R6Chart.map((item) => item.anomaly),
                 fill: false,
                 backgroundColor: "rgba(75,192,192,1)",
@@ -422,7 +422,7 @@ export default function Anomaly(props) {
         labels: PH1Chart.map((item) => new Date(item.createdAt).toLocaleString()),
         datasets: [
             {
-                label: "PH Hujan",
+                label: "PH Kolom B",
                 data: PH1Chart.map((item) => item.anomaly),
                 fill: false,
                 backgroundColor: "rgba(75,192,192,1)",
@@ -436,7 +436,7 @@ export default function Anomaly(props) {
         labels: ST1Chart.map((item) => new Date(item.createdAt).toLocaleString()),
         datasets: [
             {
-                label: "ST Hujan",
+                label: "ST Kolom B",
                 data: ST1Chart.map((item) => item.anomaly),
                 fill: false,
                 backgroundColor: "rgba(75,192,192,1)",
@@ -450,7 +450,7 @@ export default function Anomaly(props) {
         labels: NPK1Chart.map((item) => new Date(item.createdAt).toLocaleString()),
         datasets: [
             {
-                label: "NPK Hujan",
+                label: "NPK Kolom B",
                 data: NPK1Chart.map((item) => item.anomaly),
                 fill: false,
                 backgroundColor: "rgba(75,192,192,1)",
@@ -476,12 +476,12 @@ export default function Anomaly(props) {
 
 
 
-    //bedeng kemarau
+    //bedeng Kolom C
     const chartSM_C3R1 = {
         labels: SM_C3R1Chart.map((item) => new Date(item.createdAt).toLocaleString()),
         datasets: [
             {
-                label: "R1 Kemarau",
+                label: "R1 Kolom C",
                 data: SM_C3R1Chart.map((item) => item.anomaly),
                 fill: false,
                 backgroundColor: "rgba(75,192,192,1)",
@@ -494,7 +494,7 @@ export default function Anomaly(props) {
         labels: SM_C3R2Chart.map((item) => new Date(item.createdAt).toLocaleString()),
         datasets: [
             {
-                label: "R2 Kemarau",
+                label: "R2 Kolom C",
                 data: SM_C3R2Chart.map((item) => item.anomaly),
                 fill: false,
                 backgroundColor: "rgba(75,192,192,1)",
@@ -508,7 +508,7 @@ export default function Anomaly(props) {
         labels: SM_C3R3Chart.map((item) => new Date(item.createdAt).toLocaleString()),
         datasets: [
             {
-                label: "R3 Kemarau",
+                label: "R3 Kolom C",
                 data: SM_C3R3Chart.map((item) => item.anomaly),
                 fill: false,
                 backgroundColor: "rgba(75,192,192,1)",
@@ -522,7 +522,7 @@ export default function Anomaly(props) {
         labels: SM_C3R4Chart.map((item) => new Date(item.createdAt).toLocaleString()),
         datasets: [
             {
-                label: "R4 Kemarau",
+                label: "R4 Kolom C",
                 data: SM_C3R4Chart.map((item) => item.anomaly),
                 fill: false,
                 backgroundColor: "rgba(75,192,192,1)",
@@ -536,7 +536,7 @@ export default function Anomaly(props) {
         labels: SM_C3R5Chart.map((item) => new Date(item.createdAt).toLocaleString()),
         datasets: [
             {
-                label: "R5 Kemarau",
+                label: "R5 Kolom C",
                 data: SM_C3R5Chart.map((item) => item.anomaly),
                 fill: false,
                 backgroundColor: "rgba(75,192,192,1)",
@@ -550,7 +550,7 @@ export default function Anomaly(props) {
         labels: SM_C3R6Chart.map((item) => new Date(item.createdAt).toLocaleString()),
         datasets: [
             {
-                label: "R6 Kemarau",
+                label: "R6 Kolom C",
                 data: SM_C3R6Chart.map((item) => item.anomaly),
                 fill: false,
                 backgroundColor: "rgba(75,192,192,1)",
@@ -564,7 +564,7 @@ export default function Anomaly(props) {
         labels: PH2Chart.map((item) => new Date(item.createdAt).toLocaleString()),
         datasets: [
             {
-                label: "PH Kemarau",
+                label: "PH Kolom C",
                 data: PH2Chart.map((item) => item.anomaly),
                 fill: false,
                 backgroundColor: "rgba(75,192,192,1)",
@@ -578,7 +578,7 @@ export default function Anomaly(props) {
         labels: ST2Chart.map((item) => new Date(item.createdAt).toLocaleString()),
         datasets: [
             {
-                label: "ST Kemarau",
+                label: "ST Kolom C",
                 data: ST2Chart.map((item) => item.anomaly),
                 fill: false,
                 backgroundColor: "rgba(75,192,192,1)",
@@ -592,7 +592,7 @@ export default function Anomaly(props) {
         labels: NPK2Chart.map((item) => new Date(item.createdAt).toLocaleString()),
         datasets: [
             {
-                label: "NPK Kemarau",
+                label: "NPK Kolom C",
                 data: NPK2Chart.map((item) => item.anomaly),
                 fill: false,
                 backgroundColor: "rgba(75,192,192,1)",
@@ -643,7 +643,7 @@ export default function Anomaly(props) {
                                 <div className="flex gap-5 text-sm tracking-normal w-full">
                                     <div className="flex flex-col gap-3 w-full">
                                         <h2 className="text-2xl font-semibold tracking-tight text-black">
-                                            Anomali Sensor Bedeng Manual
+                                            Anomali Sensor Bedeng Kolom A
                                         </h2>
                                         <div className="text-teal-500">Nilai 0 berarti normal dan nilai 1 berarti anomali</div>
 
@@ -681,7 +681,7 @@ export default function Anomaly(props) {
                                 <div className="flex gap-5 text-sm tracking-normal w-full">
                                     <div className="flex flex-col gap-3 w-full">
                                         <h2 className="text-2xl font-semibold tracking-tight text-black">
-                                            Anomali Sensor Bedeng Hujan
+                                            Anomali Sensor Bedeng Kolom B
                                         </h2>
                                         <div className="text-teal-500">Nilai 0 berarti normal dan nilai 1 berarti anomali</div>
 
@@ -728,7 +728,7 @@ export default function Anomaly(props) {
                                 <div className="flex gap-5 text-sm tracking-normal w-full">
                                     <div className="flex flex-col gap-3 w-full">
                                         <h2 className="text-2xl font-semibold tracking-tight text-black">
-                                            Anomali Sensor Bedeng Kemarau
+                                            Anomali Sensor Bedeng Kolom C
                                         </h2>
                                         <div className="text-teal-500">Nilai 0 berarti normal dan nilai 1 berarti anomali</div>
 

@@ -3,7 +3,7 @@ import Pages from "../../Constants/Pages.json";
 import axios from "axios";
 import './index.css'
 import * as React from "react";
-import { Line } from "react-chartjs-2";
+// import { Line } from "react-chartjs-2";
 import "chart.js/auto";
 
 const datasoil = [
@@ -526,7 +526,7 @@ export default function Dashboard() {
 
 	React.useEffect(() => {
 		if (dataB.irynan1.length && dataB.musan1.length) {
-			let analysisText = "Pemberian air dan nutrisi pada bedeng hujan hari ini sudah sesuai";
+			let analysisText = "Pemberian air dan nutrisi pada bedeng Kolom B hari ini sudah sesuai";
 			let issues = [];
 
 			const irynan1 = dataB.irynan2[0]?.value || 0;
@@ -559,7 +559,7 @@ export default function Dashboard() {
 			}
 
 			if (issues.length) {
-				analysisText = `Pemberian nutrisi pada bedeng hujan  ${issues.join(', ')}`;
+				analysisText = `Pemberian nutrisi pada bedeng Kolom B  ${issues.join(', ')}`;
 			}
 
 			setAnalysis(analysisText);
@@ -569,7 +569,7 @@ export default function Dashboard() {
 
 	React.useEffect(() => {
 		if (dataB.irynan2.length && dataB.musan2.length) {
-			let analysisText = "Pemberian air dan nutrisi pada bedeng kemarau hari ini sudah sesuai";
+			let analysisText = "Pemberian air dan nutrisi pada bedeng Kolom C hari ini sudah sesuai";
 			let issues = [];
 
 			const irynan2 = dataB.irynan2[0]?.value || 0;
@@ -602,7 +602,7 @@ export default function Dashboard() {
 			}
 
 			if (issues.length) {
-				analysisText = `Pemberian nutrisi pada bedeng kemarau  ${issues.join(', ')}`;
+				analysisText = `Pemberian nutrisi pada bedeng Kolom C  ${issues.join(', ')}`;
 			}
 
 			setAnalysisA(analysisText);
@@ -620,7 +620,7 @@ export default function Dashboard() {
 						<section className="grid grid-cols-2 gap-4 mt-12">
 							<div className="flex flex-col p-9 gap-4 bg-white rounded-[30px] shadow-[0px_10px_60px_rgba(226,236,249,0.5)]">
 								<div className="text-3xl font-semibold tracking-tight text-black text-center">
-									Bedeng Kemarau
+									Bedeng Kolom C
 								</div>
 								<div className="flex flex-row justify-between gap-4">
 									<div className="flex flex-col gap-4 mt-3 items-center justify-center w-full">
@@ -632,7 +632,7 @@ export default function Dashboard() {
 							</div>
 							<div className="flex flex-col p-9 gap-4 bg-white rounded-[30px] shadow-[0px_10px_60px_rgba(226,236,249,0.5)]">
 								<div className="text-3xl font-semibold tracking-tight text-black text-center">
-									Bedeng Hujan
+									Bedeng Kolom B
 								</div>
 								<div className="flex flex-row justify-between gap-4">
 									<div className="flex flex-col gap-4 mt-3 items-center justify-center w-full">
@@ -661,13 +661,13 @@ export default function Dashboard() {
 												Baris
 											</div>
 											<div className="font-medium text-gray-400 w-full text-center justify-center items-center">
-												Kemarau
+												Kolom C
 											</div>
 											<div className="font-medium text-gray-400 w-full text-center justify-center items-center">
-												Hujan
+												Kolom B
 											</div>
 											<div className="font-medium text-gray-400 w-full text-center justify-center items-center">
-												Manual
+												Kolom A
 											</div>
 										</div>
 										<div className="flex flex-row gap-3 px-2 py-2 justify-between w-full font-medium border-b border-solid border-zinc-100">
@@ -982,10 +982,10 @@ export default function Dashboard() {
 												PH
 											</div>
 											<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
-												Kemarau
+												Kolom C
 											</div>
 											<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
-												{(soil?.sensorph2?.value * 10)}
+												{(soil?.sensorph2?.value * 10).toFixed(2)}
 												<br />
 											</div>
 											<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
@@ -1009,10 +1009,10 @@ export default function Dashboard() {
 												PH
 											</div>
 											<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
-												Hujan
+												Kolom B
 											</div>
 											<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
-												{(soil?.sensorph1?.value * 10)}
+												{(soil?.sensorph1?.value * 10).toFixed(2)}
 											</div>
 											<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
 												{soilA?.PH1A_1?.anomaly === 1 ? (
@@ -1031,7 +1031,7 @@ export default function Dashboard() {
 												ST
 											</div>
 											<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
-												Kemarau
+												Kolom C
 											</div>
 											<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
 												{soil?.sensorst2?.value}
@@ -1054,7 +1054,7 @@ export default function Dashboard() {
 												ST
 											</div>
 											<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
-												Hujan
+												Kolom B
 											</div>
 											<div className="flex flex-col gap-4 font-medium w-full text-center justify-center items-center">
 												{soil?.sensorst1?.value}

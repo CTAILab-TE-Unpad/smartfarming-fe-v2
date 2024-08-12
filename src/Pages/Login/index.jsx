@@ -17,7 +17,7 @@ export default function Login(props) {
     e.preventDefault();
 
     axios
-      .post("/login", {
+      .post("/user/login", {
         email,
         password,
       })
