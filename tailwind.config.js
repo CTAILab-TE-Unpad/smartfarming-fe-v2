@@ -2,7 +2,8 @@
 export default {
   content: [
     "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
+    "./src/Pages/Dashboard/*.{js,ts,jsx,tsx}",
+    "./src/Pages/Anomaly/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     screen: {md: {max: "1050px"}, sm:{max: "550px"}},
