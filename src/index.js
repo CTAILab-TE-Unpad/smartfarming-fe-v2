@@ -21,10 +21,11 @@ import DatasetData from "./Pages/Dataset/Data";
 import DatasetDevice from "./Pages/Dataset/Device";
 import ControlList from "./Pages/Control/List";
 import ControlSwitch from "./Pages/Control/Switch";
-import Anomaly from "./Pages/Dashboard/anomaly";
-// import Anomaly from "./Pages/Anomaly";
 import Prediksi from "./Pages/Dashboard/prediksi";
 import Valve from "./Pages/Dashboard/valve";
+import Detail from "./Pages/Dashboard/detail";
+
+
 
 axios.defaults.baseURL = process.env.REACT_APP_API_BASE_URL;
 
@@ -72,10 +73,6 @@ const router = createBrowserRouter([
     element: <ControlSwitch />,
   },
   {
-    path: "/dashboard/anomaly",
-    element: <Anomaly />,
-  },
-  {
     path: "/dashboard/prediksi",
     element: <Prediksi />,
   },
@@ -83,6 +80,11 @@ const router = createBrowserRouter([
     path: "/dashboard/logValve",
     element: <Valve />,
   },
+  {
+    path: "/dashboard/:device_id/:index_id",
+    element: <Detail />, // Komponen detail grafik
+  },
+  
 ]);
 
 axios.interceptors.response.use(
